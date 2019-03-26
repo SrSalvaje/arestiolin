@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import content from './content'
 import HeroCont from './Components/Hero/HeroCont';
+import Profile from './Components/Profile/Profile';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           button={content.hero.button}
           background={content.hero.background}
         />
+        <Profile/>
         
       </div>
     );
