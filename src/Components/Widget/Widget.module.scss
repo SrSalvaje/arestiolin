@@ -1,0 +1,38 @@
+.widget{
+    width: 40vw;
+    max-height:40vh;
+    background-color:gainsboro;
+    color:black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:50px;
+    /* center item */
+    left:0;
+    right:0;
+    margin: auto;
+}
+
+.widget h2{
+    margin: 0;
+    background: white;
+}
+
+.widget ul, .widget div{
+    overflow: auto;
+     height: 100%; 
+    list-style: none;
+    padding: 5px;
+    margin: 5% 5%;
+    background: ivory; 
+    z-index: 1; 
+}
+
+
+
+.widget li {
+    text-align: justify;
+    padding:10px 5px ;
+
+}
