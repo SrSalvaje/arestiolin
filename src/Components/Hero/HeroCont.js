@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./HeroCont.module.scss";
 import PropTypes from 'prop-types';
-import bc from '../../Assets/img/hero.JPG'
+import bc from '../../Assets/img/hero.JPG';
 
 
 
@@ -20,11 +20,9 @@ const HeroCont =(props)=>(
 );
 
 HeroCont.propTypes= {
-    background: PropTypes.string,
     title: PropTypes.string,
     content: PropTypes.string,
     button : PropTypes.string
-
 };
 
 
