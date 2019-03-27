@@ -16,8 +16,7 @@ class Widget extends Component {
   
       let showHide = this.state.show === true ? 'block' : 'none',
       classes, classesString;
-      //if a class is passed as a prop
-      console.log(this.props.class)
+     
         if(this.props.class){
             classes=[styles.widget, this.props.class];
             classesString=classes.join(' ');
@@ -28,7 +27,10 @@ class Widget extends Component {
   
       const widget = (<article className={classesString} >
                           <h2 onClick={this.togleShow}>{this.props.title}</h2>
-                          <div style={{display:showHide}}>{this.props.content}</div>
+                          <div style={{display:showHide}}>
+                            {/* if its a list, wrap all props in a UL and return LI, else return the content */}
+                            {(this.props.type==='list'? <ul>{this.props.content.map((li, index) =>( <li key={`item${index}`}>{li}</li>))}</ul> : this.props.content)}
+                          </div>
                       </article>);
       return (
           widget
