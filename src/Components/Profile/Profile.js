@@ -1,23 +1,34 @@
 import React from 'react';
 import styles from './Profile.module.scss';
 import Widget from '../Widget/Widget';
+import content from '../../content'
 
 const Profile = () => (
 
     <div className={styles.main}>
         <Widget
+                type={content.profile.widget1.type}
                 class={styles.gridPos1} 
-                title={"Jon Miren Aresti Olin"} 
-                content={<ul >
-                    <li>30 years old (22/03/1988), Spanish and Mexican Citizenship</li>
-                    <li>Swedish Personal Number: 880322-1251</li>
-                    <li>Front-end Web Developer</li>
-                    <li>Journalist</li>
-                    <li>Video Editor</li>
-                    <li>PADI Certified SCUBA diving instructor</li>
-                    <li>Email: jon.m.h.aresti@gmail.com</li>
-                    <li>cellphone: 07 6321 82 80</li>
-                </ul>} 
+                title={content.profile.widget1.title} 
+                content={content.profile.widget1.content} 
+        />
+        <Widget 
+            type={content.profile.widget2.type}
+            class={styles.gridPos2} 
+            title={content.profile.widget2.title} 
+            content={content.profile.widget2.content} 
+        /> 
+         <Widget 
+            type={content.profile.widget3.type}
+            class={styles.gridPos3} 
+            title={content.profile.widget3.title} 
+            content={content.profile.widget3.content} 
+        /> 
+        <Widget 
+            type={content.profile.widget4.type}
+            class={styles.gridPos4} 
+            title={content.profile.widget4.title} 
+            content={content.profile.widget4.content} 
         /> 
 
 
