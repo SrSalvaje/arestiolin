@@ -5,7 +5,7 @@ import Widget from '../Widget/Widget';
 const Profile = () => (
 
     <div className={styles.main}>
-      <Widget
+        <Widget
                 class={styles.gridPos1} 
                 title={"Jon Miren Aresti Olin"} 
                 content={<ul >
@@ -18,7 +18,7 @@ const Profile = () => (
                     <li>Email: jon.m.h.aresti@gmail.com</li>
                     <li>cellphone: 07 6321 82 80</li>
                 </ul>} 
-                />
+        /> 
 
 
      
