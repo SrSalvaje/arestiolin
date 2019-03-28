@@ -17,7 +17,9 @@
     background-repeat: no-repeat;
     background-position: center ;
     background-size: auto 100%;
-    position: relative;
+    position: sticky;
+    top:0;
+    z-index: 2;
     
   
 }
