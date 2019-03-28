@@ -3,6 +3,7 @@ import './App.css';
 import content from './content'
 import HeroCont from './Components/Hero/HeroCont';
 import Profile from './Components/Profile/Profile';
+import CV from './Components/CV/CV';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           background={content.hero.background}
         />
         <Profile/>
+        <CV/>
         
       </div>
     );
