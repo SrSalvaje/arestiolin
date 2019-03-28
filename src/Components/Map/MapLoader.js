@@ -28,13 +28,16 @@ class Map extends Component {
 
     renderMap= ()=> {
         let config;
-        if (this.props.configObject) {
+        console.log(this.props.configObject);
+       
+        if (!!this.props.configObject) {
           config=this.props.configObject
           } else {
             config={
                 center: {
                 lat: 55.609126, lng: 13.000811},
                 zoom:14,
+                disableDefaultUI:true,
                 styles:[
                     {
                       "elementType": "geometry",
@@ -313,9 +316,10 @@ class Map extends Component {
                   ] 
                 }
           }
+          console.log(config)
           
           // create map instance
-        const map= new window.google.maps.Map(this.map.current, this.props.configObject);
+        const map= new window.google.maps.Map(this.map.current, config);
     }
   
   
