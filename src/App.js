@@ -4,6 +4,7 @@ import content from './content'
 import HeroCont from './Components/Hero/HeroCont';
 import Profile from './Components/Profile/Profile';
 import CV from './Components/CV/CV';
+import Portfolio from './Components/Portfolio/Portfolio'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         />
         <Profile/>
         <CV/>
+        <Portfolio/>
         
       </div>
     );
