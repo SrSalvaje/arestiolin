@@ -1,0 +1,71 @@
+$ratio-16-9: 56.25%;
+$cols: 1;
+
+.main{
+    width: 90%;
+    height:30vh;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+        'title title'
+        'description imgs';
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 20% 80% ;
+    border: 1px;
+    border-color: aqua;
+    border-style: solid;
+}
+.main h3{
+    width:100%;
+    grid-area: title;
+    height: auto;
+    margin: 0 auto;
+}
+
+.description{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    grid-area: description;
+    border: 1px;
+    border-color:blue;
+    border-style: solid;
+    
+
+}
+
+.leftColumn{
+    grid-area: imgs;
+    display: flex;
+    flex-flow: column;
+}
+
+.imgCont {
+    width:  calc(100% / #{$cols});
+    margin: 2px;
+    border: 1px solid red;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: #{$ratio-16-9 / $cols};
+  }
+ 
+  .img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    margin: auto;
+  }
+
+  .btn{
+      height: 40px;
+      width: 100px;
+      align-self: center;
+      margin: auto;
+  }
+  
+ 

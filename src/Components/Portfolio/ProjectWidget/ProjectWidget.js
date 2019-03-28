@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Portfolio.module.scss";
+import styles from "./ProjectWidget.module.scss";
 import PropTypes from 'prop-types';
 
 
@@ -7,8 +7,17 @@ import PropTypes from 'prop-types';
 
 const ProjectWidget =(props)=>(
   <div className={styles.main}>
-    <h2>{props.title}</h2>
-
+    <h3>{props.title}</h3>
+    <div className={styles.description}>
+        {props.description}
+    </div>
+    <div className={styles.leftColumn}>
+        <div className={styles.imgCont}>
+            <img class={styles.img} src={props.image} alt={props.alt}/>  
+        </div>
+        <button className={styles.btn}>Open in new window</button>
+    </div>
+    
   </div>
   
 
