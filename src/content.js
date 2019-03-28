@@ -67,6 +67,77 @@ const content={
                 </ul>
             
         }
+    },
+    CV:{
+        1:{
+            title:'Web development internship at Securelink',
+            date:"",
+            location:'Malmo, Sweden',
+            coordinahtes:'',
+            description:'Ipso lorem'
+        },
+        2:{
+            title:'Online Editor for the Newspaper La Jornada',
+            date:'',
+            location:'Mexico City, Mexico',
+            description:'Lorem ipsum'
+        },
+        3:{
+            title:'English Teacher at Nerles Language Center',
+            date:'',
+            location: 'MExico City, Mexico',
+            description:'ahgdfl aSFHJKHG'
+        },
+
+        4:{
+            title: 'Columnist and reporter for La Palabra',
+            date:'',
+            location:'Acapulco, Mexico',
+            description:'Stuff, much important very wow'
+        },
+
+        5:{
+            title:'Reporter and translator at La Jornada',
+            date:'',
+            location:'Mexico City, Mexico',
+            description:'Much work, very nice'
+        },
+
+        6:{
+            title:'Sales Executive for Occidental Vacation Club',
+            date:'',
+            location:"Playa del Carmen, Qro. Mexico",
+            description:'Much sales, very nice'
+        },
+
+        7:{
+            title:'Scuba and First Aid Instructor at Sinai Divers.',
+            date:'',
+            location:'Sharm el Sheikh, Egypt',
+            description:'Much wet, very deep'
+        },
+
+        8:{
+            title:'Scuba Diving Instructor and Guide at Scuba Playa.',
+            date:'',
+            location:'Playa del Carmen México',
+            description:'Also wet, very mexican'
+        },
+
+        9:{
+            title:'Scuba Diving Instructor and Guide at Scuba Fun Caraibes.',
+            date:'',
+            location:'Philipsburg, Sint Maarten',
+            description:'sd<föo föhAEFG'
+        },
+
+        10:{
+            title:'Sales Associate at the hotel Barceló Cancun',
+            date:'',
+            location:'Cancun, Mexico',
+            description:'much sales, loads of party'
+        }
+
     }
 };
 
