@@ -1,0 +1,30 @@
+.listCont{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+      /* center item */
+      left:0;
+      right:0;
+      margin: auto;
+     
+}
+
+.listCont h2{
+    width: 100%;
+    margin: 0;
+   
+}
+
+.employmentList{
+    list-style: none;
+    overflow: auto;
+    height: 100%;
+    padding: 0;
+}
+
+.listItem{
+    color: blue;
+    padding: 5px 0;
+}
