@@ -5,4 +5,16 @@
     top:0;
     z-index: 4;
     background: white;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.main h2{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    margin: 0;
 }

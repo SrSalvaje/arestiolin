@@ -1,3 +1,56 @@
 .main{
-    height: 40vh;
+    height: 90vh;
+    width: 100%;
+    display: grid;
+     grid-template-areas: 
+        'topR'
+        'centerR'
+        'bottomR';
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%; 
+    overflow: hidden;
+    justify-items: center;
+
+    
+
 }
+
+.imgCommon{
+    width: 80%;
+    height: 100%;
+    overflow: visible;
+    filter: blur(1px);
+    
+   
+    
+}
+
+.centerR{
+    composes:imgCommon;
+    z-index: 2;
+     grid-area: centerR;
+     filter:none;
+     width: 85%; 
+  
+   
+  
+}
+
+.topR{
+    composes: imgCommon;
+    z-index: 0;
+    grid-area: topR;
+    
+    
+   
+   
+}
+
+.bottomR{
+    composes: imgCommon;
+    z-index: 0;
+    grid-area: bottomR;  
+}
+
+
+
