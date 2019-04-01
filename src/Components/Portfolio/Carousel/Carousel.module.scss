@@ -3,11 +3,9 @@
     width: 100%;
     display: grid;
      grid-template-areas: 
-        'topR'
-        'centerR'
-        'bottomR';
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 80% 10%; 
+        'leftC centerC rightC';
+    grid-template-columns: 10% 80% 10%;
+   
     overflow: hidden;
     justify-items: center;
 
@@ -15,41 +13,36 @@
 
 }
 
-.imgCommon{
-    width: 80%;
-    height: 100%;
-    overflow: visible;
+
+
+.sideCommon{
     filter: blur(1px);
-    
-   
-    
+    height: 90%;
+    width: 80vw;
+    overflow: visible; 
+
 }
 
-.centerR{
-    composes:imgCommon;
+.centerC{
     z-index: 2;
-     grid-area: centerR;
-     filter:none;
-     width: 85%; 
-  
-   
-  
+     grid-area: centerC;
+    height: 100%;
+     width: 100%;  
 }
 
-.topR{
-    composes: imgCommon;
+
+
+.rightC{
+    composes: sideCommon;
     z-index: 0;
-    grid-area: topR;
-    
-    
-   
-   
+    grid-area: rightC;
+     
 }
 
-.bottomR{
-    composes: imgCommon;
+.leftC{
+    composes: sideCommon;
     z-index: 0;
-    grid-area: bottomR;  
+    grid-area: leftC;  
 }
 
 
