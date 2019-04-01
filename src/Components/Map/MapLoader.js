@@ -8,12 +8,36 @@ class Map extends Component {
         this.map=React.createRef();
       
       };
+
+    state={
+      map:""
+    }
      
   
+    
     componentDidMount(){
         this.mapChecker();
         console.log("on lifecycle")
 
+    }
+
+    renderMarker=() =>{
+      const {map}=this.state,
+      infoWindow = new window.google.maps.infoWindow(),
+      markers=[];
+
+      //create info window for each job in cv
+      this.props.cv.forEach()
+
+
+
+    }
+
+    
+
+    getLocations = ()=>{
+      const locations = Object.keys(this.props.cv).map(key=>({coordinates: this.props.cv[key].coordinates, description: this.props.cv[key].description}));
+      this.setState({locations:locations});
     }
 
     mapChecker=  ()=>{
@@ -34,9 +58,10 @@ class Map extends Component {
           config=this.props.configObject
           } else {
             config={
+            
                 center: {
-                lat: 55.609126, lng: 13.000811},
-                zoom:14,
+                lat: 34.972461, lng: -40.678406},
+                zoom:2,
                 disableDefaultUI:true,
                 styles:[
                     {
@@ -316,12 +341,15 @@ class Map extends Component {
                   ] 
                 }
           }
-          console.log(config)
-          
           // create map instance
-        const map= new window.google.maps.Map(this.map.current, config);
-    }
+        this.setState({map:new window.google.maps.Map(this.map.current, config)}, () =>{this.passMapToParent(this.state.map)});
+        //add markers
+        //this.props.createMarkers();
+      }
   
+    passMapToParent = (map) => {
+      this.props.mapToParent(map);
+    }
   
   
     render() {
