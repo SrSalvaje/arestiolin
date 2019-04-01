@@ -68,78 +68,104 @@ const content={
             
         }
     },
-    CV:{
-        1:{
-            title:'Web development internship at Securelink',
-            date:"",
-            location:'Malmo, Sweden',
-            coordinahtes:'',
-            description:'Ipso lorem'
+
+    CV:[
+        {
+        title:'Web development internship at Securelink',
+        date:"",
+        location:'Malmo, Sweden',
+        coordinahtes:'',
+        description:'Ipso lorem',
+        coordinates:  { lat:'55.587399', lng: '13.057444'},
+        id:"webSecureLink"
         },
-        2:{
+    
+        {
             title:'Online Editor for the Newspaper La Jornada',
             date:'',
             location:'Mexico City, Mexico',
-            description:'Lorem ipsum'
+            description:'Lorem ipsum',
+            coordinates:  { lat: '19.373213', lng: '-99.160531'},
+            id:'onlineJornada'
         },
-        3:{
+
+        {
             title:'English Teacher at Nerles Language Center',
             date:'',
             location: 'MExico City, Mexico',
-            description:'ahgdfl aSFHJKHG'
+            description:'ahgdfl aSFHJKHG',
+            coordinates: { lat:'19.428896', lng: '-99.141923'},
+            id:'englishNerles'
         },
 
-        4:{
+        {
             title: 'Columnist and reporter for La Palabra',
             date:'',
             location:'Acapulco, Mexico',
-            description:'Stuff, much important very wow'
+            description:'Stuff, much important very wow',
+            coordinates:  { lat:'16.865667', lng: '-99.891980'},
+            id:'columnistPalabra'
         },
 
-        5:{
+        {
             title:'Reporter and translator at La Jornada',
             date:'',
             location:'Mexico City, Mexico',
-            description:'Much work, very nice'
+            description:'Much work, very nice',
+            coordinates:  { lat:'19.373213', lng: '-99.160531'},
+            id:'reporterJornada'
         },
 
-        6:{
+        {
             title:'Sales Executive for Occidental Vacation Club',
             date:'',
             location:"Playa del Carmen, Qro. Mexico",
-            description:'Much sales, very nice'
+            description:'Much sales, very nice',
+            coordinates:  { lat:'20.586335', lng: '-87.116533'},
+            id:'salesOccidental'
         },
 
-        7:{
+        {
             title:'Scuba and First Aid Instructor at Sinai Divers.',
             date:'',
             location:'Sharm el Sheikh, Egypt',
-            description:'Much wet, very deep'
+            description:'Much wet, very deep',
+            coordinates:  { lat:'27.907461', lng: '34.327875'},
+            id:'scubaSinai'
+            
         },
 
-        8:{
+        {
             title:'Scuba Diving Instructor and Guide at Scuba Playa.',
             date:'',
             location:'Playa del Carmen México',
-            description:'Also wet, very mexican'
+            description:'Also wet, very mexican',
+            coordinates:{lat:'20.626654', lng:'-87.071960'},
+            id:'scubaScuba'
         },
 
-        9:{
+        {
             title:'Scuba Diving Instructor and Guide at Scuba Fun Caraibes.',
             date:'',
             location:'Philipsburg, Sint Maarten',
-            description:'sd<föo föhAEFG'
+            description:'sd<föo föhAEFG',
+            coordinates:  { lat:'18.018169', lng: '-63.043496'},
+            id:'scubaFun'
         },
 
-        10:{
+        {
             title:'Sales Associate at the hotel Barceló Cancun',
             date:'',
             location:'Cancun, Mexico',
-            description:'much sales, loads of party'
+            description:'much sales, loads of party',
+            coordinates: { lat:'21.102660', lng: '-86.764194'},
+            id:'salesBarcelo'
         }
 
-    }
-};
+    
+    ]
+}
+
 
 export default content;
 
