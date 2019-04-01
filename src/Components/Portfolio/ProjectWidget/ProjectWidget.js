@@ -10,7 +10,7 @@ const ProjectWidget =(props)=>(
     <h3>{props.title}</h3>
     <div className={styles.projectImg}>
         <div className={styles.imgCont}>
-            <img class={styles.img} src={props.image} alt={props.alt}/>  
+            <img className={styles.img} src={props.image} alt={props.alt}/>  
         </div>
     </div>
     <div className={styles.description}>
