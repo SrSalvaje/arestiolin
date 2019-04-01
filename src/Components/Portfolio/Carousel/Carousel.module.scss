@@ -5,9 +5,9 @@
      grid-template-areas: 
         'leftC centerC rightC';
     grid-template-columns: 10% 80% 10%;
-   
     overflow: hidden;
     justify-items: center;
+    align-items: center;
 
     
 
@@ -20,6 +20,7 @@
     height: 90%;
     width: 80vw;
     overflow: visible; 
+   
 
 }
 
@@ -30,7 +31,22 @@
      width: 100%;  
 }
 
+.controlsCommon{
+    width:100%;
+    z-index: 2;
+    font-size: 40px;
 
+}
+.prev{
+    composes: controlsCommon;    
+    grid-area: leftC;
+    
+}
+
+.next{
+    composes: controlsCommon;
+    grid-area: rightC;
+}
 
 .rightC{
     composes: sideCommon;
