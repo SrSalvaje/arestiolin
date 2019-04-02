@@ -8,12 +8,26 @@ import ProjectWidget from '../ProjectWidget/ProjectWidget';
 
 class Carousel extends Component {
 
+  
+
+
 
 
 
   render(){
     return(
       <div className={styles.main}>
+        {this.props.content.map(project=>(
+          <ProjectWidget
+            title={project.title}
+            image={project.image}
+            alt={project.alt}
+            description={project.description}
+
+          />
+        )
+          
+        )}
 
 
 
