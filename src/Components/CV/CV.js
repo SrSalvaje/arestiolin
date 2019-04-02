@@ -8,16 +8,20 @@ class CV extends Component{
 
     state={
         markers:"",
-        map:""
+        map:"",
+        infoWindows:"",
     }
 
     createMarkers = () => {
         const {map}=this.state;
-        const infowindow = new window.google.maps.InfoWindow();
         const markers=[];
+        const infoWindowArray=[];
 
         content.CV.forEach(job=>{
+            
+
             let infoWindowContent= `<div><p>${job.location} from: ${job.date} to: ${job.date}</p><p>${job.description}</p> </div>`;
+            let infowindow = new window.google.maps.InfoWindow({content:infoWindowContent, id:job.id});
             let marker = new window.google.maps.Marker({
                 map:map,
                 position:{lat: Number(job.coordinates.lat), lng: Number(job.coordinates.lng)},
@@ -25,13 +29,16 @@ class CV extends Component{
 
             });
             markers.push(marker);
+            infoWindowArray.push(infowindow)
+         
+
             marker.addListener("click", function () {
-                infowindow.setContent(infoWindowContent);
+                //infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
             });
         
         });
-        this.setState({markers:markers});
+        this.setState({markers:markers, infoWindows:infoWindowArray});
         
     }
 
@@ -42,6 +49,8 @@ class CV extends Component{
 
     openInfo = (target) => {
       const  clickedMarker = this.state.markers.filter(marker=>marker.id===target.id)[0];
+      const infoWindow= this.state.infoWindows.filter(ifw=>ifw.id===target.id)[0];
+      infoWindow.open(this.state.map, clickedMarker);
       console.log(clickedMarker);
 
     }
