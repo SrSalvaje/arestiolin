@@ -1,4 +1,9 @@
 import React from 'react';
+import Mymalmo from './Assets/img/myMalmo.JPG';
+import myReads from './Assets/img/myReads.JPG';
+import restRev from './Assets/img/restRev.JPG';
+import matching from './Assets/img/matching.JPG';
+import arcade from './Assets/img/arcade.JPG';
 
 const content={
     hero:{
@@ -163,8 +168,50 @@ const content={
         }
 
     
+    ],
+
+    portfolio:[
+        {title: "My Malmö",
+        image: Mymalmo,
+        url: 'https://srsalvaje.github.io/UdacityFinal/',
+        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        id:'myMalmo'
+        },
+        {title: "Book Tracker",
+        image: myReads,
+        url: 'https://srsalvaje.github.io/Udacity-My-Reads/',
+        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        id:'bkTrack'
+        },
+        {title: "Restaurant Reviews",
+        image: restRev,
+        url: 'https://srsalvaje.github.io/udacity-restaurant-reviews/',
+        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        id:'restRev'
+        },
+        {title: "Arcade Clone",
+        image: arcade,
+        url: 'https://srsalvaje.github.io/UdacityP4Frogger/',
+        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        id:'arcClo'
+        },
+        {title: "Memory Game",
+        image: matching,
+        url: 'https://srsalvaje.github.io/memorygame/',
+        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        id:'memGame'
+        }
     ]
+        
+
+    
 }
+
+
+
+
+
+
 
 
 export default content;
