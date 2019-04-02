@@ -8,6 +8,13 @@ import ProjectWidget from '../ProjectWidget/ProjectWidget';
 
 class Carousel extends Component {
 
+    state={
+      isFirst:true
+    }
+
+    componentDidMount(){
+      this.setState({isFirst:false});
+    }
   
 
 
@@ -15,16 +22,21 @@ class Carousel extends Component {
 
 
   render(){
+    
+
     return(
       <div className={styles.main}>
-        {this.props.content.map(project=>(
-          <ProjectWidget
+        { this.props.content.map((project, index)=>(
+        
+          <div className={this.state.isFirst? (index===0? styles.centerC : index===1? styles.rightC : index=== this.props.content.length-1? styles.leftC: styles.inLine ) : "inLine"  }>
+            <ProjectWidget
             title={project.title}
             image={project.image}
             alt={project.alt}
             description={project.description}
 
-          />
+            />
+          </div>
         )
           
         )}
