@@ -7,42 +7,44 @@ import ProjectWidget from '../ProjectWidget/ProjectWidget';
 
 
 class Carousel extends Component {
-
-    state={
-      isFirst:true
+  constructor(props){
+    super(props);
+    this.state={
+      inLine:this.props.content.slice(2, this.props.content.length-1),
+      displayed:[this.props.content[0], this.props.content[1], this.props.content[this.props.content.length-1]]
     }
 
-    componentDidMount(){
-      this.setState({isFirst:false});
-    }
-  
+  }
 
-
-
-
-
-  render(){
     
+
+
+
+
+
+
+  render(){ 
+   
+    
+
 
     return(
       <div className={styles.main}>
-        { this.props.content.map((project, index)=>(
-        
-          <div className={this.state.isFirst? (index===0? styles.centerC : index===1? styles.rightC : index=== this.props.content.length-1? styles.leftC: styles.inLine ) : "inLine"  }>
-            <ProjectWidget
-            title={project.title}
-            image={project.image}
-            alt={project.alt}
-            description={project.description}
-
-            />
-          </div>
-        )
-          
-        )}
+        {this.state.displayed.map((project, index)=>(
+          <div key={project.id} className={index===0? styles.centerC : index===1? styles.rightC : index === this.state.displayed.length-1? styles.leftC: styles.inLine}>
+          <ProjectWidget
+          title={project.title}
+          image={project.image}
+          alt={project.alt}
+          description={project.description}
+  
+          />
+        </div> 
 
 
+        ))
 
+        } 
         <div className={styles.prev} >&#10094;</div>
         <div className={styles.next} >&#10095;</div>
       </div>
@@ -54,12 +56,7 @@ class Carousel extends Component {
   }
 }
 
-  {/* <div className={styles.main}>
-     <div className={styles.leftC}>{props.img1} </div> 
-    <div className={styles.centerC}>{props.img2} </div>
-    <div className={styles.rightC}>{props.img3} </div> 
-    
-  </div> */}
+
   
 
 
