@@ -175,31 +175,36 @@ const content={
         image: Mymalmo,
         url: 'https://srsalvaje.github.io/UdacityFinal/',
         description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
-        id:'myMalmo'
+        id:'myMalmo',
+        alt:'screenshot from website'
         },
         {title: "Book Tracker",
         image: myReads,
         url: 'https://srsalvaje.github.io/Udacity-My-Reads/',
         description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
-        id:'bkTrack'
+        id:'bkTrack',
+        alt:'screenshot from website'
         },
         {title: "Restaurant Reviews",
         image: restRev,
         url: 'https://srsalvaje.github.io/udacity-restaurant-reviews/',
         description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
-        id:'restRev'
+        id:'restRev',
+        alt:'screenshot from website'
         },
         {title: "Arcade Clone",
         image: arcade,
         url: 'https://srsalvaje.github.io/UdacityP4Frogger/',
         description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
-        id:'arcClo'
+        id:'arcClo',
+        alt:'screenshot from website'
         },
         {title: "Memory Game",
         image: matching,
         url: 'https://srsalvaje.github.io/memorygame/',
         description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
-        id:'memGame'
+        id:'memGame',
+        alt:'screenshot from website'
         }
     ]
         
