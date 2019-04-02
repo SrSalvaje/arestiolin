@@ -20,6 +20,7 @@
     height: 90%;
     width: 80vw;
     overflow: visible; 
+    z-index: 0;
    
 
 }
@@ -29,6 +30,23 @@
      grid-area: centerC;
     height: 100%;
      width: 100%;  
+}
+
+.rightC{
+    composes: sideCommon;
+    grid-area: rightC;
+     
+}
+
+.leftC{
+    composes: sideCommon;
+    grid-area: leftC;  
+}
+
+.inline{
+    composes: sideCommon;
+    position: absolute;
+    left:100px;
 }
 
 .controlsCommon{
@@ -48,18 +66,8 @@
     grid-area: rightC;
 }
 
-.rightC{
-    composes: sideCommon;
-    z-index: 0;
-    grid-area: rightC;
-     
-}
 
-.leftC{
-    composes: sideCommon;
-    z-index: 0;
-    grid-area: leftC;  
-}
+
 
 
 
