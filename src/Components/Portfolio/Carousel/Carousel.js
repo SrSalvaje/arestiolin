@@ -17,12 +17,20 @@ class Carousel extends Component {
   }
 
 nextWidget=()=>{
-  /* const tempDisplayed = [...this.state.displayed];
-  tempDisplayed[0] */
+  const tempDisplayed = [...this.state.displayed];
+  const firstElement =tempDisplayed.shift();
+  tempDisplayed.push(firstElement);
+  this.setState({displayed:tempDisplayed});
+    console.log("next");
 
 }    
 
 prevWidget = ()=>{
+  const tempDisplayed = [...this.state.displayed];
+  const lastElement= tempDisplayed.pop();
+  tempDisplayed.splice(0,0, lastElement);
+  this.setState({displayed:tempDisplayed});
+  console.log("prev");
 
 }
 
