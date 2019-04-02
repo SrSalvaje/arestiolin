@@ -10,15 +10,21 @@ class Carousel extends Component {
   constructor(props){
     super(props);
     this.state={
-      inLine:this.props.content.slice(2, this.props.content.length-1),
-      displayed:[this.props.content[0], this.props.content[1], this.props.content[this.props.content.length-1]]
+      /* inLine:this.props.content.slice(2, this.props.content.length-1), */
+      displayed:[...this.props.content]
     }
 
   }
 
-    
+nextWidget=()=>{
+  /* const tempDisplayed = [...this.state.displayed];
+  tempDisplayed[0] */
 
+}    
 
+prevWidget = ()=>{
+
+}
 
 
 
@@ -45,8 +51,8 @@ class Carousel extends Component {
         ))
 
         } 
-        <div className={styles.prev} >&#10094;</div>
-        <div className={styles.next} >&#10095;</div>
+        <div onClick={this.prevWidget} className={styles.prev} >&#10094;</div>
+        <div onClick={this.nextWidget} className={styles.next} >&#10095;</div>
       </div>
       
 
