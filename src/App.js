@@ -17,14 +17,12 @@ class App extends Component {
           button={content.hero.button}
           background={content.hero.background}
         />
-        <Nav
+       {/*  <Nav
           links={[{name:'Profile', position: 1 },
           {name:'CV', position: 2 },
           {name:'Portfolio', position: 3 }
           ]}
-          
-
-        />
+        /> */}
         <Profile/>
         <CV/>
         <Portfolio/>
