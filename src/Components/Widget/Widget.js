@@ -14,20 +14,20 @@ class Widget extends Component {
   
     render(){
   
-      let showHide = this.state.show === true ? 'block' : 'none',
+      let showHide = this.state.show === false ? styles.widget : styles.clicked,
       classes, classesString;
      
         if(this.props.class){
-            classes=[styles.widget, this.props.class];
+            classes=[showHide, this.props.class];
             classesString=classes.join(' ');
         }else{
-            classesString=styles.widget
+            classesString=showHide;
         }
 
   
       const widget = (<article className={classesString} >
                           <h2 onClick={this.togleShow}>{this.props.title}</h2>
-                          <div style={{display:showHide}}>
+                          <div /* style={{display:showHide}} */>
                             {/* if its a list, wrap all props in a UL and return LI, else return the content */}
                             {(this.props.type==='list'? <ul>{this.props.content.map((li, index) =>( <li key={`item${index}`}>{li}</li>))}</ul> : this.props.content)}
                           </div>

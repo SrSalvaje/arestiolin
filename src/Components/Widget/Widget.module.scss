@@ -12,27 +12,46 @@
     left:0;
     right:0;
     margin: auto;
-}
+    h2{
+        margin: 0;
+        background: white;
+    }
 
-.widget h2{
-    margin: 0;
-    background: white;
-}
+    ul, div{
+   
+        height: 100%; 
+       list-style: none;
+       padding: 5px;
+       margin: 5% 5%;
+       background: ivory;    
+   }
 
-.widget ul, .widget div{
+   div{
     overflow: auto;
-     height: 100%; 
-    list-style: none;
-    padding: 5px;
-    margin: 5% 5%;
-    background: ivory; 
-    z-index: 1; 
+    display:none;
+    }
+
+    
+    li {
+        text-align: justify;
+        padding:10px 5px ;
+
+    }
+}
+
+.clicked{
+    composes:widget;
+    z-index: 100;
+    div{
+        display: block;
+    }
+
 }
 
 
 
-.widget li {
-    text-align: justify;
-    padding:10px 5px ;
 
-}
+
+
+
+
