@@ -15,7 +15,7 @@ class App extends Component {
    
         <div className="App">
           <div style={{ backgroundImage: `url( ${bc} )`}} className="heroImg"></div>
-          <GetScrollPos>
+          {/* <GetScrollPos> */}
             <HeroCont
               title={content.hero.title}
               content={content.hero.content}
@@ -38,7 +38,7 @@ class App extends Component {
             />
             <Portfolio
             scrollAt={50}/>
-          </GetScrollPos> 
+          {/* </GetScrollPos>  */}
         </div>
     
     );
