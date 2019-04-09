@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from "./HeroCont.module.scss";
 import PropTypes from 'prop-types';
-import bc from '../../Assets/img/hero.JPG';
 
 
 
-const HeroCont =(props)=>(
+
+const HeroCont =React.forwardRef((props, ref)=>(
   
-    <header className={styles.heroCont}>
-        <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg} > 
-        </div>
+    <header className={styles.heroCont} ref={ref}>
+        {/* <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg} > 
+        </div> */}
         <div className={styles.heroTxt}>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
@@ -17,7 +17,7 @@ const HeroCont =(props)=>(
         </div>
     </header>
 
-);
+));
 
 HeroCont.propTypes= {
     title: PropTypes.string,

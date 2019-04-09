@@ -21,17 +21,14 @@ class Map extends Component {
 
     }
 
-    renderMarker=() =>{
+    /* renderMarker=() =>{
       const {map}=this.state,
       infoWindow = new window.google.maps.infoWindow(),
       markers=[];
 
       //create info window for each job in cv
       this.props.cv.forEach()
-
-
-
-    }
+    } */
 
     
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./ProjectWidget.module.scss";
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 
 
