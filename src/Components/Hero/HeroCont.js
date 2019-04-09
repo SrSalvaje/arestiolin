@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 
 
-const HeroCont =React.forwardRef((props, ref)=>(
+const HeroCont =(props)=>(
   
-    <header className={styles.heroCont} ref={ref}>
+    <header className={styles.heroCont}>
         {/* <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg} > 
         </div> */}
         <div className={styles.heroTxt}>
@@ -17,7 +17,7 @@ const HeroCont =React.forwardRef((props, ref)=>(
         </div>
     </header>
 
-));
+);
 
 HeroCont.propTypes= {
     title: PropTypes.string,
