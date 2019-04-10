@@ -15,30 +15,27 @@ class App extends Component {
    
         <div className="App">
           <div style={{ backgroundImage: `url( ${bc} )`}} className="heroImg"></div>
-          {/* <GetScrollPos> */}
+          <GetScrollPos>     
             <HeroCont
+              id={"hero"}
               title={content.hero.title}
               content={content.hero.content}
               button={content.hero.button}
               background={content.hero.background}
               scrollAt={100}
             />
-            
             <Nav
+              id={"nav"}
               links={[{name:'Profile', position: 1 },
               {name:'CV', position: 2 },
               {name:'Portfolio', position: 3 }
               ]}
               scrollAt={100}
             />
-            <Profile
-              scrollAt={60}/>
-            <CV
-            scrollAt={80}
-            />
-            <Portfolio
-            scrollAt={50}/>
-          {/* </GetScrollPos>  */}
+            <Profile id={"profile"} scrollAt={60}/>
+            <CV  id={"cv"} scrollAt={80}/>
+            <Portfolio id={'portfolio'} scrollAt={50}/>
+          </GetScrollPos>
         </div>
     
     );
