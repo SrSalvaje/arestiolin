@@ -5,28 +5,19 @@ import _ from 'lodash';
 class GetScrollPos extends Component {
     constructor(props){
         super (props);
-        //holds key/value pairs of the refs that are dinamically created based on props.children
-        this.myrefs={};
-        //holds just the value (the ref), this will be used to loop trough each ref
-        this.myrefsArr="";
-    
         this.state={
-            currentView:0
-          
+            currentView:0,
+            refs:[]
         };
-    
-        React.Children.forEach(this.props.children, (child)=>{console.log(child)})
+        this.keys=[];
+        //React.Children.forEach(this.props.children, (child)=>{console.log(child)})
         //for each child 
-        this.props.children.forEach((element, index)=>{
-
-           
-          //create a ref and store it this.myrefs
-            this.myrefs[`div${index}`]=React.createRef();
+        this.props.children.forEach((child, index)=>{
           //initializes a state for each children, this will be used to know if a ref has gone over the height I want
-            this.state[`view${index}`]={scroll:element.props.scrollAt, reachedTop:false, verticalPosition:""};
-    
-          //adds ther refs to the array
-            this.myrefsArr=Object.keys(this.myrefs).map(refKey=> this.myrefs[refKey]);
+            this.keys.push(`View${index+1}`);
+            this.state.refs.push(React.createRef())
+            this.state[`view${index}`]={scroll:child.props.scrollAt, reachedTop:false, verticalPosition:"", addRef:this.state.refs[index]};
+           
         });
     }
       
@@ -38,7 +29,8 @@ class GetScrollPos extends Component {
     
     getPosition=()=>{
         //get the current view
-        const view = this.myrefsArr[this.state.currentView];
+        const view = this.state[`view${this.state.currentView}`].addRef.current;
+        console.log(view);
         //check its position
         //let position=view.current.offsetTop;
        
@@ -54,13 +46,9 @@ class GetScrollPos extends Component {
       } 
 
   render() {
-    const childrenToRender= this.props.children.map((child, index)=>{
-        console.log(this.myrefs)
-        
+    const childrenToRender= this.props.children.map((child, index)=>{ 
         return (
-            React.cloneElement(child, {verticalPosition:this.state[`view${index}`].verticalPosition, key:child.type.name, ref:this.myrefs[`div${index}`]})
-        
-        
+            React.cloneElement(child, {verticalPosition:this.state[`view${index}`].verticalPosition, ref:this.state.refs[index], key:child.props.id})  
         )
     });
 
@@ -73,14 +61,5 @@ class GetScrollPos extends Component {
     );
   }
 }
-
-
-{/* <section  
-ref={this.myrefs[`div${index}`]} 
-key={`div${index}`}  
-className={styles.v1}>
-  {child}
-  </section> */}
-
 
 export default GetScrollPos;
