@@ -1,8 +1,9 @@
+@import '../../Assets/variables.module';
 .widget{
     width: 90vw;
     max-height:40vh;
-    background-color:gainsboro;
-    color:black;
+    background-color:$blackish;
+    color:white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -14,16 +15,19 @@
     margin: auto;
     h2{
         margin: 0;
-        background: white;
+       
+        //background: white;
     }
-
+    p{
+        color:black;
+    }
     ul, div{
    
         height: 100%; 
        list-style: none;
        padding: 5px;
        margin: 5% 5%;
-       background: ivory;    
+       background:$whitish;    
    }
 
    div{
@@ -35,6 +39,7 @@
     li {
         text-align: justify;
         padding:10px 5px ;
+        color:black;
 
     }
 }
@@ -42,8 +47,17 @@
 .clicked{
     composes:widget;
     z-index: 100;
+    grid-area: gridPos1;
+    max-height: 95vh;
+    top:0px;
+    width:100vw;
+    
+    h2{
+        color: $darkBlue;
+    }
     div{
         display: block;
+        
     }
 
 }

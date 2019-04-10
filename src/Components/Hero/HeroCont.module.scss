@@ -1,4 +1,4 @@
-
+@import '../../Assets/variables.module';
 .heroCont{
     height: 100vh;
     width: 100vw;
@@ -21,8 +21,8 @@
 
   .heroTxt {
     background-color: rgb(0,0,0); // Fallback color 
-    background-color: rgba(0,0,0, 0.4); 
-    color: white;
+    background-color:$blackish; 
+    color:$whitish;
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;

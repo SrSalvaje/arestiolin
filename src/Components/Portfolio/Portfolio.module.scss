@@ -5,7 +5,7 @@
     position: sticky;
     top:$navBarHeight1;
     z-index: 4;
-    background: white;
+    background: $blackish;
     display:flex;
     flex-flow: column;
     align-items: center;
@@ -14,9 +14,9 @@
 }
 
 .main h2{
-    height: 10vh;
+    height: 7vh;
     width: 100%;
-    background-color: black;
-    color: whitesmoke;
+    background-color:$blackish;
+    color: $whitish;
     margin: 0;
 }

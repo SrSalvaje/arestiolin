@@ -3,7 +3,7 @@
 .main{
     height:$viewHeight1;
     width: 100%;
-    background: black;
+    //background: black;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
         'gridPos4';
     grid-template-rows: 25%;
     grid-template-columns: 100%; 
-    background-image: url('../../Assets/img/zen-space-web.jpg');
+    //background-image: url('../../Assets/img/zen-space-web.jpg');
     background-repeat: no-repeat;
     background-position: center ;
     background-size: auto 100%;

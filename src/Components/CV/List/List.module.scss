@@ -1,3 +1,4 @@
+@import '../../../Assets/variables.module';
 .listCont{
     height: 100%;
     width: 100%;
@@ -8,23 +9,35 @@
       left:0;
       right:0;
       margin: auto;
+      background-color: $blackish;
+      h2{
+        margin: 0;
+        background-color: $blackish;
+        color:$whitish;
+
+      }
+      li:hover{
+          background-color: $darkBlue;
+          color: $whitish;
+          cursor: pointer;
+          
+      }
      
 }
 
-.listCont h2{
-    width: 100%;
-    margin: 0;
-   
-}
+
 
 .employmentList{
     list-style: none;
     overflow: auto;
     height: 100%;
+    width:95%;
     padding: 0;
+    margin:auto;
+    background-color: $whitish;
 }
 
 .listItem{
-    color: blue;
+    color:black;
     padding: 5px 0;
 }

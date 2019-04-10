@@ -9,12 +9,22 @@
     z-index: 2;
     position:fixed;
     top:0; 
-    background:#90afc5;
+    background:$blackish;
     margin: 0 0 95vh;
     visibility: visible;
-        
+    li{
+        color:$whitish;
+        height: 5vh;
+        display: inline-block;
+        width:30vw;
+    }
+    transition:top .2s;
 }
 
+li:hover{
+    color: $darkBlue;
+    background-color: $whitish;
+}
 .hide{
     composes:main;
     top:-$navBarHeight1;
