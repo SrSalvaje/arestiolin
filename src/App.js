@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import styles from './App.module.scss';
 import content from './content'
 import HeroCont from './Components/Hero/HeroCont';
 import Profile from './Components/Profile/Profile';
@@ -13,8 +13,8 @@ class App extends Component {
   render() {
     return (
    
-        <div className="App">
-          <div style={{ backgroundImage: `url( ${bc} )`}} className="heroImg"></div>
+        <div className={styles.App}>
+          <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
           <GetScrollPos>     
             <HeroCont
               id={"hero"}
