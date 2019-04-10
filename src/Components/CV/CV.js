@@ -4,14 +4,15 @@ import List from './List/List';
 import content from '../../content';
 import Map from '../Map/MapLoader';
 
-class CV extends Component{
 
+class CV extends Component{
+      
     state={
         markers:"",
         map:"",
         infoWindows:"",
-    }
-
+    };
+    
     createMarkers = () => {
         const {map}=this.state;
         const markers=[];
@@ -56,31 +57,24 @@ class CV extends Component{
     }
 
     render(){
-
-        
-
         return(
-        <div className={styles.main}>
-            <div className={styles.list}>
-            <List
-                items={content.CV}
-                listTitle={'Employment History'}
-                openInfo={this.openInfo}
-            />
-
+            <div className={styles.main} ref={this.props.forwardedRef}>
+                <div className={styles.list}>
+                    <List
+                        items={content.CV}
+                        listTitle={'Employment History'}
+                        openInfo={this.openInfo}
+                    />
+                </div>
+                <div className={styles.map}>
+                    <Map cv={content.CV}
+                        mapToParent={this.mapToParent}
+                        createMarkers={this.createMarkers}
+                        map={this.state.map}
+                    />
+                </div>
             </div>
-        
-            <div className={styles.map}>
-                <Map cv={content.CV}
-                    mapToParent={this.mapToParent}
-                    createMarkers={this.createMarkers}
-                    map={this.state.map}/>
-            </div>
-            
-        </div>
-
         )
     }
-
 } 
-export default CV
+export default React.forwardRef((props, ref)=> <CV {...props} forwardedRef={ref}/>); 

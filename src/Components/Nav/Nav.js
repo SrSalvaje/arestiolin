@@ -5,8 +5,8 @@ import styles from "./Nav.module.scss";
 
 
 
-const Nav =(props)=>(
-    <ul className={styles.main}>
+const Nav = React.forwardRef((props, ref)=>(
+    <ul className={styles.main} ref={ref}>
         {props.links.map(link=>(
             <li key={link.name} className={styles.links} onClick={()=>{
                 window.scrollTo(0,`${(window.innerHeight+100)*link.position}`); 
@@ -16,7 +16,7 @@ const Nav =(props)=>(
     </ul>
   
 
-);
+));
 
 
 

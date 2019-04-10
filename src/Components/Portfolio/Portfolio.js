@@ -8,7 +8,7 @@ import content from '../../content';
 
 
 
-const Portfolio =React.forwardRef((props, ref)=>(
+const Portfolio = React.forwardRef((props,ref)=>(
   <div className={styles.main} ref={ref}>
     <h2>{props.title? props.title:"Title goes here"}</h2>
     <Carousel

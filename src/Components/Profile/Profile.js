@@ -3,9 +3,9 @@ import styles from './Profile.module.scss';
 import Widget from '../Widget/Widget';
 import content from '../../content'
 
-const Profile = () => (
+const Profile = React.forwardRef((props, ref) => (
 
-    <div className={styles.main}>
+    <div className={styles.main} ref={ref}>
         <Widget
                 type={content.profile.widget1.type}
                 class={styles.gridPos1} 
@@ -35,5 +35,5 @@ const Profile = () => (
      
     </div>
 
-)
+));
 export default Profile
