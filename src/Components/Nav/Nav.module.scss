@@ -1,15 +1,23 @@
+@import '../../Assets/variables.module';
+
 .main{
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    height:5vh;
+    height:$navBarHeight1;
     z-index: 2;
-    position: sticky;
-    top:0;
-    background: whitesmoke;
+    position:fixed;
+    top:0; 
+    background:#90afc5;
+    margin: 0 0 95vh;
+    visibility: visible;
+        
+}
 
-    
+.hide{
+    composes:main;
+    top:-$navBarHeight1;
 }
 
 .links{
