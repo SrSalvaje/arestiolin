@@ -1,6 +1,7 @@
+@import '../../Assets/variables.module';
 
 .main{
-    height: 95vh;
+    height:$viewHeight1;
     width: 100%;
     background: black;
     display: grid;
@@ -18,12 +19,12 @@
     background-position: center ;
     background-size: auto 100%;
     position: sticky;
-    top:5vh;
-    z-index: 2;
-    margin: 100px 0 0;
-    
-  
+    top:$navBarHeight1; 
+    z-index: 3;
+    margin: 100px 0 0; 
 }
+
+
 
 .gridPos1{
     grid-area: gridPos1;
