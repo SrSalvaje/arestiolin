@@ -51,6 +51,8 @@
     max-height: 95vh;
     top:0px;
     width:100vw;
+    transition: top .5s, max-height .3s;
+    position: absolute;
     
     h2{
         color: $darkBlue;
