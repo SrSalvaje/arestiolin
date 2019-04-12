@@ -8,17 +8,31 @@
     background:$blackish;
     margin: 100px 0 0;
     h2{
+        width: 95%;
+        margin: auto;
+        height: 7%;;
         color:$darkBlue;
         background-color: $whitish;
+        border-radius: 20px;
     }
 }
-.list{
-    width: 100%;
-    height: 60%;
-}
+
 .map{
     width: 95%;
-    height:40% ;
+    height:0 ;
     margin:auto;
     padding: 0;
+    border-radius: 20px;
+    border:1px solid $darkBlue;
+    opacity: 0;
+    transition: opacity .5s height .5s;
+
+}
+.displayMap{
+    height:53%;
+    opacity: 100;
+    transition: opacity .5s height .5s;
+    composes: map;
+    
+   
 }
