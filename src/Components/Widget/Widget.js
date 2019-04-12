@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styles from './Widget.module.scss';
+import styles from '../Profile/Profile.module.scss';
 
 class Widget extends Component {
  
@@ -14,18 +14,11 @@ class Widget extends Component {
   
     render(){
   
-      let showHide = this.state.show === false ? styles.widget : styles.clicked,
-      classes, classesString;
-     
-        if(this.props.class){
-            classes=[showHide, this.props.class];
-            classesString=classes.join(' ');
-        }else{
-            classesString=showHide;
-        }
+      let showHide = this.state.show === false ? this.props.class : styles.clicked;
+      
 
   
-      const widget = (<article className={classesString} >
+      const widget = (<article className={showHide} >
                           <h2 onClick={this.togleShow}>{this.props.title}</h2>
                           <div /* style={{display:showHide}} */>
                             {/* if its a list, wrap all props in a UL and return LI, else return the content */}
