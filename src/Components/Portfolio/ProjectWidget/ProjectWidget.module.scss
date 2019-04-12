@@ -1,9 +1,11 @@
+@import '../../../Assets/variables.module';
+
 $ratio-16-9: 56.25%;
 $cols: 1;
 
 .main{
     width: 100%;
-    height:100%;
+    height:95%;
     
     display: grid;
     grid-template-areas: 
@@ -13,9 +15,9 @@ $cols: 1;
     grid-template-columns: 100%;
     grid-template-rows: 10% 45% 45% ;
     border: 1px;
-    border-color: aqua;
+    border-color:$darkBlue;
     border-style: solid;
-    background-color:#86aaff;
+    background-color:$whitish;
     align-items: center;
     margin: auto;
    
@@ -27,7 +29,7 @@ $cols: 1;
     grid-area: title;
     height: auto;
     margin: 0 auto;
-    color: whitesmoke;
+    color: black;
     justify-self: center;
 }
 
@@ -41,7 +43,6 @@ $cols: 1;
 .imgCont {
     width:  calc(100% / #{$cols});
     margin: 2px;
-    border: 1px solid red;
     height: 0;
     position: relative;
     overflow: hidden;
@@ -65,9 +66,8 @@ $cols: 1;
     overflow: auto;
     grid-area: description;
     border: 1px;
-    border-color:blue;
     border-style: solid;
-    background-color: white;
+    background-color:$lightBlue;
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ $cols: 1;
       margin: auto;
       grid-area: description;
       z-index: 1;
-      background-color: black;
+      background-color:$blackish;
       color:whitesmoke;
         align-self: flex-end;
   }
