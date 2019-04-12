@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import _, {debounce}from 'lodash';
 import variables from '../../Assets/_variables.module.scss'
 
 
@@ -26,7 +26,7 @@ class GetScrollPos extends Component {
      componentDidMount(){
         const nav = this.state.view1.addRef.current.getBoundingClientRect().height;
         this.setState({navBarheight:nav});
-        window.addEventListener("scroll", _.debounce(this.getPosition, 50, {leading:true}));
+        window.addEventListener("scroll",  debounce(this.getPosition, 50, /* {leading:true} */) );
        
     } 
     
