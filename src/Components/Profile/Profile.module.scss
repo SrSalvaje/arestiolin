@@ -3,7 +3,7 @@
 .main{
     height:$viewHeight1;
     width: 100%;
-    //background: black;
+    background:$blackish;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -23,21 +23,129 @@
     z-index: 3;
     margin: 100px 0 0; 
 }
+//widgets
 
+.widget{
+    width: 90vw;
+    max-height:40vh;
+    background-color:$whitish;
+    color:$darkBlue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:50px;
+    left:-200vw;
+    right:0;
+    margin: auto;
+    border-radius: 10px;
+    
+    h2{
+        margin: 0;
+        
+        //background: $lightBlue;
+    }
+    p{
+        color:black;
+    }
+    ul, div{
+   
+        height: 100%; 
+       list-style: none;
+       padding: 5px;
+       margin: 5% 5%;
+       background:$whitish;    
+   }
 
+   div{
+    overflow: auto;
+    display:none;
+    }
+
+    
+    li {
+        text-align: justify;
+        padding:10px 5px ;
+        color:black;
+    }
+}
+
+.clicked{
+    composes:widget;
+    z-index: 100;
+    grid-area: gridPos1;
+    max-height:$viewHeight1;
+    top:0;
+    left:0;
+    width:100vw;
+    transition: top .5s, max-height .3s, width .2s;
+    
+    
+    h2{
+        background-color: $darkBlue;
+        color: $whitish;
+        border-radius: 10px;
+        transition: .3s; 
+    }
+    div{
+        display: block;
+    
+        
+    }
+
+}
 
 .gridPos1{
+    composes:widget;
     grid-area: gridPos1;
+    opacity: 0;
+    transition: left .5s, opacity .5s;
+    
+}
+.enter1{
+    composes:gridPos1;
+    left:0; 
+    opacity:100; 
+    transition: left .5s, opacity .5s, ; 
 }
 
 .gridPos2{
+    composes:widget;
     grid-area: gridPos2;
+    opacity: 0;
+    transition: left .5s, opacity .5s;
+    
+}
+
+.enter2{
+    composes:gridPos2;
+    left:0;
+    opacity:100; 
+    transition: left .5s, opacity .5s, ; 
 }
 
 .gridPos3{
+    composes:widget;
     grid-area: gridPos3;
+    opacity: 0;
+    transition: left .5s, opacity .5s;
+}
+.enter3{
+    composes:gridPos3;
+    left:0; 
+    opacity:100; 
+    transition: left .5s, opacity .5s, ; 
 }
 
 .gridPos4{
+    composes:widget;
     grid-area: gridPos4;
+    opacity: 0;
+    transition: left .5s, opacity .5s;
+}
+.enter4{
+    composes:gridPos4;
+    left:0; 
+    opacity:100; 
+    transition: left .5s, opacity .5s, ;  
 }
