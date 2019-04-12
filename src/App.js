@@ -22,7 +22,6 @@ class App extends Component {
               content={content.hero.content}
               button={content.hero.button}
               background={content.hero.background}
-              scrollAt={100}
             />
             <Nav
               id={"nav"}
@@ -30,11 +29,10 @@ class App extends Component {
               {name:'CV', position: 2 },
               {name:'Portfolio', position: 3 }
               ]}
-              scrollAt={100}
             />
-            <Profile id={"profile"} scrollAt={60}/>
-            <CV  id={"cv"} scrollAt={80}/>
-            <Portfolio id={'portfolio'} scrollAt={50}/>
+            <Profile id={"profile"}/>
+            <CV  id={"cv"} />
+            <Portfolio id={'portfolio'}/>
           </GetScrollPos>
         </div>
     
