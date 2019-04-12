@@ -59,14 +59,15 @@ class CV extends Component{
     render(){
         return(
             <div className={styles.main} ref={this.props.forwardedRef}>
-                <div className={styles.list}>
+                <h2>Employment History</h2>
+               
                     <List
+                        position={this.props.verticalPosition}
                         items={content.CV}
-                        listTitle={'Employment History'}
                         openInfo={this.openInfo}
                     />
-                </div>
-                <div className={styles.map}>
+              
+                <div className={this.props.verticalPosition<=200?styles.displayMap: styles.map}>
                     <Map cv={content.CV}
                         mapToParent={this.mapToParent}
                         createMarkers={this.createMarkers}
