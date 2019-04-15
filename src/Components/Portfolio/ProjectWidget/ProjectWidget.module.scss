@@ -4,9 +4,9 @@ $ratio-16-9: 56.25%;
 $cols: 1;
 
 .main{
-    width: 100%;
-    height:95%;
-    
+    width: 98%;
+    height:auto;
+    margin: 50px 0;
     display: grid;
     grid-template-areas: 
         'title'
@@ -19,7 +19,8 @@ $cols: 1;
     border-style: solid;
     background-color:$whitish;
     align-items: center;
-    margin: auto;
+    border-radius: 20px;
+  
    
 
    
@@ -33,21 +34,63 @@ $cols: 1;
     justify-self: center;
 }
 
+.imgCont{
+  grid-area: imgs;
+  width:100%;
+  height: auto;
+  max-height: 100%;
+  overflow:hidden;
+  border-radius: 20px;
 
-
-.projectImg{
-    grid-area: imgs;
-   
+  
+}
+.img{
+  
+  width: 100%;
+  height: auto;
+  
 }
 
-.imgCont {
-    width:  calc(100% / #{$cols});
+.btn{
+  height: 40px;
+  width: 90%;
+  margin: auto;
+  grid-area: description;
+  z-index: 1;
+  background-color:$blackish;
+  color:whitesmoke;
+    align-self: flex-end;
+    border-radius: 20px;
+  }
+  
+  .description{
+    width: 95%;
+    height: 90%;
+    overflow: auto;
+    grid-area: description;
+    border: 1px solid $brownish;
+    border-radius: 20px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+ 
+  /* .projectImg{
+    grid-area: imgs;
+   
+} */
+
+/* .imgCont {
+    grid-area: imgs;
+    width:  calc(100% / #{$cols}) ;
     margin: 2px;
     height: 0;
-    position: relative;
+  position: relative; 
     overflow: hidden;
-    padding-bottom: #{$ratio-16-9 / $cols};
-  }
+   padding-bottom: #{$ratio-16-9 / $cols}; 
+} 
  
   .img {
     width: 100%;
@@ -58,36 +101,8 @@ $cols: 1;
     right: -50%;
     bottom: -50%;
     margin: auto;
+    border-radius: 20px;
   }
 
-.description{
-    width: 95%;
-    height: 90%;
-    overflow: auto;
-    grid-area: description;
-    border: 1px;
-    border-style: solid;
-    background-color:$lightBlue;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    
 
-}
-
-
-
-
-
-  .btn{
-      height: 40px;
-      width: 90%;
-      margin: auto;
-      grid-area: description;
-      z-index: 1;
-      background-color:$blackish;
-      color:whitesmoke;
-        align-self: flex-end;
-  }
-  
- 
+ */
