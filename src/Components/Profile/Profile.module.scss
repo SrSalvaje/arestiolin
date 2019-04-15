@@ -84,7 +84,8 @@
     h2{
         background-color: $darkBlue;
         color: $whitish;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
+        padding: 10px 0 10px; 
         transition: .3s; 
     }
     div{
@@ -110,11 +111,8 @@
 }
 
 .gridPos2{
-    composes:widget;
-    grid-area: gridPos2;
-    opacity: 0;
-    transition: left .5s, opacity .5s;
-    
+    composes:gridPos1;
+    grid-area: gridPos2;  
 }
 
 .enter2{
@@ -125,10 +123,8 @@
 }
 
 .gridPos3{
-    composes:widget;
+    composes:gridPos1;
     grid-area: gridPos3;
-    opacity: 0;
-    transition: left .5s, opacity .5s;
 }
 .enter3{
     composes:gridPos3;
@@ -138,10 +134,8 @@
 }
 
 .gridPos4{
-    composes:widget;
+    composes:gridPos1;
     grid-area: gridPos4;
-    opacity: 0;
-    transition: left .5s, opacity .5s;
 }
 .enter4{
     composes:gridPos4;
