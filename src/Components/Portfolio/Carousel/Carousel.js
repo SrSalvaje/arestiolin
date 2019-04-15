@@ -51,7 +51,7 @@ prevWidget = ()=>{
           image={project.image}
           alt={project.alt}
           description={project.description}
-  
+          
           />
         </div> 
 
