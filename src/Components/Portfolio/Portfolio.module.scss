@@ -11,6 +11,18 @@
     align-items: center;
     justify-items: center;
     margin: 100px 0 0;
+    overflow: hidden;
+}
+
+.projectList{
+    margin:auto;
+    padding: 0;
+    height: 70%;
+    overflow: scroll;
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid $lightBlue;
+
 }
 
 .main h2{
@@ -20,3 +32,5 @@
     color: $whitish;
     margin: 0;
 }
+
+
