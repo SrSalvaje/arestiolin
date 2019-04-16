@@ -89,7 +89,7 @@ const content={
         end:'ongoing',
         location:'Malmo, Sweden',
         description:'I am developing the internal portal and creating  custom schedulling apps that integrate with their API ',
-        coordinates:  { lat:'55.587399', lng: '13.057444'},
+        coordinates:  { lat:55.587399, lng: 13.057444},
         id:"webSecureLink"
         },
     
@@ -100,7 +100,7 @@ const content={
             end:'16/06/2017',
             location:'Mexico City, Mexico',
             description:'La Jornada is Mexico´s premiere political newspaper, during my time there I was in charge of managing the portal, fact checking stories, coordinating live coverage and creating multimedia content',
-            coordinates:  { lat: '19.373213', lng: '-99.160531'},
+            coordinates:  { lat: 19.373213, lng: -99.160531},
             id:'onlineJornada'
         },
 
@@ -111,7 +111,7 @@ const content={
             end:'21/11/2015',
             location: 'Mexico City, Mexico',
             description:'I focused on executive classes and translation of corporate material',
-            coordinates: { lat:'19.428896', lng: '-99.141923'},
+            coordinates: { lat:19.428896, lng:-99.141923},
             id:'englishNerles'
         },
 
@@ -122,7 +122,7 @@ const content={
             end:'19/12/2013',
             location:'Acapulco, Guerrero, Mexico',
             description:'Local weekly newspaper focused on political comentary, I wrote a weekly column',
-            coordinates:  { lat:'16.865667', lng: '-99.891980'},
+            coordinates:  { lat:16.865667, lng: -99.891980},
             id:'columnistPalabra'
         },
 
@@ -133,7 +133,7 @@ const content={
             end:'18/10/2013',
             location:'Mexico City, Mexico',
             description:'I wrote for the Culture section.',
-            coordinates:  { lat:'19.373213', lng: '-99.160531'},
+            coordinates:  { lat:19.373213, lng:-99.160531},
             id:'reporterJornada'
         },
 
@@ -144,7 +144,7 @@ const content={
             end:'15/07/ 2010',
             location:"Playa del Carmen, Qro. Mexico",
             description:'I sold high-end time-share properties to international clients',
-            coordinates:  { lat:'20.586335', lng: '-87.116533'},
+            coordinates:  { lat:20.586335, lng: -87.116533},
             id:'salesOccidental'
         },
 
@@ -155,7 +155,7 @@ const content={
             end:'5/09/2009',
             location:'Sharm el Sheikh, Egypt',
             description:'I taught advanced scuba diving courses and worked as a guide',
-            coordinates:  { lat:'27.907461', lng: '34.327875'},
+            coordinates:  { lat:27.907461, lng: 34.327875},
             id:'scubaSinai'
             
         },
@@ -167,7 +167,7 @@ const content={
             end:'13/05/ 2009',
             location:'Playa del Carmen México',
             description:'I taught advanced scuba diving courses and worked as a guide. I was in charge of the logistics of daily dives and ensuring the safety of the clientele',
-            coordinates:{lat:'20.626654', lng:'-87.071960'},
+            coordinates:{lat:20.626654, lng:-87.071960},
             id:'scubaScuba'
         },
 
@@ -178,7 +178,7 @@ const content={
             end:'20/07/2008',
             location:'Philipsburg, Sint Maarten',
             description:'I taught advanced scuba diving courses and guided groups of novice divers in demanding conditions',
-            coordinates:  { lat:'18.018169', lng: '-63.043496'},
+            coordinates:  { lat:18.018169, lng: -63.043496},
             id:'scubaFun'
         },
 
@@ -189,7 +189,7 @@ const content={
             end:'18/06/2007',
             location:'Cancun, Mexico',
             description:'My job was to ensure our guests had the vacation of their lifetime by providing access to all the activities and nightlife Cancun had to offer.',
-            coordinates: { lat:'21.102660', lng: '-86.764194'},
+            coordinates: { lat:21.102660, lng: -86.764194},
             id:'salesBarcelo'
         }
 
