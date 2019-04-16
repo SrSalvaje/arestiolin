@@ -58,9 +58,8 @@ class CV extends Component{
 
     render(){
         return(
-            <div className={styles.main} ref={this.props.forwardedRef}>
+            <div id={"cv"} className={styles.main} ref={this.props.forwardedRef}>
                 <h2>Employment History</h2>
-               
                     <List
                         position={this.props.verticalPosition}
                         items={content.CV}

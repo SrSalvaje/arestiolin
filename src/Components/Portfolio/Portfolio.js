@@ -9,7 +9,8 @@ import content from '../../content';
 
 
 const Portfolio = React.forwardRef((props,ref)=>(
-  <div className={styles.main} ref={ref}>
+  <div id={'portfolio'} className={styles.main} ref={ref}>
+    <h2>Portfolio</h2>
     <ul className={styles.projectList}>
     {content.portfolio.map((project, index)=>(
         <li key={project.id}>
