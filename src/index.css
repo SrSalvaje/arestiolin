@@ -9,6 +9,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+ .gm-style .gm-style-iw {
+            background-color: #f4f4ef!important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 90vw !important;
+            height: 100% !important;
+            min-height: 120px !important;
+            padding-top: 10px;
+            display: block !important;
+            overflow:scroll;
+           
+         } 
+         
+         
+.gm-style-iw-d{
+  overflow: hidden !important;
+}
+.gm-style-iw-c{
+  box-shadow: 3px 3px 10px #336b87 !important;
+}
+/* #763626 
+#336b87*/
+.gm-style-iw-t::after{
+  background-color: #f4f4ef!important;
+}
+
 *,
 *:before,
 *:after{
