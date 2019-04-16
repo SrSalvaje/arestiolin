@@ -44,10 +44,12 @@
     ul, div{
    
         height: 100%; 
+        width:100%;
        list-style: none;
        padding: 5px;
-       margin: 5% 5%;
-       background:$whitish;    
+       margin: 5% 0;
+       background:$whitish;
+       font-size: 18px;    
    }
 
    div{
@@ -61,6 +63,21 @@
         padding:10px 5px ;
         color:black;
     }
+
+    ul>li:nth-child(odd){
+        background-color: $lightBlue;
+        color: $whitish;
+        cursor: pointer;
+       
+      
+      }
+      
+      li:hover, ul>li:nth-child(odd):hover {
+          background-color: $darkBlue;
+          color: $brownish;
+          cursor: pointer;
+          
+      }
 }
 
 
