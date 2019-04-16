@@ -4,6 +4,13 @@ import myReads from './Assets/img/myReads.JPG';
 import restRev from './Assets/img/restRev.JPG';
 import matching from './Assets/img/matching.JPG';
 import arcade from './Assets/img/arcade.JPG';
+import code from './Assets/img/svg/code.svg';
+import diving from './Assets/img/svg/diving.svg';
+import news from './Assets/img/svg/news.svg';
+import sales from './Assets/img/svg/sale.svg';
+import teach from './Assets/img/svg/teach.svg';
+
+
 
 const content={
     hero:{
@@ -77,64 +84,77 @@ const content={
     CV:[
         {
         title:'Web development internship at Securelink',
-        date:"",
+        icon:code,
+        start:"15/08/2018",
+        end:'ongoing',
         location:'Malmo, Sweden',
-        coordinahtes:'',
-        description:'Ipso lorem',
+        description:'I am developing the internal portal and creating  custom schedulling apps that integrate with their API ',
         coordinates:  { lat:'55.587399', lng: '13.057444'},
         id:"webSecureLink"
         },
     
         {
-            title:'Online Editor for the Newspaper La Jornada',
-            date:'',
+            title:'Online Editor for La Jornada',
+            icon:news,
+            start:'10/12/2015',
+            end:'16/06/2017',
             location:'Mexico City, Mexico',
-            description:'Lorem ipsum',
+            description:'La Jornada is Mexico´s premiere political newspaper, during my time there I was in charge of managing the portal, fact checking stories, coordinating live coverage and creating multimedia content',
             coordinates:  { lat: '19.373213', lng: '-99.160531'},
             id:'onlineJornada'
         },
 
         {
             title:'English Teacher at Nerles Language Center',
-            date:'',
-            location: 'MExico City, Mexico',
-            description:'ahgdfl aSFHJKHG',
+            icon:teach,
+            start:'15/01/2015 ',
+            end:'21/11/2015',
+            location: 'Mexico City, Mexico',
+            description:'I focused on executive classes and translation of corporate material',
             coordinates: { lat:'19.428896', lng: '-99.141923'},
             id:'englishNerles'
         },
 
         {
             title: 'Columnist and reporter for La Palabra',
-            date:'',
-            location:'Acapulco, Mexico',
-            description:'Stuff, much important very wow',
+            icon:news,
+            start:'10/01/2013 ',
+            end:'19/12/2013',
+            location:'Acapulco, Guerrero, Mexico',
+            description:'Local weekly newspaper focused on political comentary, I wrote a weekly column',
             coordinates:  { lat:'16.865667', lng: '-99.891980'},
             id:'columnistPalabra'
         },
 
         {
             title:'Reporter and translator at La Jornada',
-            date:'',
+            icon:news,
+            start:'1/09/2013 ',
+            end:'18/10/2013',
             location:'Mexico City, Mexico',
-            description:'Much work, very nice',
+            description:'I wrote for the Culture section.',
             coordinates:  { lat:'19.373213', lng: '-99.160531'},
             id:'reporterJornada'
         },
 
         {
             title:'Sales Executive for Occidental Vacation Club',
-            date:'',
+            icon:sales,
+            start:'1/11/ 2009 ',
+            end:'15/07/ 2010',
             location:"Playa del Carmen, Qro. Mexico",
-            description:'Much sales, very nice',
+            description:'I sold high-end time-share properties to international clients',
             coordinates:  { lat:'20.586335', lng: '-87.116533'},
             id:'salesOccidental'
         },
 
         {
             title:'Scuba and First Aid Instructor at Sinai Divers.',
-            date:'',
+            icon:diving,
+            start:'1/06/2009 ',
+            end:'5/09/2009',
             location:'Sharm el Sheikh, Egypt',
-            description:'Much wet, very deep',
+            description:'I taught advanced scuba diving courses and worked as a guide',
             coordinates:  { lat:'27.907461', lng: '34.327875'},
             id:'scubaSinai'
             
@@ -142,27 +162,33 @@ const content={
 
         {
             title:'Scuba Diving Instructor and Guide at Scuba Playa.',
-            date:'',
+            icon:diving,
+            start:'01/08/ 2008 ',
+            end:'13/05/ 2009',
             location:'Playa del Carmen México',
-            description:'Also wet, very mexican',
+            description:'I taught advanced scuba diving courses and worked as a guide. I was in charge of the logistics of daily dives and ensuring the safety of the clientele',
             coordinates:{lat:'20.626654', lng:'-87.071960'},
             id:'scubaScuba'
         },
 
         {
             title:'Scuba Diving Instructor and Guide at Scuba Fun Caraibes.',
-            date:'',
+            icon:diving,
+            start:'10/12/ 2007',
+            end:'20/07/2008',
             location:'Philipsburg, Sint Maarten',
-            description:'sd<föo föhAEFG',
+            description:'I taught advanced scuba diving courses and guided groups of novice divers in demanding conditions',
             coordinates:  { lat:'18.018169', lng: '-63.043496'},
             id:'scubaFun'
         },
 
         {
-            title:'Sales Associate at the hotel Barceló Cancun',
-            date:'',
+            title:'Sales Associate and entertainer at the hotel Barceló Cancun',
+            icon:sales,
+            start:'14/07/2006 ',
+            end:'18/06/2007',
             location:'Cancun, Mexico',
-            description:'much sales, loads of party',
+            description:'My job was to ensure our guests had the vacation of their lifetime by providing access to all the activities and nightlife Cancun had to offer.',
             coordinates: { lat:'21.102660', lng: '-86.764194'},
             id:'salesBarcelo'
         }
