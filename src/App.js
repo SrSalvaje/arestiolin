@@ -10,12 +10,45 @@ import bc from './Assets/img/hero.JPG';
 import GetScrollPos from './HOCS/GetScrollPos/GetScrollPos';
 
 class App extends Component {
+  state={
+    refs:[],
+    currentView:""
+
+  }
+
+  getRefs=(views)=>{
+    this.setState({refs:views.slice(0)});
+  }
+
+  setCurrentView=()=>{
+    let currentView="";
+    this.state.refs.forEach((view, index)=>{
+      if(index===0 && view.verticalPosition>=400){
+        currentView="hero"; 
+        console.log(index, view);
+      }
+      else if(index===2 && view.verticalPosition<=200){
+        currentView="profile";
+        console.log(index, view);
+      }
+      else if(index===3 && view.verticalPosition<=200){
+        currentView="cv";
+        console.log(index, view);
+      }
+      else if(index===4 && view.verticalPosition<=200){
+       currentView="portfolio";
+        console.log(index, view);
+      }
+    });
+    this.setState({currentView:currentView});
+  }
+
   render() {
     return (
    
         <div className={styles.App}>
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
-          <GetScrollPos>     
+          <GetScrollPos getRefs={this.getRefs} setCurrentView={this.setCurrentView}  >     
             <HeroCont
               id={"hero"}
               title={content.hero.title}
@@ -25,9 +58,12 @@ class App extends Component {
             />
             <Nav
               id={"nav"}
-              links={[{name:'Profile', position: 1 },
-              {name:'CV', position: 2 },
-              {name:'Portfolio', position: 3 }
+              currentView={this.state.currentView}
+              links={[
+              {name:'profile', position: 1 },
+              {name:'cv', position: 2 },
+              {name:'portfolio', position: 3 },
+              {name:'contact', position:4}
               ]}
             />
             <Profile id={"profile"}/>
