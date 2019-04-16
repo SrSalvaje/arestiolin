@@ -15,6 +15,7 @@ class App extends Component {
     currentView:""
 
   }
+  
 
   getRefs=(views)=>{
     this.setState({refs:views.slice(0)});
@@ -25,19 +26,19 @@ class App extends Component {
     this.state.refs.forEach((view, index)=>{
       if(index===0 && view.verticalPosition>=400){
         currentView="hero"; 
-        console.log(index, view);
+   
       }
       else if(index===2 && view.verticalPosition<=200){
         currentView="profile";
-        console.log(index, view);
+       
       }
       else if(index===3 && view.verticalPosition<=200){
         currentView="cv";
-        console.log(index, view);
+       
       }
       else if(index===4 && view.verticalPosition<=200){
        currentView="portfolio";
-        console.log(index, view);
+      
       }
     });
     this.setState({currentView:currentView});
