@@ -15,13 +15,20 @@
       margin: auto;
       box-shadow: 5px 5px 3px $lightBlue;
     
-    
-      li:hover{
+      ul>li:nth-child(odd){
+        background-color: $lightBlue;
+        color: $whitish;
+        cursor: pointer;
+
+      }
+
+      li:hover, ul>li:nth-child(odd):hover {
           background-color: $darkBlue;
-          color: $whitish;
+          color: $brownish;
           cursor: pointer;
           
       }
+     
      
 }
 

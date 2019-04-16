@@ -17,8 +17,7 @@ class Map extends Component {
     
     componentDidMount(){
         this.mapChecker();
-        console.log("on lifecycle")
-
+        console.log("map mounted")
     }
 
     /* renderMarker=() =>{
@@ -40,16 +39,15 @@ class Map extends Component {
     mapChecker=  ()=>{
         if(!window.google) {
             setTimeout(this.mapChecker, 100);
-            console.log("map is loading");
+          
           } else {
-            console.log("we're good to go!!");
+          
             this.renderMap();
           }
     }
 
     renderMap= ()=> {
         let config;
-        console.log(this.props.configObject);
        
         if (!!this.props.configObject) {
           config=this.props.configObject
@@ -58,7 +56,7 @@ class Map extends Component {
             
                 center: {
                 lat: 34.972461, lng: -40.678406},
-                zoom:2,
+                zoom:1,
                 disableDefaultUI:true,
                 styles:[
                   {

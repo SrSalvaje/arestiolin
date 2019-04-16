@@ -5,55 +5,77 @@ import content from '../../content';
 import Map from '../Map/MapLoader';
 
 
+
 class CV extends Component{
       
     state={
+        clickedMarker:"",
+        openedWindow:null,
         markers:"",
         map:"",
         infoWindows:"",
     };
+
+  
     
-    createMarkers = () => {
+    createMarkers = (fu) => {
         const {map}=this.state;
         const markers=[];
         const infoWindowArray=[];
 
-        content.CV.forEach(job=>{
-            
 
-            let infoWindowContent= `<div><p>${job.location} from: ${job.date} to: ${job.date}</p><p>${job.description}</p> </div>`;
-            let infowindow = new window.google.maps.InfoWindow({content:infoWindowContent, id:job.id});
+        content.CV.forEach(job=>{
+
+            let icon ={
+                url: job.icon,
+                scaledSize: new window.google.maps.Size(35, 35), // scaled size
+                origin: new window.google.maps.Point(0,0), // origin
+                anchor: new window.google.maps.Point(0, 0) // anchor
+
+            }
+            
+            let infoWindowContent=  `<div class=${styles.infoWindow}>
+                                        <span>Location: ${job.location}</span><br>
+                                        <span>from: ${job.start} to: ${job.end}</span>
+                                        <div>
+                                        <p>${job.description}</p> 
+                                        </div>
+                                        
+                                    </div>`;
+            let infowindow = new window.google.maps.InfoWindow({content:infoWindowContent, id:job.id, maxWidth: '100px', maxHeight: '100%'});
             let marker = new window.google.maps.Marker({
                 map:map,
                 position:{lat: Number(job.coordinates.lat), lng: Number(job.coordinates.lng)},
+                icon:icon,
                 "id":job.id
-
             });
+
             markers.push(marker);
-            infoWindowArray.push(infowindow)
-         
-
+            infoWindowArray.push(infowindow);
+    
             marker.addListener("click", function () {
-                //infowindow.setContent(infoWindowContent);
                 infowindow.open(map, marker);
-            });
-        
+            }); 
         });
-        this.setState({markers:markers, infoWindows:infoWindowArray});
-        
-    }
+        this.setState({markers:markers, infoWindows:infoWindowArray});    
+    };
 
+    closeInfo=()=>{
+        if(this.state.openedWindow){
+            this.state.openedWindow.close();
+        }
+    };
     
     mapToParent = (map) => {
-        this.setState({map:map}, ()=>{this.createMarkers()})
-    }
+        this.setState({map:map}, ()=>{this.createMarkers()} )
+    };
 
     openInfo = (target) => {
-      const  clickedMarker = this.state.markers.filter(marker=>marker.id===target.id)[0];
-      const infoWindow= this.state.infoWindows.filter(ifw=>ifw.id===target.id)[0];
-      infoWindow.open(this.state.map, clickedMarker);
-      console.log(clickedMarker);
-
+        this.closeInfo();
+        const  clickedMarker = this.state.markers.filter(marker=>marker.id===target.id)[0];
+        const infoWindow= this.state.infoWindows.filter(ifw=>ifw.id===target.id)[0];
+        infoWindow.open(this.state.map, clickedMarker);
+        this.setState({clickedMarker:clickedMarker, openedWindow:infoWindow});
     }
 
     render(){

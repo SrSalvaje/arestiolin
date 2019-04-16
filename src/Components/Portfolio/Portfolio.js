@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Portfolio.module.scss";
 import ProjectWidget from './ProjectWidget/ProjectWidget';
-import Carousel from './Carousel/Carousel';
+
 //import PropTypes from 'prop-types';
 import content from '../../content';
 

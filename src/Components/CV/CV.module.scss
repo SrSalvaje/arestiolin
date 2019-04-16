@@ -40,3 +40,25 @@
     //transition: opacity .5s, transform .5s;
     
 }
+
+.infoWindow{
+    background-color:$whitish;
+    //overflow: auto;
+    width:100%;
+    padding:10px 0 0;
+   position: absolute;
+   top:0;
+   left: 0;
+   font-size: 15px;
+   
+   div{
+    overflow: scroll;
+    //margin: 10px 10px 0;
+    height: 100%;
+    p{
+        overflow: scroll;
+    }
+   }
+  
+}
+
