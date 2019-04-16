@@ -17,7 +17,7 @@ class Map extends Component {
     
     componentDidMount(){
         this.mapChecker();
-        console.log("map mounted")
+        
     }
 
     /* renderMarker=() =>{
