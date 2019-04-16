@@ -2,43 +2,37 @@
 
 .main{
     height:$viewHeight1;
-    width: 100%;
+    width: 100vw;
     background:$blackish;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas: 
-        'gridPos1'
-        'gridPos2'
-        'gridPos3' 
-        'gridPos4';
-    grid-template-rows: 25%;
-    grid-template-columns: 100%; 
-    //background-image: url('../../Assets/img/zen-space-web.jpg');
-    background-repeat: no-repeat;
-    background-position: center ;
-    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+/*   justify-content: center;
+    align-items: center; */
+   
     position: sticky;
     top:$navBarHeight1; 
     z-index: 3;
     margin: 100px 0 0; 
+    
+   
 }
 //widgets
 
 .widget{
     width: 90vw;
-    max-height:40vh;
+    max-height:6vh;
     background-color:$whitish;
     color:$darkBlue;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top:50px;
-    left:-200vw;
-    right:0;
+    transform: translateX(-100vw);
+    opacity:0;
     margin: auto;
     border-radius: 10px;
+    transition:  opacity .5s, transform .5s,  max-height .5s, width .5s ; 
+    box-shadow: 5px 5px 3px $lightBlue;
     
     h2{
         margin: 0;
@@ -58,8 +52,8 @@
    }
 
    div{
-    overflow: auto;
-    display:none;
+    overflow: scroll;
+    //display:none;
     }
 
     
@@ -70,15 +64,20 @@
     }
 }
 
-.clicked{
+
+
+.enter{
     composes:widget;
+    opacity:100; 
+    transform: translateX(0);
+}
+
+.clicked{
+    composes:enter;
     z-index: 100;
-    grid-area: gridPos1;
     max-height:$viewHeight1;
-    top:0;
-    left:0;
     width:100vw;
-    transition: top .5s, max-height .3s, width .2s;
+    transition:  max-height .5s, width .5s;
     
     
     h2{
@@ -96,50 +95,3 @@
 
 }
 
-.gridPos1{
-    composes:widget;
-    grid-area: gridPos1;
-    opacity: 0;
-    transition: left .5s, opacity .5s;
-    
-}
-.enter1{
-    composes:gridPos1;
-    left:0; 
-    opacity:100; 
-    transition: left .5s, opacity .5s, ; 
-}
-
-.gridPos2{
-    composes:gridPos1;
-    grid-area: gridPos2;  
-}
-
-.enter2{
-    composes:gridPos2;
-    left:0;
-    opacity:100; 
-    transition: left .5s, opacity .5s, ; 
-}
-
-.gridPos3{
-    composes:gridPos1;
-    grid-area: gridPos3;
-}
-.enter3{
-    composes:gridPos3;
-    left:0; 
-    opacity:100; 
-    transition: left .5s, opacity .5s, ; 
-}
-
-.gridPos4{
-    composes:gridPos1;
-    grid-area: gridPos4;
-}
-.enter4{
-    composes:gridPos4;
-    left:0; 
-    opacity:100; 
-    transition: left .5s, opacity .5s, ;  
-}

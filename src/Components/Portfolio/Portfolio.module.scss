@@ -16,21 +16,36 @@
 
 .projectList{
     margin:auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    overflow-x: scroll;
     padding: 0;
-    height: 70%;
-    overflow: scroll;
+    height: 85%;
+    justify-items: center;
+    align-items: center;
+    //overflow: scroll;
     width: 100%;
     border-radius: 20px;
     border: 3px solid $lightBlue;
-
+    list-style: none;
+    li{
+       // margin:auto 5px;
+       display:flex;
+       flex-direction: column;
+       align-items: center;
+       justify-items: center;
+       height: 100%;
+       width: 100%;
+    }
+    
 }
 
 .main h2{
     height: 7vh;
     width: 100%;
-    background-color:$blackish;
     color: $whitish;
-    margin: 0;
+    margin: auto;
 }
 
 

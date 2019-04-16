@@ -11,28 +11,32 @@
         width: 95%;
         margin: auto;
         height: 7%;;
-        color:$darkBlue;
-        background-color: $whitish;
-        border-radius: 20px;
+        color:white;
+        padding: 10px 0 10px;
+        //background-color: $whitish;
+       // border-radius: 20px;
     }
 }
 
 .map{
     width: 95%;
-    height:0 ;
+    height:0;
     margin:auto;
     padding: 0;
     border-radius: 20px;
     border:1px solid $darkBlue;
+    //transform: translateX(-200vw);
     opacity: 0;
-    transition: opacity .5s height .5s;
+    transition: opacity .5s, height.5s;
+    margin:3% auto 0;
+    box-shadow: 5px 5px 3px $lightBlue;
 
 }
 .displayMap{
-    height:53%;
-    opacity: 100;
-    transition: opacity .5s height .5s;
     composes: map;
+    height: 50%;
+    opacity: 100;
+   // transform: translateX(0);
+    //transition: opacity .5s, transform .5s;
     
-   
 }

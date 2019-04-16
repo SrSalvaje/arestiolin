@@ -174,7 +174,7 @@ const content={
         {title: "My Malmö",
         image: Mymalmo,
         url: 'https://srsalvaje.github.io/UdacityFinal/',
-        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: 'jgdf thdjdj d jdjdyjdjd jd jdyj djd yjdhj djdyjdrtsrtyhsrtyh sthshsvhs sh sh shsht sh sthshsipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
         id:'myMalmo',
         alt:'screenshot from website'
         },

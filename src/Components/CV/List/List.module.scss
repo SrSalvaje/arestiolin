@@ -6,13 +6,14 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: $blackish;
-    border-radius: 20px;
+    //background-color: $blackish;
+    border-radius: 10px;
     transition: height .3s, opacity .3s;
       /* center item */
       left:0;
       right:0;
       margin: auto;
+      box-shadow: 5px 5px 3px $lightBlue;
     
     
       li:hover{
