@@ -1,3 +1,4 @@
+@import '../../Assets/variables.module';
 .modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -10,6 +11,7 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     transition: left .5s, width .5s, height .5s;
+   
 }
 
 .display{
@@ -21,11 +23,21 @@
 }
 
 .modalContent {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: $whitish;
+    margin: 50% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 90%; /* Could be more or less, depending on screen size */
+    height:auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px $brownish;
+    p{
+      text-align: left;
+      margin:auto;
+      height: auto;
+      -webkit-user-select: text;  
+      font-size: 25px;
+    }
   }
   
   /* The Close Button */
@@ -34,6 +46,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: relative;
+    right:-10px;
+    top:-20px; 
   }
   
   .close:hover,
