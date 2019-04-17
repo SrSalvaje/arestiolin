@@ -11,6 +11,9 @@ const Footer = (props)=>{
 
 
     return(
+        <div className={styles.main}>
+            
+        </div>
         
     )
     };
