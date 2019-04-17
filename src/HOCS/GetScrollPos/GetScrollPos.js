@@ -9,7 +9,7 @@ class GetScrollPos extends Component {
         this.state={
             refs:[],
             views:[],
-            navBarheight:0
+            /* navBarheight:0 */
         };
         //for each child 
         this.props.children.forEach((child, index)=>{
@@ -23,15 +23,19 @@ class GetScrollPos extends Component {
     };
       
      componentDidMount(){
-        //get the height of the nav bar
+        /* //get the height of the nav bar
         const nav = this.state.view1.addRef.current.getBoundingClientRect().height;
-        this.setState({navBarheight:nav});
+        this.setState({navBarheight:nav}); */
         //add the scroll event listener 
         window.addEventListener("scroll",  debounce(this.getPosition, 50, /* {leading:true} */) );
         //pass the refs to the parent
         this.props.getRefs(this.state.views);
        
     }; 
+
+    componentWillUnmount(){
+        window.removeEventListener("scroll", debounce(this.getPosition, 50));
+    }
     
     
     getPosition=()=>{
