@@ -13,11 +13,11 @@ const ProjectWidget =(props)=>(
             <img className={styles.img} src={props.image} alt={props.alt}/>  
         </div>
   {/*   </div> */}
-    <div className={styles.description}>
-        {props.description}
-        <button className={styles.btn}>Open in new window</button>
+    <div className={styles.description}>   
+        <p>{props.description}</p>
+        
     </div>
-    
+    <a href={props.url} target={"_blank"} ><button className={styles.btn}/* onClick={(e)=>{console.log(e.target)}} */>Open in new window</button></a>
     
   </div>
   
