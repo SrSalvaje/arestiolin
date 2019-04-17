@@ -10,6 +10,7 @@ import bc from './Assets/img/hero.JPG';
 import GetScrollPos from './HOCS/GetScrollPos/GetScrollPos';
 import Modal from './Components/Modal/Modal';
 import  {debounce}from 'lodash';
+import Footer  from "./Components/Footer/Footer";
 
 class App extends Component {
   state={
@@ -90,6 +91,7 @@ class App extends Component {
             <CV  id={"cv"} />
             <Portfolio id={'portfolio'}/>
           </GetScrollPos>
+          <Footer openModal={this.openModal}></Footer>
           <Modal isModal={this.state.isModal}
           openModal={this.openModal}/>
         </div>
