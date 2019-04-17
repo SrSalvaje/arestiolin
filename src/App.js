@@ -21,6 +21,7 @@ class App extends Component {
   }
 
   componentDidMount=()=>{
+    this.getViewpoertSize();
     window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
@@ -62,6 +63,9 @@ class App extends Component {
     });
     this.setState({currentView:currentView});
   }
+  clickedOnNav=(currentView)=>{
+    this.setState({currentView:currentView})
+  }
 
   render() {
     return (
@@ -77,6 +81,7 @@ class App extends Component {
               background={content.hero.background}
             />
             <Nav
+              clickedOnNav={this.clickedOnNav}
               id={"nav"}
               currentView={this.state.currentView}
               links={[
@@ -87,11 +92,11 @@ class App extends Component {
               ]}
               openModal={this.openModal}
             />
-            <Profile id={"profile"}/>
+            <Profile height={this.state.viewPortHeight} id={"profile"}/>
             <CV  id={"cv"} />
             <Portfolio id={'portfolio'}/>
           </GetScrollPos>
-          <Footer openModal={this.openModal}></Footer>
+          <Footer  openModal={this.openModal}></Footer>
           <Modal isModal={this.state.isModal}
           openModal={this.openModal}/>
         </div>
