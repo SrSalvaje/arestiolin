@@ -30,9 +30,36 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 80%;
+    width: 95%;
     padding: 20px;
     text-align: center;
     
+    h1{
+      width: 100%;
+      font-size: 25px;
+
+    }
+    
   }
   
+  @media screen and (min-width:768px){
+    .heroCont{
+      max-width:750px;
+    }
+   
+    .heroTxt{
+      max-width:750px;
+
+      h1{
+        font-size: 40px;
+      }
+      p{
+        font-size: 25px;
+        margin-bottom: 5px;;
+      }
+      p:nth-child(3){
+        margin-top: 0;
+
+      }
+    }
+  }

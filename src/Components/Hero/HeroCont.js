@@ -13,7 +13,7 @@ const HeroCont = React.forwardRef((props, ref)=>(
         <div className={styles.heroTxt}>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <div className={styles.heroButton}>{props.button}</div>
+        <p className={styles.heroButton}>{props.button}</p>
         </div>
     </header>
 
