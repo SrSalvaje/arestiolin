@@ -9,14 +9,14 @@ import diving from './Assets/img/svg/diving.svg';
 import news from './Assets/img/svg/news.svg';
 import sales from './Assets/img/svg/sale.svg';
 import teach from './Assets/img/svg/teach.svg';
-
+import JasmineTest from './Assets/img/jasmine.pg.jpg';
 
 
 const content={
     hero:{
-        title: 'Hi, I am Jon Miren',
-        content:"I'm a Front-End Web Developer",
-        button:'Checkout My Portfolio',
+        title: 'Hi, my name is Jon Miren',
+        content:"I'm a Front-End Web Developer.",
+        button:'Welcome to my portfolio!',
         background: "../../Assets/img/hero.JPG"
     },
 
@@ -56,11 +56,15 @@ const content={
         widget3:{
             type:'text',
             title:'About Me',
-            content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-            officia deserunt mollit anim id est laborum.</p>
+            content: 
+            <div>
+                <p>My background is in journalism and before coming to Sweden I worked as a news editor for one of the largest newspapers in Mexico where I helped shape their digital transformation strategy.</p> 
+                <p>Being a journalist taught me two things: to think critically and to thrive under pressure, and aren’t these the exact skills that make a great programmer? </p>
+                <p>I am passionate about JavaScript and thanks to a Google Scholarship I was able to graduate from Udacity´s Front-End Nanodegree. </p>
+                <p>I also studied a semester of Interaction Design in Malmo University and I am currently finishing a masters in Collaborative Media and Creative Industries.</p> 
+                <p>My goal is to become a digital product developer and mix my new-found passion for programming with my experience in media.</p>
+            </div>
+            
         },
         widget4:{
             type:'jsx',
@@ -200,35 +204,46 @@ const content={
         {title: "My Malmö",
         image: Mymalmo,
         url: 'https://srsalvaje.github.io/UdacityFinal/',
-        description: 'jgdf thdjdj d jdjdyjdjd jd jdyj djd yjdhj djdyjdrtsrtyhsrtyh sthshsvhs sh sh shsht sh sthshsipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: `I was tasked with building a website to display points of interest in my city. 
+        The site was built from the ground up by me using create-react app and relying on the API´s of FourSquare and Google Maps.`,
+    
+    
         id:'myMalmo',
         alt:'screenshot from website'
         },
         {title: "Book Tracker",
         image: myReads,
         url: 'https://srsalvaje.github.io/Udacity-My-Reads/',
-        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: `This is the 7th assessment project for Udacity's FEND Nanodegree. 
+        Basic CSS, HTML and a book database API were provided but without any of the React code.`,
         id:'bkTrack',
         alt:'screenshot from website'
         },
         {title: "Restaurant Reviews",
         image: restRev,
         url: 'https://srsalvaje.github.io/udacity-restaurant-reviews/',
-        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: ` I had to convert a static webpage to a mobile-ready web application by adding accessibility features, converting the design to be responsive on different sized displays and add a service worker to allow offline use.`,
         id:'restRev',
         alt:'screenshot from website'
         },
+        {title:"Jasmine Test suite",
+        description:`This repo is the 4th project of the Udacity FEND Nanodegree, my task was to develop a test suit for the existing code base.`,
+        image:JasmineTest,
+        id:'jasTest',
+        alt:'Jasmine Logo',
+        url:'https://github.com/SrSalvaje/UdacityFeedReaderProject'
+    },
         {title: "Arcade Clone",
         image: arcade,
         url: 'https://srsalvaje.github.io/UdacityP4Frogger/',
-        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: `This is a clone of the popular Frogger arcade game, the game engine, images and resources.js were provided by the Udacity team, the rest of the code was written by me`,
         id:'arcClo',
         alt:'screenshot from website'
         },
         {title: "Memory Game",
         image: matching,
         url: 'https://srsalvaje.github.io/memorygame/',
-        description: 'ipso loreum WEFLKUHSAE<klöufhikuhflikuihsdfgliughraghg',
+        description: 'Third Project of Udacity´s FEND Nanodegree as a test of OOP. It´s made with vanilla JS ',
         id:'memGame',
         alt:'screenshot from website'
         }
