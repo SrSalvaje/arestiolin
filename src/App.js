@@ -9,15 +9,27 @@ import Nav from './Components/Nav/Nav';
 import bc from './Assets/img/hero.JPG';
 import GetScrollPos from './HOCS/GetScrollPos/GetScrollPos';
 import Modal from './Components/Modal/Modal';
+import  {debounce}from 'lodash';
 
 class App extends Component {
   state={
     refs:[],
     currentView:"",
-    isModal:false
-
+    isModal:false,
+    viewPortHeight:""
   }
-  
+
+  componentDidMount=()=>{
+    window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
+  }
+
+  componentWillUnmount=()=>{
+    window.removeEventListener("resize", debounce(this.getViewpoertSize, 500));
+  }
+
+  getViewpoertSize=()=>{
+    this.setState({viewPortHeight:window.innerHeight});
+  }
   openModal=()=>{
     this.setState( function(prevState, prevProps){
      return {isModal:!prevState.isModal}
