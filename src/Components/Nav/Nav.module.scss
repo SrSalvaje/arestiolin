@@ -10,6 +10,7 @@
     margin: 0 0 95vh;
     visibility: visible;
     box-shadow: 2px 2px 10px $darkBlue;
+    transition: top .5s;
    
     ul{
         list-style-type: none;
@@ -42,6 +43,7 @@
 .hide{
     composes:main;
     top:-$navBarHeight1;
+   
 }
 
 .links{
@@ -55,6 +57,7 @@
     color:$whitish;
     font-family:  'Special Elite', cursive;
     font-size: 19px;
+    transition: .5s;
 
     a:visited{
         text-decoration: none;
@@ -66,6 +69,7 @@
     composes:links;
     color: $darkBlue;
     background-color: $whitish;
+    
  
     
 }

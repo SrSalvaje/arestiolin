@@ -8,15 +8,21 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Nav from './Components/Nav/Nav';
 import bc from './Assets/img/hero.JPG';
 import GetScrollPos from './HOCS/GetScrollPos/GetScrollPos';
+import Modal from './Components/Modal/Modal';
 
 class App extends Component {
   state={
     refs:[],
-    currentView:""
+    currentView:"",
+    isModal:false
 
   }
   
-
+  openModal=()=>{
+    this.setState( function(prevState, prevProps){
+     return {isModal:!prevState.isModal}
+  })
+}
   getRefs=(views)=>{
     this.setState({refs:views.slice(0)});
   }
@@ -66,11 +72,14 @@ class App extends Component {
               {name:'portfolio', position: 3 },
               {name:'contact', position:4}
               ]}
+              openModal={this.openModal}
             />
             <Profile id={"profile"}/>
             <CV  id={"cv"} />
             <Portfolio id={'portfolio'}/>
           </GetScrollPos>
+          <Modal isModal={this.state.isModal}
+          openModal={this.openModal}/>
         </div>
     
     );
