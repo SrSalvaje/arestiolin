@@ -20,6 +20,7 @@ const Portfolio = React.forwardRef((props,ref)=>(
           image={project.image}
           alt={project.alt}
           description={project.description}
+          url={project.url}
           />
 
         </li>
