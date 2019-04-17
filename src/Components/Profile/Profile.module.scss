@@ -37,8 +37,19 @@
     h2{
         margin: 0;
     }
+
     p{
+        padding:15px 0 0;
         color:black;
+        font-size: 20px;
+        //text-indent:20px;
+        text-align: justify;
+        letter-spacing: 2px;
+        margin:0 5px;
+    }
+
+    p:first-child {
+        padding-top: 0;
     }
 
     ul, div{
@@ -49,12 +60,17 @@
        padding: 5px;
        margin: 5% 0;
        background:$whitish;
-       font-size: 18px;    
+       font-size: 20px;    
    }
 
    div{
     overflow: scroll;
     //display:none;
+    }
+
+    div div{
+        margin:0;
+        padding:0;
     }
 
     
@@ -94,6 +110,7 @@
     max-height:$viewHeight1;
     width:100vw;
     transition:  max-height .5s, width .5s, transform .5s;
+   
     
     
     h2{
@@ -104,10 +121,45 @@
         transition: .3s; 
     }
     div{
-        display: block;
-    
-        
+        display: block;  
     }
 
 }
+
+@media screen and (min-width:768px){
+    .main{  
+        display: grid;
+        grid-template-columns: 47.5% 47.5%;
+        grid-template-rows: 47.5% 47.5%;
+        grid-gap: 5%;
+        padding: 5%;
+
+    }
+   .widget{
+       position: relative;
+       right:0;
+        width: 100%;
+        max-width: 100%;
+        margin:auto;
+        height: 100%;
+
+        max-height: 100%;
+       
+        h2{
+            background-color: $darkBlue;
+            color: $whitish;
+            border-radius: 10px 10px 0 0;
+            padding: 10px 0 10px; 
+            transition: .3s; 
+        }
+
+        div{
+            display: block;  
+        }
+   }
+     
+ }
+
+
+
 
