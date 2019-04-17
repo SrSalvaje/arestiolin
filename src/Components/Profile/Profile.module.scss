@@ -34,6 +34,10 @@
     transition:  opacity .5s, transform .5s,  max-height .5s, width .5s ; 
     box-shadow: 5px 5px 3px $lightBlue;
     
+    span{
+        margin: 0 0 0 5px;
+    }
+    
     h2{
         margin: 0;
     }
@@ -58,7 +62,7 @@
         width:100%;
        list-style: none;
        padding: 5px;
-       margin: 5% 0;
+       margin: 5px 0;
        background:$whitish;
        font-size: 20px;    
    }
@@ -78,6 +82,12 @@
         text-align: justify;
         padding:10px 5px ;
         color:black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        //justify-content: center;
+        align-content: center;
+        
     }
 
     ul>li:nth-child(odd){
@@ -124,6 +134,12 @@
         display: block;  
     }
 
+}
+
+.mainDivStyles{
+    background-color: transparent !important;
+    height: auto !important;
+    width:30px !important;
 }
 
 @media screen and (min-width:768px){

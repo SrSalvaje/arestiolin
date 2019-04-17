@@ -7,12 +7,13 @@ import styles from "./RespLogo.module.scss";
 
 const RespLogo = (props)=>{
    
-  
+    const allStyles=[styles.logo, props.animation];
+    const mainDivStyles=props.mainDivStyles
 
 
     return(
-        <div className={styles.main}>
-            
+        <div  className={mainDivStyles}>
+            <img className={allStyles.join(" ")} src={props.logo} alt={props.alt}></img>
         </div>
         
     )

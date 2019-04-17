@@ -17,7 +17,7 @@ const ProjectWidget =(props)=>(
         <p>{props.description}</p>
         
     </div>
-    <a href={props.url} target={"_blank"} ><button className={styles.btn}/* onClick={(e)=>{console.log(e.target)}} */>Open in new window</button></a>
+    <a href={props.url} target={"_blank"} rel={"noopener"} ><button className={styles.btn}/* onClick={(e)=>{console.log(e.target)}} */>Open in new window</button></a>
     
   </div>
   
