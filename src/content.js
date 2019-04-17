@@ -10,9 +10,19 @@ import news from './Assets/img/svg/news.svg';
 import sales from './Assets/img/svg/sale.svg';
 import teach from './Assets/img/svg/teach.svg';
 import JasmineTest from './Assets/img/jasmine.pg.jpg';
-
+import google from './Assets/img/google.png';
+import jsLogos from './Assets/img/001-javascript.png';
 
 const content={
+    imgs:{
+      google:{
+          img:google,
+          alt:"Google Maps Logo"
+      },
+      jsLogo:{
+          img:jsLogos
+        }  
+    },
     hero:{
         title: 'Hi, my name is Jon Miren',
         content:"I'm a Front-End Web Developer.",
@@ -69,19 +79,7 @@ const content={
         widget4:{
             type:'jsx',
             title:'Skills',
-            content:
-                <ul>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>CSS</li>
-                    <li>HTML</li>
-                    <li>Test Driven Development</li>
-                    <li>Accesibility</li>
-                    <li>PremierePro</li>
-                    <li>Photoshop</li>
-                    <li>Tools</li>
-                </ul>
-            
+             
         }
     },
 
