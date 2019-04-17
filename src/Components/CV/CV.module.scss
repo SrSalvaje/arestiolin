@@ -49,17 +49,23 @@
    position: absolute;
    top:0;
    left: 0;
-   font-size: 15px;
-   font-family: -apple-system, BlinkMacSystemFont, 'Roboto Condensed', sans-serif;
-   
+   font-size: 18px;
+   font-family:  'Roboto Condensed', sans-serif -apple-system, BlinkMacSystemFont,;
+   text-align: justify;
    div{
     overflow: scroll;
     //margin: 10px 10px 0;
     height: 100%;
+   
     p{
         overflow: scroll;
+        margin: 5px 10px auto;
     }
    }
   
+   span{
+    margin:0 10px;
+    text-align: left;
+}
 }
 

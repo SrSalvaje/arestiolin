@@ -18,8 +18,8 @@ class CV extends Component{
 
     createInfoWindow=(job)=>(
         `<div class=${styles.infoWindow}>
-        <span>Location: ${job.location}</span><br>
-        <span>from: ${job.start} to: ${job.end}</span>
+        <span><b>Location:</b> ${job.location}</span><br>
+        <span><b>Period:</b> ${job.start}-${job.end}</span>
         <div>
         <p>${job.description}</p> 
         </div>
