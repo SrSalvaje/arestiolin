@@ -40,6 +40,17 @@ height must match custom infowindow height  */
 .gm-style .gm-style-iw-t::after{
   background-color: #90afc5   !important;
 }
+/* close */
+.gm-ui-hover-effect{
+  width:40px !important;
+  height: 40px !important;
+}
+.gm-ui-hover-effect img{
+  width:25px !important;
+  height: 25px !important;
+
+}
+
 
 /* .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{
   background-color:  !important;
