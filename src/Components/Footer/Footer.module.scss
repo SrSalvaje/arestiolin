@@ -15,15 +15,15 @@
     border-top: 2px solid $darkBlue; 
     grid-template: "names logo"
                     "attribution logo";
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: 50%;
     text-align: left;
     font-size: 15px;
     overflow: hidden;    
    
     p{
-        width:100%;
-        height:auto;
-        margin:10px 0 0 10px;;
-       
+        
+        margin:10px 0 0 20px;;
         grid-area: names;
         cursor: pointer;
     }
@@ -39,11 +39,21 @@
     } 
 }
 
-.mainDivStyles{
+.commonLogo{
     background-color: transparent !important;
     height: auto !important;
     width:50px !important;
+    margin: auto 20px auto 0;
+}
+.googleLogo{
+    composes:commonLogo;
     
+    height: auto !important;
+    width:40px !important; 
+}
+.reactLogo{
+    composes: commonLogo;
+    margin: auto 14px auto 0;
 }
 
 
@@ -51,7 +61,7 @@
     grid-area: attribution;
     width:100%;
     height:auto;
-    margin:10px 0 0 10px;;
+    margin:10px 0 0 20px;;
     
 
 }
@@ -59,12 +69,12 @@
 .logos{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    align-items: flex-end;
+    justify-items:center;
     grid-area: logo;
     width: 100%;
     height: auto;
-    margin:auto;
+    margin:auto 25px auto 0;;
     position:relative;
     top:0;
 }
