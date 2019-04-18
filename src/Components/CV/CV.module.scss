@@ -43,22 +43,25 @@
 
 .infoWindow{
     background-color:$whitish;
+    
     //overflow: auto;
     width:100%;
-    padding:10px 0 0;
-   position: absolute;
-   top:0;
-   left: 0;
+    height: auto;
+    //min-width: 200px;
+    //padding:10px 0 0;
+  /*  position: relative;
+  top:0;
+   left: 0;  */
    font-size: 18px;
    font-family:  'Roboto Condensed', sans-serif -apple-system, BlinkMacSystemFont,;
    text-align: justify;
    div{
-    overflow: scroll;
+/*     overflow: scroll; */
     //margin: 10px 10px 0;
     height: 100%;
    
     p{
-        overflow: scroll;
+        //overflow: scroll;
         margin: 5px 10px auto;
     }
    }
