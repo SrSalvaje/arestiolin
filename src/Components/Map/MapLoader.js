@@ -56,7 +56,7 @@ class Map extends Component {
             
                 center: {
                 lat: 34.972461, lng: -40.678406},
-                zoom:1,
+                zoom:this.props.viewPortWidth>=768?1:2,
                 disableDefaultUI:true,
                 styles:[
                   {
@@ -222,11 +222,16 @@ class Map extends Component {
           }
           // create map instance
         this.setState({map:new window.google.maps.Map(this.map.current, config)}, () =>{this.passMapToParent(this.state.map)});
+        
         //add markers
         //this.props.createMarkers();
       }
-  
+    /* 
+      adjustZoom = (map) => {
+        console.log(map.getBounds())
+      } */
     passMapToParent = (map) => {
+      console.log(map.getBounds())
       this.props.mapToParent(map);
     }
   

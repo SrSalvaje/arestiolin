@@ -7,12 +7,16 @@ import styles from "./Nav.module.scss";
 
 const Nav = React.forwardRef((props, ref)=>{
    
-    const goTo=(e, position)=>{
+    const goTo=(e, position, element)=>{
        e.preventDefault();
-        window.scrollTo(0,`${(window.innerHeight+100)*position}`); 
+       window.scrollTo(0,`${(window.innerHeight+70)*position}`); 
+        console.log(element);
         props.clickedOnNav(e.currentTarget.id);
+        //adjustPos(element);
+
 
     };
+    //const adjustPos=(element)=>element.addRef.current.scrollIntoView(false); 
 
    /*  const toggleModal=(callback)=>{
         console.log("Modal");
@@ -24,7 +28,7 @@ const Nav = React.forwardRef((props, ref)=>{
         <nav className={(props.verticalPosition<=-80 )?styles.main: styles.hide} ref={ref}>
             <ul>
             {props.links.map(link=>(
-            <li id={link.name} onClick={link.name==='contact'? props.openModal : (e)=> goTo(e, link.position)} key={link.name} className={ link.name===props.currentView? styles.liCurrent:styles.lis}><a  href={`#${link.name}`} value={link.name}className={/* link.name===props.currentView? styles.linksCurrent: */ styles.links}  >{link.name}</a></li>
+            <li id={link.name} onClick={link.name==='contact'? (e)=>props.openModal(e) : (e)=> goTo(e,link.position, link.elementRef)} key={link.name} className={ link.name===props.currentView? styles.liCurrent:styles.lis}><a  href={`#${link.name}`} value={link.name}className={/* link.name===props.currentView? styles.linksCurrent: */ styles.links}  >{link.name}</a></li>
             ))}
             </ul>
         </nav>

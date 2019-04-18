@@ -17,7 +17,8 @@ class App extends Component {
     refs:[],
     currentView:"",
     isModal:false,
-    viewPortHeight:""
+    viewPortHeight:"",
+    viewPortWidth:""
   }
 
   componentDidMount=()=>{
@@ -30,9 +31,10 @@ class App extends Component {
   }
 
   getViewpoertSize=()=>{
-    this.setState({viewPortHeight:window.innerHeight});
+    this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth});
   }
-  openModal=()=>{
+  openModal=(e)=>{
+    e.preventDefault();
     this.setState( function(prevState, prevProps){
      return {isModal:!prevState.isModal}
   })
@@ -81,14 +83,16 @@ class App extends Component {
               background={content.hero.background}
             />
             <Nav
+              viewPortHeight={this.state.viewPortHeight}
+              viewPortWidth={this.state.viewPortWidth}
               clickedOnNav={this.clickedOnNav}
               id={"nav"}
               currentView={this.state.currentView}
               links={[
-              {name:'profile', position: 1 },
-              {name:'cv', position: 2 },
-              {name:'portfolio', position: 3 },
-              {name:'contact', position:4}
+              {name:'profile', position: 1, elementRef:this.state.refs[2]},
+              {name:'cv', position: 2, elementRef:this.state.refs[3]},
+              {name:'portfolio', position: 3, elementRef:this.state.refs[4]},
+              {name:'contact', position:4, }
               ]}
               openModal={this.openModal}
             />

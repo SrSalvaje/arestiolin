@@ -1,8 +1,9 @@
 @import '../../Assets/variables.module';
 
 .main{
+    box-shadow: -7px -7px 19px -4px rgba(118,54,38,1);
     height:$viewHeight1;
-    width: 100vw;
+    width: 100%;
     background:$blackish;
     display: flex;
     flex-direction: column;
@@ -50,6 +51,7 @@
         text-align: justify;
         letter-spacing: 2px;
         margin:0 5px;
+       
     }
 
     p:first-child {

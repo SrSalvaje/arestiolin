@@ -18,11 +18,13 @@ class CV extends Component{
 
     createInfoWindow=(job)=>(
         `<div class=${styles.infoWindow}>
-        <span><b>Location:</b> ${job.location}</span><br>
-        <span><b>Period:</b> ${job.start}-${job.end}</span>
-        <div>
-        <p>${job.description}</p> 
-        </div>
+            <div class=${styles.dates}> 
+                <div><b>Location:</b> ${job.location}</div>
+                <div><b>Period:</b> ${job.start}-${job.end}</div>
+            </div>
+            <div class=${styles.description}>
+                <p class=${styles.infoP}>${job.description}</p> 
+            </div>
         </div>`        
     );
 
@@ -76,13 +78,17 @@ class CV extends Component{
     };
 
     openInfo = (target) => {
+        
+
         this.closeInfo();
         const  clickedMarker = this.state.markers.filter(marker=>marker.id===target.id)[0];
         const job = content.CV.filter(job=>job.id===target.id)[0];
         const infoWindowContent=this.createInfoWindow(job)
-        const infoWindow= new window.google.maps.InfoWindow();
-        infoWindow.setContent(infoWindowContent);
+        const infoWindow= new window.google.maps.InfoWindow({content:infoWindowContent,
+    maxWidth: 320});
+        //infoWindow.setContent(infoWindowContent);
         infoWindow.open(this.state.map, clickedMarker);
+        
        this.state.map.panTo(job.coordinates);
         this.state.map.setZoom(10);
         this.animateMarker(clickedMarker, 2100);
@@ -90,6 +96,8 @@ class CV extends Component{
         //const infoWindow= this.state.infoWindows.filter(ifw=>ifw.id===target.id)[0];
         //infoWindow.open(this.state.map, clickedMarker);
         this.setState({clickedMarker:clickedMarker, openedWindow:infoWindow });
+      
+        
     };
 
     

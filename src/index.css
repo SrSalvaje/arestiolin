@@ -10,8 +10,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* main infowindow div
+height and width for the info window are controlled here,
+height must match custom infowindow height  */
 
+.gm-style-iw {
+  margin:0;
+  padding: 0;
+  min-width: 300px; 
+  min-height: 200px;
+  box-shadow: 10px 10px 10px #2a3132 !important;
+}
 
+.gm-style .gm-style-iw{
+  padding:0;
+
+}
+ .gm-style-iw-d{
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+}
+
+.gm-style .gm-style-iw-d{
+  overflow: hidden !important;
+
+  
+}
+/* tootip */
+.gm-style .gm-style-iw-t::after{
+  background-color: #90afc5   !important;
+}
+
+/* .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{
+  background-color:  !important;
+} */
 
  /* .gm-style .gm-style-iw {
             background-color: #f4f4ef!important;

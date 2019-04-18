@@ -14,13 +14,16 @@
     border-top-left-radius: 10px;
     border-top: 2px solid $darkBlue; 
     grid-template: "names logo"
-                    "attribution logo";    
+                    "attribution logo";
+    text-align: left;
+    font-size: 15px;
+    overflow: hidden;    
    
     p{
         width:100%;
         height:auto;
         margin:10px 0 0 10px;;
-        text-align: left;
+       
         grid-area: names;
         cursor: pointer;
     }
@@ -39,7 +42,7 @@
 .mainDivStyles{
     background-color: transparent !important;
     height: auto !important;
-    width:30px !important;
+    width:50px !important;
     
 }
 
@@ -48,7 +51,9 @@
     grid-area: attribution;
     width:100%;
     height:auto;
-    font-size: 15px;
+    margin:10px 0 0 10px;;
+    
+
 }
 
 .logos{
