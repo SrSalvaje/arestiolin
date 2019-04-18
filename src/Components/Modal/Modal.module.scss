@@ -10,8 +10,18 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    transition: left .5s, width .5s, height .5s;
+    transition: left 1s, width 1s, height 1s;
+  
    
+}
+
+.myPicture{
+  grid-area: myFace;
+  margin:auto;
+  
+}
+.pictureShadow{
+  box-shadow: 7px 7px 5px gray;
 }
 
 .display{
@@ -23,37 +33,84 @@
 }
 
 .modalContent {
+    display: grid;
+    grid-template-areas:  " nothing  closeM"
+                          "myFace myname"
+                          "myFace myemail"
+                          "myFace myphone";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 4% 32% 32% 32%;
+
     background-color: $whitish;
     margin: 50% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 5px;
     border: 1px solid #888;
-    width: 90%; /* Could be more or less, depending on screen size */
-    height:auto;
+    width: 92vw; /* Could be more or less, depending on screen size */
+    height:40vh;
     border-radius: 10px;
     box-shadow: 3px 3px 5px $brownish;
+    justify-content: center;
+    align-content: center;
     p{
+      width: 100%;
       text-align: left;
       margin:auto;
       height: auto;
-      -webkit-user-select: text;  
-      font-size: 25px;
+      -webkit-user-select: text;
+      background-color: $lightBlue;
+      border-left: 3px solid white;
+      box-shadow: 7px 7px 5px gray;  
+      //font-size: 25px;
     }
+    
   }
+
+  .myName{
+     
+    grid-area: myname;
+    align-self: flex-start;  
+  }
+
+  .myEmail{
+    grid-area: myemail;
+    //font-size: 5px ;
+  }
+
+  .myPhone{
+   
+    grid-area: myphone;
+  }
+
+  
+ 
+  
+
+
   
   /* The Close Button */
   .close {
-    color: #aaa;
+    grid-area: closeM;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
     float: right;
-    font-size: 28px;
+    font-size: 70px;
+
+   // color: #aaa;
+    //float: right;
+    //font-size: 28px;
     font-weight: bold;
-    position: relative;
+    /* position: relative;
     right:-10px;
-    top:-20px; 
+    top:0px; */ 
   }
   
   .close:hover,
   .close:focus {
     color: black;
+    font-size: 80px;
     text-decoration: none;
     cursor: pointer;
   }
