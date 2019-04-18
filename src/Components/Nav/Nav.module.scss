@@ -52,6 +52,13 @@
     align-items: center;
     justify-items: center;
     cursor: pointer;
+    text-transform: capitalize;
+    
+
+}
+
+.lis:nth-child(2){
+    text-transform: uppercase;
 
 }
 
