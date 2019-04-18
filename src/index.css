@@ -13,7 +13,7 @@ body {
 
 
 
- .gm-style .gm-style-iw {
+ /* .gm-style .gm-style-iw {
             background-color: #f4f4ef!important;
             top: 0 !important;
             left: 0 !important;
@@ -23,22 +23,22 @@ body {
             min-height: 170px !important;
             padding-top: 10px;
             display: block !important;
-            overflow:scroll;
+            overflow:scroll; 
            
-         } 
+         }  */
          
          
-.gm-style-iw-d{
+/* .gm-style-iw-d{
   overflow: hidden !important;
 }
 .gm-style-iw-c{
   box-shadow: 3px 3px 10px #336b87 !important;
-}
+} */
 /* #763626 
 #336b87*/
-.gm-style-iw-t::after{
+/* .gm-style-iw-t::after{
   background-color: #f4f4ef!important;
-}
+} */
 
 *,
 *:before,
