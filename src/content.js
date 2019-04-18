@@ -67,14 +67,14 @@ const content={
             type:'text',
             title:'About Me',
             content: 
-            <div>
+            <React.Fragment>
                 <p>My background is in journalism and before coming to Sweden I worked as a news editor for one of the largest newspapers in Mexico where I helped shape their digital transformation strategy.</p> 
                 <p>Being a journalist taught me two things: to think critically and to thrive under pressure, and aren’t these the exact skills that make a great programmer? </p>
                 <p>I am passionate about JavaScript and thanks to a Google Scholarship I was able to graduate from Udacity´s Front-End Nanodegree. </p>
                 <p>I also studied a semester of Interaction Design in Malmo University and I am currently finishing a masters in Collaborative Media and Creative Industries.</p> 
                 <p>My goal is to become a digital product developer and mix my new-found passion for programming with my experience in media.</p>
-            </div>
             
+                </React.Fragment>
         },
         widget4:{
             type:'jsx',
