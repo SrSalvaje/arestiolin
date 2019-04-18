@@ -11,8 +11,9 @@ const PercentageB = (props)=>{
 
 
     return(
-        <div className={styles.main}>
-            
+        <div style={{width:props.width, height:props.height, backgroundColor:props.mainColor} } className={styles.container}>
+            <span style={{background: props.progressColor, width:props.progress}}className={styles.main}></span>
+            <span className={styles.remaining} >{props.progress}</span>
         </div>
         
     )
@@ -22,3 +23,4 @@ const PercentageB = (props)=>{
 
 
 export default PercentageB;
+/* <PercentageB width={"100%"} height={"50px"} mainColor={"white"} progressColor={"red"} progress={"70%"}/> */
