@@ -103,31 +103,89 @@
    
 }
 
+
+@media screen and  (min-width: 425px){
+  .infoWindow{
+    height:220px;
+    .description{
+      height: 80%;
+      .infoP{
+        font-size: 20px;
+      }
+    }
+    .dates{
+      div{
+        font-size: 20px;
+      }
+    }
+   
+  }
+  
+
+
+}
+
 @media screen and (min-width:768px){
     .main{
         display: grid;
-        grid-template-areas: "myheader myheader"
-                              "mylist  mymap" ;
-        grid-template-rows: auto 90%;;
+        grid-template-areas: ". . "
+                              "mylist  mymap"
+                              ". ." ;
+        grid-template-rows: 100px 800px auto;
         grid-template-columns: 40% 60%;
         h2{
-            grid-area: myheader;
-
-        } 
-        div:first-child{
+          font-size: 40px;
             grid-area: mylist;
-           
+            margin: 10px auto ;
+            height:100px;
+            
+        }
+
+        div:nth-child(2){
+          grid-area: mylist;
+          margin: 100px auto ;
+          height:700px;
+        }
+        
+        div ul li{
+          font-size: 27px;
+          text-align: left;
+          padding: 5px 10px;
+         
         }
 
     }
     .map{
         grid-area: mymap;
-        height: 90%;
+        height: 795px;
+        margin:auto ;
     }
     
+    
+  }
+/* infoWindow */
+ .infoP::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  
+  /* Track */
+  .infoP::-webkit-scrollbar-track {
+    background:$blackish ; 
+  }
+  
+  /* Handle */
+  .infoP::-webkit-scrollbar-thumb {
+    background: $darkBlue; 
+  }
+  
+  /* Handle on hover */
+  .infoP::-webkit-scrollbar-thumb:hover {
+    background: $brownish; 
   }
 
- .infoP::-webkit-scrollbar {
+  /* list */
+
+  .infoP::-webkit-scrollbar {
     width: 5px !important;
   }
   
