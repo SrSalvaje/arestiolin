@@ -13,8 +13,7 @@ body {
 /* main infowindow div
 height and width for the info window are controlled here,
 height must match custom infowindow height  */
-
-.gm-style-iw {
+ .gm-style-iw {
   margin:0;
   padding: 0;
   min-width: 300px; 
@@ -35,13 +34,13 @@ height must match custom infowindow height  */
   overflow: hidden !important;
 
   
-}
+} 
 /* tootip */
-.gm-style .gm-style-iw-t::after{
+ .gm-style .gm-style-iw-t::after{
   background-color: #90afc5   !important;
-}
+} 
 /* close */
-.gm-ui-hover-effect{
+ .gm-ui-hover-effect{
   width:40px !important;
   height: 40px !important;
 }
@@ -49,39 +48,9 @@ height must match custom infowindow height  */
   width:25px !important;
   height: 25px !important;
 
-}
+} 
 
 
-/* .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{
-  background-color:  !important;
-} */
-
- /* .gm-style .gm-style-iw {
-            background-color: #f4f4ef!important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            min-width: 280px !important;
-            min-height: 170px !important;
-            padding-top: 10px;
-            display: block !important;
-            overflow:scroll; 
-           
-         }  */
-         
-         
-/* .gm-style-iw-d{
-  overflow: hidden !important;
-}
-.gm-style-iw-c{
-  box-shadow: 3px 3px 10px #336b87 !important;
-} */
-/* #763626 
-#336b87*/
-/* .gm-style-iw-t::after{
-  background-color: #f4f4ef!important;
-} */
 
 *,
 *:before,
@@ -108,3 +77,23 @@ code {
     monospace;
 }
 
+@media screen and  (min-width: 375px){
+  
+   h2{
+   font-size: 35px;
+  }
+
+
+}
+
+ @media screen and  (min-width: 425px){
+  .gm-style-iw {
+  
+    min-width: 380px; 
+    min-height: 220px;
+    
+  }
+  
+
+
+} 
