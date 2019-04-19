@@ -74,7 +74,7 @@ class CV extends Component{
     };
     
     mapToParent = (map) => {
-        this.setState({map:map}, ()=>{this.createMarkers()} )
+        this.setState({map:map}, ()=>{this.createMarkers()});
     };
 
     openInfo = (target) => {
