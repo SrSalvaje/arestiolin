@@ -33,6 +33,10 @@
      
 }
 
+/* list handle bar*/
+
+
+
 .displayList{
     composes:listCont;
     opacity:100;
@@ -57,11 +61,34 @@
     font-size: 20px;
 }
 
+.employmentList::-webkit-scrollbar {
+    width: 10px !important;
+  }
+  
+  /* Track */
+  .employmentList::-webkit-scrollbar-track {
+    background:$blackish ; 
+  }
+  
+  /* Handle */
+  .employmentList::-webkit-scrollbar-thumb {
+    background: $darkBlue; 
+  }
+  
+  /* Handle on hover */
+  .employmentList::-webkit-scrollbar-thumb:hover {
+    background: $brownish; 
+  }
+
 @media screen and (min-width:768px){
     .displayList{
-
-        min-height: 575px;
-        margin: 14px auto 0;
+        height:725px;
+       /*  min-height: 710px; */
+       //margin: 25px auto 0;
+    }
+    .employmentList{
+        height: 100%;
+        
     }
 
 }
