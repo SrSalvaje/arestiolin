@@ -16,25 +16,25 @@ const Profile = React.forwardRef((props, ref) => (
     <div id={'profile'} className={styles.main} ref={ref}>
         <Widget
                 type={content.profile.widget1.type}
-                class={props.verticalPosition<=(props.height*0.85)? styles.enter: styles.widget} 
+                class={props.verticalPosition<=( props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget} 
                 title={content.profile.widget1.title} 
                 content={content.profile.widget1.content} 
         />
         <Widget 
             type={content.profile.widget2.type}
-            class={props.verticalPosition<=(props.height*0.65)? styles.enter: styles.widget} 
+            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget} 
             title={content.profile.widget2.title} 
             content={content.profile.widget2.content} 
         /> 
          <Widget 
             type={content.profile.widget3.type}
-            class={props.verticalPosition<=(props.height*0.35)? styles.enter: styles.widget} 
+            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget} 
             title={content.profile.widget3.title} 
             content={content.profile.widget3.content} 
         /> 
         <Widget 
             type={content.profile.widget4.type}
-            class={props.verticalPosition<=(props.height*0.15 )? styles.enter: styles.widget} 
+            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget} 
             title={content.profile.widget4.title} 
             content={<ul>
                 <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>
