@@ -18,7 +18,8 @@ class App extends Component {
     currentView:"",
     isModal:false,
     viewPortHeight:"",
-    viewPortWidth:""
+    viewPortWidth:"",
+  
   }
 
   componentDidMount=()=>{
@@ -96,7 +97,7 @@ class App extends Component {
               ]}
               openModal={this.openModal}
             />
-            <Profile height={this.state.viewPortHeight} id={"profile"}/>
+            <Profile height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"}/>
             <CV  id={"cv"} />
             <Portfolio id={'portfolio'}/>
           </GetScrollPos>
