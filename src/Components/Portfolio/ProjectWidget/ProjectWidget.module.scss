@@ -46,6 +46,7 @@ $cols: 1;
   max-height: 100%;
   overflow:hidden;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px gray;
 
   
 }
@@ -63,6 +64,7 @@ $cols: 1;
   color:whitesmoke;
     align-self: flex-end;
     border-radius: 20px;
+    box-shadow: 4px 4px 5px gray;
     /* a{
       width:100%;
       height: 100%;
@@ -85,6 +87,7 @@ $cols: 1;
     flex-direction: column;
     //overflow: visible;
     margin:10px auto;
+    box-shadow: 4px 4px 5px gray;
     p{
       padding: 7px 5px 5px;;
       width:100%;
@@ -118,16 +121,33 @@ $cols: 1;
   background: $brownish; 
 }
 
- 
+@media screen and  (min-height: 700px){
+  .main{
+    height: 70%;
+    min-height: 0;
+    h3{
+      font-size: 25px;
+    }
+    .btn{
+      height:40px;
+      width:60%;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .description{font-size: 20px; }
+}
+
+}
 @media screen and (min-width:360px){
   .main{
       margin:auto 40px;
   }   
 }
 
-@media screen and (min-width:390px){
+@media screen and (min-width:390px ) {
   .main{
       margin:auto 50px;
+      min-height: 0;
   }   
 }
 
@@ -156,6 +176,12 @@ $cols: 1;
   }
   
 }
+
+
+@media screen and (min-height:730){
+  
+}
+
   /* .projectImg{
     grid-area: imgs;
    
