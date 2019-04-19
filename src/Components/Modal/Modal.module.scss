@@ -29,7 +29,7 @@
     display:block;
     left:0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .modalContent {
@@ -58,9 +58,13 @@
       height: auto;
       -webkit-user-select: text;
       background-color: $lightBlue;
-      border-left: 3px solid white;
-      box-shadow: 7px 7px 5px gray;  
+      border-left: 2px solid $darkBlue;
+      box-shadow: 7px 7px 5px gray; 
+      color: white; 
       //font-size: 25px;
+      span{
+        margin-left: 3px;
+      }
     }
     
   }
@@ -114,3 +118,26 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  @media screen and (min-width:375px){
+    .myPicture{
+      width:120px;
+    }
+
+
+  }
+
+  @media screen and  (min-width: 425px){
+    .myPicture{
+      width: 140px
+       
+    }
+    .modalContent{
+      font-size: 25px;
+      word-break: break-word;
+      text-align: right;
+    }
+
+  
+
+}
