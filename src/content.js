@@ -4,7 +4,7 @@ import myReads from './Assets/img/myReads.JPG';
 import restRev from './Assets/img/restRev.JPG';
 import matching from './Assets/img/matching.JPG';
 import arcade from './Assets/img/arcade.JPG';
-import code from './Assets/img/svg/code.svg';
+import code from './Assets/img/coding.png';
 import diving from './Assets/img/svg/diving.svg';
 import news from './Assets/img/svg/news.svg';
 import sales from './Assets/img/svg/sale.svg';
