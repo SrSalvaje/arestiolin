@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from  './MapLoader.module.scss';
-
 class Map extends Component {
 
     constructor(props){
@@ -17,19 +16,9 @@ class Map extends Component {
     
     componentDidMount(){
         this.mapChecker();
-      
+        
     }
 
-    /* renderMarker=() =>{
-      const {map}=this.state,
-      infoWindow = new window.google.maps.infoWindow(),
-      markers=[];
-      
-      //create info window for each job in cv
-      this.props.cv.forEach()
-    } */
-
-    
 
     getLocations = ()=>{
       const locations = Object.keys(this.props.cv).map(key=>({coordinates: this.props.cv[key].coordinates, description: this.props.cv[key].description}));
@@ -48,7 +37,7 @@ class Map extends Component {
 
     renderMap= ()=> {
         let config;
-       
+          
         if (!!this.props.configObject) {
           config=this.props.configObject
           } else {
@@ -220,9 +209,9 @@ class Map extends Component {
                   ] 
                 }
           }
-          // create map instance
+          // create map instanc
         this.setState({map:new window.google.maps.Map(this.map.current, config)}, () =>{this.passMapToParent(this.state.map)});
-        
+          
         //add markers
         //this.props.createMarkers();
       }
@@ -230,16 +219,14 @@ class Map extends Component {
       adjustZoom = (map) => {
         console.log(map.getBounds())
       } */
-    passMapToParent = (map) => {
-      console.log(map.getBounds())
+    passMapToParent = (map) => {    
       this.props.mapToParent(map);
     }
   
   
     render() {
       return ( 
-      <div ref={this.map} className={styles.map} >
-        
+      <div ref={this.map} id={styles.map} >   
       </div>    
       );
     }
