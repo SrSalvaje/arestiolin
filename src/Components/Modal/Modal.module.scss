@@ -1,16 +1,20 @@
 @import '../../Assets/variables.module';
 .modal{
-    display: none; /* Hidden by default */
+    //display: none; /* Hidden by default */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     position: fixed; /* Stay in place */
     z-index: 20; /* Sit on top */
     left: -200vw;
     top: 0;
-    width: 0%; /* Full width */
-    height: 0%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    transition: left 1s, width 1s, height 1s;
+    transition: left .3s, /* , height 1s */;
   
    
 }
@@ -18,6 +22,9 @@
 .myPicture{
   grid-area: myFace;
   margin:auto;
+  z-index: 1;
+  max-height:195px;
+  max-width: 115px;
   
 }
 .pictureShadow{
@@ -26,51 +33,105 @@
 
 .display{
     composes:modal;
-    display:block;
+    //display:block;
+    
     left:0;
     width: 100%;
     height: 100vh;
-}
+ /*    span{
+      visibility: visible;
+    } */
 
+ 
+}
+.display .close{
+  visibility: visible;
+}
+ 
+  /* The Close Button */
+  .close {
+    grid-area: closeM;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    float: right;
+    font-size: 70px;
+    visibility: hidden;
+
+   // color: #aaa;
+    //float: right;
+    //font-size: 28px;
+    font-weight: bold;
+    /* position: relative;
+    right:-10px;
+    top:0px; */ 
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    font-size: 80px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.display .modalContent p {
+   
+    width: 100%;
+    z-index: 0;
+    transform:translateX(5px);
+    transition-property: transform .5s, width .5s;
+    transition-duration: .5s;
+    transition-delay: .3s;
+}
 .modalContent {
+  
+    z-index: 19;
     display: grid;
     grid-template-areas:  " nothing  closeM"
                           "myFace myname"
                           "myFace myemail"
-                          "myFace myphone";
+                          "myFace myphone"
+                          ". .";
     grid-template-columns: 40% 60%;
-    grid-template-rows: 4% 32% 32% 32%;
+    grid-template-rows: 2% 32% 32% 32% 2%;
 
     background-color: $whitish;
     margin: 50% auto; /* 15% from the top and centered */
     padding: 5px;
     border: 1px solid #888;
-    width: 92vw; /* Could be more or less, depending on screen size */
-    height:40vh;
+    max-width: 300px; /* Could be more or less, depending on screen size */
+    max-height:235px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px $brownish;
     justify-content: center;
     align-content: center;
     p{
-      width: 100%;
+      width: 0%;
       text-align: left;
       margin:auto;
-      height: auto;
+      height: 19.2px;
+      overflow: hidden;
       -webkit-user-select: text;
       background-color: $lightBlue;
       border-left: 2px solid $darkBlue;
       box-shadow: 7px 7px 5px gray; 
-      color: white; 
+      color: white;
+      z-index: -1;
+      transform:translateX(-110px);
+      transition-delay: .4s;
+      transition-property: width 1s, transform 1s;
       //font-size: 25px;
-      span{
-        margin-left: 3px;
-      }
+      
     }
+   
     
   }
 
   .myName{
-     
+    height: 19.2px;
     grid-area: myname;
     align-self: flex-start;  
   }
@@ -90,35 +151,8 @@
   
 
 
-  
-  /* The Close Button */
-  .close {
-    grid-area: closeM;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    color: white;
-    float: right;
-    font-size: 70px;
-
-   // color: #aaa;
-    //float: right;
-    //font-size: 28px;
-    font-weight: bold;
-    /* position: relative;
-    right:-10px;
-    top:0px; */ 
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    font-size: 80px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
+ 
+/* 
   @media screen and (min-width:375px){
     .myPicture{
       width:120px;
@@ -140,4 +174,4 @@
 
   
 
-}
+} */
