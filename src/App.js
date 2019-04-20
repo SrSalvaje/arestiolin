@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   getViewpoertSize=()=>{
-    this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth});
+    this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth});   
   }
   openModal=(e)=>{
     e.preventDefault();
