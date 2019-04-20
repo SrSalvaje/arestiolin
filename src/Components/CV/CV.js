@@ -6,13 +6,14 @@ import Map from '../Map/MapLoader';
 
 
 
+
 class CV extends Component{
       
     state={
         clickedMarker:"",
         openedWindow:null,
         markers:"",
-        map:"",
+        map:undefined,
         infoWindows:"",
     };
 
@@ -28,7 +29,7 @@ class CV extends Component{
         </div>`        
     );
 
-    createMarkers = () => {
+    createMarkers = () => {   
         const {map}=this.state;
         const infoWindow= new window.google.maps.InfoWindow();
         const markers=[];
@@ -37,13 +38,12 @@ class CV extends Component{
 
         content.CV.forEach(job=>{
 
-            let icon ={
+             let icon ={
                 url: job.icon,
                 scaledSize: new window.google.maps.Size(35, 35), // scaled size
-                origin: new window.google.maps.Point(0,0), // origin
-                anchor: new window.google.maps.Point(0, 0) // anchor
+                anchor: new window.google.maps.Point(17, 17) // anchor
 
-            }
+            } 
             
             let infoWindowContent=  this.createInfoWindow(job)
             //let infowindow = new window.google.maps.InfoWindow({content:infoWindowContent, id:job.id, maxWidth: '100px', maxHeight: '100%'});
@@ -51,7 +51,7 @@ class CV extends Component{
                 map:map,
                 animation:window.google.maps.Animation.DROP,
                 position:{lat: Number(job.coordinates.lat), lng: Number(job.coordinates.lng)},
-                icon:icon,
+                icon:icon, 
                 "id":job.id
             });
 
@@ -117,18 +117,17 @@ class CV extends Component{
         return(
             <div id={"cv"} className={styles.main} ref={this.props.forwardedRef}>
                 <h2>Employment History</h2>
+                <div  className={styles.mainContent}>
                     <List
                         position={this.props.verticalPosition}
                         items={content.CV}
                         openInfo={this.openInfo}
                     />
-              
-                <div className={this.props.verticalPosition<=200?styles.displayMap: styles.map}>
-                    <Map cv={content.CV}
+                    <div className={this.props.verticalPosition<=200?styles.displayMap: styles.map}>
+                        <Map cv={content.CV}
                         mapToParent={this.mapToParent}
-                        createMarkers={this.createMarkers}
-                        map={this.state.map}
                     />
+                    </div>
                 </div>
             </div>
         )

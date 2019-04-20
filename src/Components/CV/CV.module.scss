@@ -11,34 +11,38 @@
     h2{
         width: 95%;
         margin: auto;
-        height: 7%;;
+        height: 10%;;
         color:white;
-        padding: 10px 0 10px;
-        //background-color: $whitish;
-       // border-radius: 20px;
+        padding: 15px 0 10px;
+
     }
+}
+
+.mainContent{
+  height: 90%;
+  width:100% !important;
+  margin:0 !important;
 }
 
 .map{
     width: 95%;
-    height:0;
+    height:50%;
     margin:auto;
     padding: 0;
     border-radius: 20px;
     border:1px solid $darkBlue;
-    //transform: translateX(-200vw);
     opacity: 0;
     transition: opacity .5s, height.5s;
     margin:3% auto 0;
     box-shadow: 5px 5px 3px $lightBlue;
+    overflow: visible !important;
 
 }
 .displayMap{
     composes: map;
-    height: 50%;
     opacity: 100;
-   // transform: translateX(0);
-    //transition: opacity .5s, transform .5s;
+
+    transition: opacity .5s/* , transform .5s */;
     
 }
 
@@ -49,11 +53,6 @@
     width:100%;
     height:200px;
     overflow: hidden;
-    //min-width: 200px;
-    //padding:10px 0 0;
-    /* position: relative;
-    top:0;
-   left: 0;   */
    display:flex;
    flex-direction: column;
    flex-wrap: nowrap;
@@ -127,24 +126,18 @@
 
 @media screen and (min-width:768px){
     .main{
-        display: grid;
-        grid-template-areas: ". . "
-                              "mylist  mymap"
-                              ". ." ;
-        grid-template-rows: 100px 800px auto;
-        grid-template-columns: 40% 60%;
         h2{
           font-size: 40px;
-            grid-area: mylist;
             margin: 10px auto ;
             height:100px;
             
         }
 
-        div:nth-child(2){
-          grid-area: mylist;
-          margin: 100px auto ;
-          height:700px;
+        div:nth-child(1){
+          margin: 0 auto auto 2% ;
+          width:42%;
+          height: 100%;;
+          
         }
         
         div ul li{
@@ -155,11 +148,14 @@
         }
 
     }
+    .mainContent{height:70%;}
     .map{
-        grid-area: mymap;
-        height: 795px;
         margin:auto ;
-    }
+        overflow:visible;
+        transform: translate(44%, -100%);
+        width:50%;
+        height:100%;
+    }  
     
     
   }
