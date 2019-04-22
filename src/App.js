@@ -27,7 +27,7 @@ class App extends Component {
 
     this.viewsRefs={hero:React.createRef(), nav:React.createRef(), 
       profile:React.createRef(), cv:React.createRef(), 
-      portfolio:React.createRef() 
+      portfolio:React.createRef(), scrollCont:React.createRef() 
   }
   }
   
@@ -84,18 +84,24 @@ class App extends Component {
   clickedOnNav=(currentView)=>{
     this.setState({currentView:currentView})
   }
-  handlesScroll=()=>{
-    /* let element =e.currentTarget;
-    console.log(`scroll height:  ${element.scrollHeight}
-    element scrollTop: ${element.scrollTop}
-    element client height: ${element.clientHeight}
-    a-b = ${element.scrollHeight-element.scrollTop}`); */
-    //show nav
-    //console.log(this.viewsRefs.hero.current.getBoundingClientRect());
-   
-    let heroPos = this.viewsRefs.hero.current.getBoundingClientRect();
- 
+  handlesScroll=(e)=>{
+    let element =e.currentTarget;
+  
     
+    
+    //show nav
+  
+    //console.log(this.viewsRefs.profile.current.getBoundingClientRect());
+    
+    //let elementHeight= element.scrollHeight;
+    let scrolled= element.scrollTop;
+    let vpHeight=element.clientHeight;
+
+    //let viewsHeight=Math.round(Math.round(this.state.viewPortHeight)-Math.round(this.state.navBarHeight));
+    let adjustedTop=Math.round(this.state.navBarHeight);
+    let heroPos = this.viewsRefs.hero.current.getBoundingClientRect();
+
+    //show/hide nav
     if(heroPos.top<=(-(heroPos.height/4.5)) && this.state.showNav===false) {
       this.setState({showNav:true});
     }
@@ -103,10 +109,19 @@ class App extends Component {
       this.setState({showNav:false});
     }
 
-     
-    //console.log(this.viewsRefs.hero.current.getBoundingClientRect());
-    
-    
+    //setViews
+    if(scrolled>= (vpHeight-adjustedTop) && scrolled < ((vpHeight*2)-adjustedTop) && this.state.currentView!=="profile"){
+      this.setState({currentView:"profile"});
+    }
+
+    if(scrolled>= ((vpHeight*2)-adjustedTop+100) && scrolled < ((vpHeight*3)-adjustedTop) && this.state.currentView!=="cv"){
+      this.setState({currentView:"cv"});
+    }
+
+    if(scrolled>= ((vpHeight*3)-adjustedTop+100) && scrolled < ((vpHeight*4)-adjustedTop)&& this.state.currentView!=="portfolio"){
+      this.setState({currentView:"portfolio"});
+    }
+    /* to do: calculate margin dynamically */  
 }
 
 
@@ -115,10 +130,10 @@ class App extends Component {
    
         <div className={styles.App}  >
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
-          <div onScroll={e=>{this.handlesScroll(e)}} className={styles.container}>
+          <div onScroll={e=>{this.handlesScroll(e)}} className={styles.container} ref={this.viewsRefs.scrollCont}>
             <HeroCont
               ref={this.viewsRefs.hero}
-              id={"hero"}
+              id={"hero"}s
               title={content.hero.title}
               content={content.hero.content}
               button={content.hero.button}
@@ -132,6 +147,7 @@ class App extends Component {
               id={"nav"}
               currentView={this.state.currentView}
               showNav={this.state.showNav}
+              scrollCont={this.viewsRefs.scrollCont}
               links={[
               {name:'profile', position: 1, elementRef:this.viewsRefs.profile},
               {name:'cv', position: 2, elementRef:this.viewsRefs.cv},
