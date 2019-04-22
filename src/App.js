@@ -69,16 +69,10 @@ class App extends Component {
   clickedOnNav=(currentView)=>{
     this.setState({currentView:currentView})
   }
-  handlesScroll=(e)=>{
-    let element =e.target;
-    console.log(`they see me scrolling ${element}`);
-}
-
-
   render() {
     return (
    
-        <div className={styles.App} onScrollCapture={e=>{this.handlesScroll(e)}}>
+        <div className={styles.App}>
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
           <GetScrollPos getRefs={this.getRefs} setCurrentView={this.setCurrentView} >
             <HeroCont

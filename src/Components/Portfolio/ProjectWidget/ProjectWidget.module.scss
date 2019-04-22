@@ -139,6 +139,46 @@ $cols: 1;
 
 }
 
+@media screen and (min-width:1024px){
+  .main{
+    height: 450px;
+    width: 95%;
+    margin: auto;
+    grid-template-areas: '. title title .'
+                        '. imgs  description .';
+    grid-template-columns: auto 600px 400px auto ;
+    grid-template-rows: 90px 290px;
+    grid-column-gap:10px;
+    
+    .description{
+      height: 280px;
+    }
+    .imgCont{
+      //align-self: center;
+      height: 280px;
+      justify-self: flex-start;
+      align-self: flex-start;
+      
+    }
+    
+    h3{
+      
+      align-self: flex-start;
+      justify-self: center;
+      margin:10px auto;
+      font-size: 40px;
+      
+    }
+    .btn{
+      grid-area: description;
+      position: relative;
+      top: -p0px;
+    }
+                      
+  }
+
+}
+
 
 
 
