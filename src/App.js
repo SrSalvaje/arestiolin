@@ -69,13 +69,20 @@ class App extends Component {
   clickedOnNav=(currentView)=>{
     this.setState({currentView:currentView})
   }
+  handlesScroll=(e)=>{
+    let element =e.target;
+    console.log(`they see me scrolling ${element}`);
+}
+
 
   render() {
     return (
    
-        <div className={styles.App}>
-          <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
-          <GetScrollPos getRefs={this.getRefs} setCurrentView={this.setCurrentView}  >     
+        <div className={styles.App} onScrollCapture={e=>{this.handlesScroll(e)}}>
+         <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
+        
+         
+          {/* <GetScrollPos getRefs={this.getRefs} setCurrentView={this.setCurrentView}  >     */} 
             <HeroCont
               id={"hero"}
               title={content.hero.title}
@@ -83,6 +90,7 @@ class App extends Component {
               button={content.hero.button}
               background={content.hero.background}
             />
+         
             <Nav
               viewPortHeight={this.state.viewPortHeight}
               viewPortWidth={this.state.viewPortWidth}
@@ -97,13 +105,15 @@ class App extends Component {
               ]}
               openModal={this.openModal}
             />
+                 <div style={{width:'100vw', height:'100vh', overflow:'auto', backgroundColor: 'red'}}>
             <Profile height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"}/>
             <CV  id={"cv"} />
             <Portfolio id={'portfolio'}/>
-          </GetScrollPos>
+          {/* </GetScrollPos> */}
           <Footer  openModal={this.openModal}></Footer>
           <Modal isModal={this.state.isModal}
           openModal={this.openModal}/>
+          </div>
         </div>
     
     );
