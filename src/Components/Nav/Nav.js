@@ -27,7 +27,7 @@ const Nav = React.forwardRef((props, ref)=>{
 
 
     return(
-        <nav id={'nav'} className={(props.verticalPosition<=-80 )?styles.main: styles.hide} ref={ref}>
+        <nav id={'nav'} className={props.showNav?styles.main: styles.hide} ref={ref}>
             <ul>
             {props.links.map(link=>(
             <li value={link.name}  onClick={link.name==='contact'? (e)=>props.openModal(e) : (e)=> goTo(e, link.position, link.name )} key={link.name} className={ link.name===props.currentView? styles.liCurrent:styles.lis}><a  href={`#${link.name}`} value={link.name}className={/* link.name===props.currentView? styles.linksCurrent: */ styles.links}  >{link.name}</a></li>
