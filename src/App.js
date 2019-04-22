@@ -145,7 +145,7 @@ class App extends Component {
               openModal={this.openModal}
             />
             <Profile ref={this.viewsRefs.profile} height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"} verticalPosition={this.state.profilePosition}/>
-            <CV ref={this.viewsRefs.cv} id={"cv"} verticalPosition={this.state.cvPosition}/>
+            <CV ref={this.viewsRefs.cv} id={"cv"} verticalPosition={this.state.cvPosition} height={this.state.viewPortHeight}/>
             <Portfolio ref={this.viewsRefs.portfolio} id={'portfolio'}/>
           <Footer  openModal={this.openModal}></Footer>
           <Modal isModal={this.state.isModal}
@@ -159,34 +159,3 @@ class App extends Component {
 
 export default App;
 
-/*  getRefs=(views)=>{
-    this.setState({refs:views.slice(0)});
-  } */
-
-  /* setCurrentView=()=>{
-    let currentView="";
-    let refsKeys= Object.keys(this.viewsRefs);
-    refsKeys.forEach((key, index)=>{
-      
-      if(this.viewsRefs[key]==='hero')
-    })
-    this.viewsRefs.forEach((view, index)=>{
-      if(index===0 && view.verticalPosition>=400){
-        currentView="hero"; 
-   
-      }
-      else if(index===2 && view.verticalPosition<=200){
-        currentView="profile";
-       
-      }
-      else if(index===3 && view.verticalPosition<=200){
-        currentView="cv";
-       
-      }
-      else if(index===4 && view.verticalPosition<=200){
-       currentView="portfolio";
-      
-      }
-    });
-    this.setState({currentView:currentView});
-  }  */
