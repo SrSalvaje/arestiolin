@@ -112,10 +112,12 @@ class CV extends Component{
                 marker.setAnimation(null);
                 }, time); 
     }
-    
+
+
+  
     render(){
         return(
-            <div id={"cv"} className={styles.main} ref={this.props.forwardedRef}>
+            <div id={"cv"} className={styles.main} ref={this.props.forwardedRef} >
                 <h2>Employment History</h2>
                 <div  className={styles.mainContent}>
                     <List

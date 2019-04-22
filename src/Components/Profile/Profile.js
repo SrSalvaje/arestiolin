@@ -13,7 +13,8 @@ import premiereLogo from '../../Assets/img/005-premiere.png';
 
 const Profile = React.forwardRef((props, ref) => (
 
-    <div id={'profile'} className={styles.main} ref={ref}>
+
+    <div id={'profile'} className={styles.main} ref={ref} >
         <Widget
                 type={content.profile.widget1.type}
                 class={props.verticalPosition<=( props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget} 

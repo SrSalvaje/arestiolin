@@ -38,7 +38,8 @@ class GetScrollPos extends Component {
     }
     
     
-    getPosition=()=>{
+    getPosition=(e)=>{
+        e.preventDefault();
         //copy of the state
         const copyOfViews=this.state.views.slice(0);
         //get the y position for each view in the cloned array

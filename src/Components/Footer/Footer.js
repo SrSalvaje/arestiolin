@@ -14,7 +14,7 @@ const Footer = (props)=>{
 
 
     return(
-        <div className={styles.main}>         
+        <div id={'footer' }className={styles.main} >         
             <p ><span onClick={props.openModal}>Created by Jon Miren</span></p>
             <div className={styles.attribution}>Icons by <a href="https://www.flaticon.com/authors/smalllikeart"  target={"_blank"} rel={"noopener"} title="smalllikeart">smalllikeart </a> @ <a href="https://www.flaticon.com/"  target={"_blank"} rel={"noopener"}title="Flaticon">www.flaticon.com</a></div>
             <div className={styles.logos}>
