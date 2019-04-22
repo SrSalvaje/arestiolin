@@ -59,63 +59,10 @@ class App extends Component {
   clickedOnNav=(currentView)=>{
     this.setState({currentView:currentView})
   }
-  handlesScroll=( )=>{
-
-    let element =this.viewsRefs.scrollCont.current;
-    //let elementHeight= element.scrollHeight;
-    let scrolled= element.scrollTop;
-    let vpHeight=Math.round(element.clientHeight);
-
-    //let viewsHeight=Math.round(Math.round(this.state.viewPortHeight)-Math.round(this.state.navBarHeight));
-    let adjustedTop=Math.round(this.state.navBarHeight);
-    let heroPos = this.viewsRefs.hero.current.getBoundingClientRect();
-
-    //show/hide nav
-    if(heroPos.top<=(-(heroPos.height/4.5)) && this.state.showNav===false) {
-      this.setState({showNav:true});
-    }
-    if(heroPos.top>(-(heroPos.height/4.5)) && this.state.showNav===true){
-      this.setState({showNav:false});
-    }
-
-    //setViews
-    if(scrolled>= (vpHeight-adjustedTop) && scrolled < ((vpHeight*2)-adjustedTop) && this.state.currentView!=="profile"){
-      this.setState({currentView:"profile"});
-    }
-
-    if(scrolled>= ((vpHeight*2)-adjustedTop+100) && scrolled < ((vpHeight*3)-adjustedTop) && this.state.currentView!=="cv"){
-      this.setState({currentView:"cv"});
-    }
-
-    if(scrolled>= ((vpHeight*3)-adjustedTop+100) && scrolled < ((vpHeight*4)-adjustedTop)&& this.state.currentView!=="portfolio"){
-      this.setState({currentView:"portfolio"});
-    }
-    //measure views
-    //this.setState({profilePosition:this.viewsRefs.profile.current.getBoundingClientRect().top})
-    
-    
-    /* to do: calculate margin dynamically */
-    let pScrolledOneFifth, profileHeight2, profileHeight3, profileHeight4;
-    pScrolledOneFifth=(vpHeight-adjustedTop)/5;
-  
-    this.setState({profilePosition:this.viewsRefs.profile.current.getBoundingClientRect().top});
-    if(this.viewsRefs.cv.current.getBoundingClientRect().top<vpHeight-adjustedTop){
-      this.setState({cvPosition:this.viewsRefs.cv.current.getBoundingClientRect().top})
-      
-    }
-  
-
-    
-}
-
-
-
-
-
   render() {
     return (
    
-        <div className={styles.App}  >
+        <div className={styles.App}>
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
           <div onScroll={debounce(this.handlesScroll, 50)} className={styles.container} ref={this.viewsRefs.scrollCont}>
             <HeroCont

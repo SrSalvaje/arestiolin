@@ -86,11 +86,11 @@ code {
   }
 } 
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1400px){
   
   
    #home,#profile, #cv, #portfolio,#nav, #footer{
-     max-width:1024px;
+     max-width:1400px;
      /* max-height:900px; */
     /* height: calc(100%-8vh); */
     margin: 200px auto auto;

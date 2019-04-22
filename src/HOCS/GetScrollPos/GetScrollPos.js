@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  {debounce}from 'lodash';
+import  {debounce, throttle}from 'lodash';
 //import variables from '../../Assets/_variables.module.scss'
 
 
@@ -27,19 +27,20 @@ class GetScrollPos extends Component {
         const nav = this.state.view1.addRef.current.getBoundingClientRect().height;
         this.setState({navBarheight:nav}); */
         //add the scroll event listener 
-        window.addEventListener("scroll",  debounce(this.getPosition, 50, /* {leading:true} */) );
+        window.addEventListener("scroll",  throttle(this.getPosition, 500 /* {leading:true} */) );
         //pass the refs to the parent
         this.props.getRefs(this.state.views);
        
     }; 
 
     componentWillUnmount(){
-        window.removeEventListener("scroll", debounce(this.getPosition, 50));
+        window.removeEventListener("scroll", throttle(this.getPosition, 50));
     }
     
     
     getPosition=(e)=>{
         e.preventDefault();
+        console.log("in scroll method")
         //copy of the state
         const copyOfViews=this.state.views.slice(0);
         //get the y position for each view in the cloned array
