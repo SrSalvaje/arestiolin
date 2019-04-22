@@ -34,15 +34,17 @@ class App extends Component {
   
   }
   
-  componentDidMount=()=>{
+  componentDidMount(){
     this.getViewpoertSize();
     window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
-  componentWillUnmount=()=>{
+  componentWillUnmount(){
     window.removeEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
+  
+  
   
   getViewpoertSize=()=>{
     this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth, navBarHeight:this.viewsRefs.nav.current.getBoundingClientRect().height});   
@@ -101,7 +103,7 @@ class App extends Component {
       this.setState({cvPosition:this.viewsRefs.cv.current.getBoundingClientRect().top})
       
     }
-   console.log(this.viewsRefs.profile.current.getBoundingClientRect().top)
+  
 
     
 }
@@ -115,7 +117,7 @@ class App extends Component {
    
         <div className={styles.App}  >
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
-          <div onScroll={throttle(this.handlesScroll, 500)} className={styles.container} ref={this.viewsRefs.scrollCont}>
+          <div onScroll={debounce(this.handlesScroll, 50)} className={styles.container} ref={this.viewsRefs.scrollCont}>
             <HeroCont
               ref={this.viewsRefs.hero}
               id={"hero"}s
