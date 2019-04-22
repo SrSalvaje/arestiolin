@@ -77,23 +77,42 @@ code {
     monospace;
 }
 
-@media screen and  (min-width: 375px){
-  
-   h2{
-   font-size: 35px;
-  }
 
-
-}
 
  @media screen and  (min-width: 425px){
   .gm-style-iw {
-  
     min-width: 380px; 
     min-height: 220px;
-    
   }
-  
-
-
 } 
+
+@media screen and (min-width:1024px){
+  
+  
+   #home,#profile, #cv, #portfolio,#nav, #footer{
+     max-width:1024px;
+     /* max-height:900px; */
+    /* height: calc(100%-8vh); */
+    margin: 200px auto auto;
+    left:-50%;
+    right:-50%;
+   }
+  
+   
+   #nav, #footer{
+     margin:auto;
+     max-width: none;
+   }
+   #footer{
+    margin: 200px auto auto;
+    max-width: none;
+    height:150px;
+   }
+} 
+/* 
+.heroImg{
+  width:1800px;
+  margin:auto;
+  left:-50%;
+  right:-50%;
+}  */
