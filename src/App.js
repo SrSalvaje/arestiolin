@@ -9,7 +9,7 @@ import Nav from './Components/Nav/Nav';
 import bc from './Assets/img/hero.JPG';
 //import GetScrollPos from './HOCS/GetScrollPos/GetScrollPos';
 import Modal from './Components/Modal/Modal';
-import  {debounce}from 'lodash';
+import  {throttle, debounce}from 'lodash';
 import Footer  from "./Components/Footer/Footer";
 
 
@@ -25,8 +25,6 @@ class App extends Component {
       navBarHeight:"",
       profilePosition:"",
       cvPosition:"",
-      
-    
     }
 
     this.viewsRefs={hero:React.createRef(), nav:React.createRef(), 
@@ -34,11 +32,8 @@ class App extends Component {
       portfolio:React.createRef(), scrollCont:React.createRef() 
   }
   
-
- 
   }
   
-
   componentDidMount=()=>{
     this.getViewpoertSize();
     window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
@@ -63,8 +58,7 @@ class App extends Component {
     this.setState({currentView:currentView})
   }
   handlesScroll=( )=>{
-    
-    
+
     let element =this.viewsRefs.scrollCont.current;
     //let elementHeight= element.scrollHeight;
     let scrolled= element.scrollTop;
@@ -102,7 +96,11 @@ class App extends Component {
     let pScrolledOneFifth, profileHeight2, profileHeight3, profileHeight4;
     pScrolledOneFifth=(vpHeight-adjustedTop)/5;
   
-    this.setState({profilePosition:this.viewsRefs.profile.current.getBoundingClientRect().top, cvPosition:this.viewsRefs.cv.current.getBoundingClientRect().top});
+    this.setState({profilePosition:this.viewsRefs.profile.current.getBoundingClientRect().top});
+    if(this.viewsRefs.cv.current.getBoundingClientRect().top<vpHeight-adjustedTop){
+      this.setState({cvPosition:this.viewsRefs.cv.current.getBoundingClientRect().top})
+      
+    }
    console.log(this.viewsRefs.profile.current.getBoundingClientRect().top)
 
     
@@ -117,7 +115,7 @@ class App extends Component {
    
         <div className={styles.App}  >
           <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
-          <div onScroll={debounce(this.handlesScroll, 100)} className={styles.container} ref={this.viewsRefs.scrollCont}>
+          <div onScroll={throttle(this.handlesScroll, 500)} className={styles.container} ref={this.viewsRefs.scrollCont}>
             <HeroCont
               ref={this.viewsRefs.hero}
               id={"hero"}s
