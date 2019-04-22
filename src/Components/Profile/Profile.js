@@ -11,48 +11,49 @@ import photoLogo from '../../Assets/img/004-photoshop.png';
 import accessLogo from '../../Assets/img/signs.png';
 import premiereLogo from '../../Assets/img/005-premiere.png';
 
-const Profile = React.forwardRef((props, ref) => (
+const Profile = React.forwardRef((props, ref) =>{
+    //let tenPercentHeight=props.height/10;
+    return (
+        <div id={'profile'} className={styles.main} ref={ref} >
+            <Widget
+                    type={content.profile.widget1.type}
+                    class={props.verticalPosition<= (props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget} 
+                    title={content.profile.widget1.title} 
+                    content={content.profile.widget1.content} 
+            />
+            <Widget 
+                type={content.profile.widget2.type}
+                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget} 
+                title={content.profile.widget2.title} 
+                content={content.profile.widget2.content} 
+            /> 
+             <Widget 
+                type={content.profile.widget3.type}
+                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget} 
+                title={content.profile.widget3.title} 
+                content={content.profile.widget3.content} 
+            /> 
+            <Widget 
+                type={content.profile.widget4.type}
+                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget} 
+                title={content.profile.widget4.title} 
+                content={<ul>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={ReactLogo} alt={"React Logo"}/><span>React</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={cssLogo} alt={"CSS Logo"}/><span>CSS</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={htmlLogo} alt={"HTML Logo"}/><span>HTML</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={testLogo} alt={"Test Logo"}/><span>Test Driven Development</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={accessLogo} alt={"Two avatars using sign language"}/><span>Accesibility</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={premiereLogo} alt={"PremierePro Logo"}/><span>PremierePro</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={photoLogo} alt={"Photoshop Logo"}/><span>Photoshop</span></li>
+                   {/*  <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/>Tools</li> */}
+                </ul>} 
+            /> 
+    
+    
+         
+        </div>
+    
+    )})
 
-
-    <div id={'profile'} className={styles.main} ref={ref} >
-        <Widget
-                type={content.profile.widget1.type}
-                class={props.verticalPosition<=( props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget} 
-                title={content.profile.widget1.title} 
-                content={content.profile.widget1.content} 
-        />
-        <Widget 
-            type={content.profile.widget2.type}
-            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget} 
-            title={content.profile.widget2.title} 
-            content={content.profile.widget2.content} 
-        /> 
-         <Widget 
-            type={content.profile.widget3.type}
-            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget} 
-            title={content.profile.widget3.title} 
-            content={content.profile.widget3.content} 
-        /> 
-        <Widget 
-            type={content.profile.widget4.type}
-            class={props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget} 
-            title={content.profile.widget4.title} 
-            content={<ul>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={ReactLogo} alt={"React Logo"}/><span>React</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={cssLogo} alt={"CSS Logo"}/><span>CSS</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={htmlLogo} alt={"HTML Logo"}/><span>HTML</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={testLogo} alt={"Test Logo"}/><span>Test Driven Development</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={accessLogo} alt={"Two avatars using sign language"}/><span>Accesibility</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={premiereLogo} alt={"PremierePro Logo"}/><span>PremierePro</span></li>
-                <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={photoLogo} alt={"Photoshop Logo"}/><span>Photoshop</span></li>
-               {/*  <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/>Tools</li> */}
-            </ul>} 
-        /> 
-
-
-     
-    </div>
-
-));
 export default Profile

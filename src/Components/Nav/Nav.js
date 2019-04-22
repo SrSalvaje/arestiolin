@@ -7,16 +7,11 @@ import styles from "./Nav.module.scss";
 
 const Nav = React.forwardRef((props, ref)=>{
    
+    let navPosition=100-props.navBarHeight;
     const goTo=(e, position, name)=>{
        e.preventDefault();
-       props.scrollCont.current.scrollTo(0,`${(window.innerHeight+70)*position}`); 
-       /*  console.log(`Target name ${name}`);
-        console.log(`Current target id ${e.currentTarget.id}`); */
-       
+       props.scrollCont.current.scrollTo(0,`${(window.innerHeight+navPosition)*position}`); 
         props.clickedOnNav(name);
-        //adjustPos(element);
-
-
     };
     //const adjustPos=(element)=>element.addRef.current.scrollIntoView(false); 
 
