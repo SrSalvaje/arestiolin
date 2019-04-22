@@ -4,12 +4,9 @@ $ratio-16-9: 56.25%;
 $cols: 1;
 
 .main{
-    width: 90%;
-    min-width:280px;
-    min-height: 290px;
-    max-height:100%;
-    //height:auto;
-    margin: auto 30px;
+    width:282px;
+    height:315px;
+    margin: auto;
     display: grid;
     grid-template-areas: 
         'title'
@@ -17,13 +14,13 @@ $cols: 1;
         'description';
     grid-template-columns: 100%;
     grid-template-rows: 10% 45% 45% ;
-    border: 1px;
+    border: 3px;
     border-color:$darkBlue;
     border-style: solid;
     background-color:$whitish;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 5px 5px 3px $lightBlue;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px gray;
     a{
       grid-area: description;
       align-self: end;
@@ -56,9 +53,9 @@ $cols: 1;
 }
 
 .btn{
-  height: 40px;
+  height: 35px;
   width: 90%;
-  margin: auto;
+  margin: auto auto 5px;;
   z-index: 1;
   background-color:$blackish;
   color:whitesmoke;
@@ -121,12 +118,15 @@ $cols: 1;
   background: $brownish; 
 }
 
-@media screen and  (min-height: 700px){
+@media screen and  (min-height: 736px){
   .main{
-    height: 70%;
-    min-height: 0;
+    height: /* 100% */ 400px ;
+    width: 90%;
+    //min-height: 0;
     h3{
-      font-size: 25px;
+      
+      font-size: 30px;
+      padding:20px 0 0 0; 
     }
     .btn{
       height:40px;
@@ -138,32 +138,21 @@ $cols: 1;
 }
 
 }
-@media screen and (min-width:360px){
-  .main{
-      margin:auto 40px;
-  }   
-}
 
-@media screen and (min-width:390px ) {
-  .main{
-      margin:auto 50px;
-      min-height: 0;
-  }   
-}
 
-@media screen and (min-width:425px){
+
+
+
+
+/* @media screen and (min-width:425px){
   .main{
-      margin:auto 60px;
-  }   
-}
-@media screen and (min-width:426px){
-  .main{
+    margin:auto 60px;
     min-height: 0;
     min-width: 0;
     max-height: none;
     max-width: 300px;
-    height:95%;
-    width: 95%;
+    height:100%;
+    width: 100%;
     margin:auto;
     h3{
       font-size: 25px;
@@ -175,12 +164,10 @@ $cols: 1;
     font-size: 15px;
   }
   
-}
+} */
 
 
-@media screen and (min-height:730){
-  
-}
+
 
   /* .projectImg{
     grid-area: imgs;
