@@ -83,8 +83,9 @@
 
 @media screen and (min-width:768px){
     .displayList{
-        height:70%/* 725px */;
-        width:80%;
+        height:100%/* 725px */;
+        width:100%;
+        grid-area: mylist;
        /*  min-height: 710px; */
        //margin: 25px auto 0;
     }
