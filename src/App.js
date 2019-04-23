@@ -102,7 +102,7 @@ class App extends Component {
             />
             <Profile height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"}/>
             <CV  id={"cv"}/>
-            <Portfolio id={'portfolio'}/>
+            <Portfolio id={'portfolio'} width={this.state.viewPortWidth}/>
          </GetScrollPos>
           <Footer  openModal={this.openModal}></Footer>
           <Modal isModal={this.state.isModal}
