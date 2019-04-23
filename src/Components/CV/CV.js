@@ -28,7 +28,11 @@ class CV extends Component{
             </div>
         </div>`        
     );
+    componentWillUnmount(){
+        window.google.maps.event.clearListener(this.state.map, 'click');
+        window.google.maps.event.clearListener(this.state.map, 'closeclick');
 
+    }
     createMarkers = () => {   
         const {map}=this.state;
         const infoWindow= new window.google.maps.InfoWindow();
@@ -61,7 +65,9 @@ class CV extends Component{
             marker.addListener("click", function () {
                 infoWindow.setContent(infoWindowContent);
                 infoWindow.open(map, marker);     
-            });         
+            });   
+            
+          
         });
         this.setState({markers:markers/* , infoWindows:infoWindowArray */});    
     };
@@ -78,17 +84,16 @@ class CV extends Component{
     };
 
     openInfo = (target) => {
-        
-
         this.closeInfo();
         const  clickedMarker = this.state.markers.filter(marker=>marker.id===target.id)[0];
         const job = content.CV.filter(job=>job.id===target.id)[0];
         const infoWindowContent=this.createInfoWindow(job)
         const infoWindow= new window.google.maps.InfoWindow({content:infoWindowContent,
-    maxWidth: 320});
+        maxWidth: 320});
+   
         //infoWindow.setContent(infoWindowContent);
+        window.google.maps.event.addListener(infoWindow, 'closeclick', this.closeInfoWindow);
         infoWindow.open(this.state.map, clickedMarker);
-        
        this.state.map.panTo(job.coordinates);
         this.state.map.setZoom(10);
         this.animateMarker(clickedMarker, 2100);
@@ -96,10 +101,20 @@ class CV extends Component{
         //const infoWindow= this.state.infoWindows.filter(ifw=>ifw.id===target.id)[0];
         //infoWindow.open(this.state.map, clickedMarker);
         this.setState({clickedMarker:clickedMarker, openedWindow:infoWindow });
-      
         
     };
 
+    
+
+    closeInfoWindow=()=>{
+        
+        this.state.map.panTo({
+            lat: 34.972461, lng: -40.678406});
+        this.state.map.setZoom(2);
+
+    }
+
+    
     
     animateMarker=(marker, time)=>{
 

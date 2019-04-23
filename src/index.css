@@ -104,8 +104,7 @@ code {
   
    #home,#profile, #cv, #portfolio,#nav, #footer{
      max-width:1400px;
-     /* max-height:900px; */
-    /* height: calc(100%-8vh); */
+    
     margin: 100px auto auto;
     left:-50%;
     right:-50%;
