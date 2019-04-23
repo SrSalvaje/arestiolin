@@ -9,15 +9,15 @@ const ProjectWidget =(props)=>(
   <div className={styles.main}>
     <h3>{props.title}</h3>
 {/*     <div className={styles.projectImg}> */}
-        <div className={styles.imgCont}>
+        <a href={props.url} target={"_blank"} rel={"noopener"} className={styles.imgCont}>
             <img className={styles.img} src={props.image} alt={props.alt}/>  
-        </div>
+        </a>
   {/*   </div> */}
     <div className={styles.description}>   
         <p>{props.description}</p>
         
     </div>
-    <a href={props.url} target={"_blank"} rel={"noopener"} ><button className={styles.btn}/* onClick={(e)=>{console.log(e.target)}} */>Open in new window</button></a>
+     {/* <button className={styles.btn}/> <a className={styles.btn} href={props.url} target={"_blank"} rel={"noopener"} >Open in new window</a> </button> */} 
     
   </div>
   
