@@ -9,11 +9,13 @@ const Nav = React.forwardRef((props, ref)=>{
    
     const goTo=(e, position, name)=>{
        e.preventDefault();
-       window.scrollTo(0,`${(window.innerHeight+70)*position}`); 
+       //e.target.scrollIntoView(false)
+       
+       window.scrollTo(0,`${(Math.round(window.innerHeight)+100)*position}`); 
        /*  console.log(`Target name ${name}`);
         console.log(`Current target id ${e.currentTarget.id}`); */
        
-        props.clickedOnNav(name);
+        //props.clickedOnNav(name);
         //adjustPos(element);
 
 
