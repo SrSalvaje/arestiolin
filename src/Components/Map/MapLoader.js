@@ -221,6 +221,7 @@ class Map extends Component {
       } */
     passMapToParent = (map) => {    
       this.props.mapToParent(map);
+      //window.mymap=map;
     }
   
   
