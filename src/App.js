@@ -22,12 +22,12 @@ class App extends Component {
   
   }
 
-  componentDidMount=()=>{
+  componentDidMount(){
     this.getViewpoertSize();
     window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
-  componentWillUnmount=()=>{
+  componentWillUnmount(){
     window.removeEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
