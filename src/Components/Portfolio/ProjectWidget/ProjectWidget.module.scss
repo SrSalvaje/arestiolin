@@ -17,10 +17,11 @@ $cols: 1;
     border: 3px;
     border-color:$darkBlue;
     border-style: solid;
-    background-color:$whitish;
+    background-color: rgba(0,0,0, 0.4);/* #90afc5; */
     align-items: center;
     border-radius: 10px;
     box-shadow: 5px 6px 10px gray;
+    color: $whitish;
     a{
       grid-area: description;
       align-self: end;
@@ -32,7 +33,7 @@ $cols: 1;
     grid-area: title;
     height: auto;
     margin: 0 auto;
-    color: black;
+    color: $whitish;
     justify-self: center;
 }
 
@@ -134,7 +135,8 @@ $cols: 1;
       font-size: 15px;
       margin-bottom: 10px;
     }
-    .description{font-size: 20px; }
+    .description{
+      font-size: 20px; }
 }
 
 }
@@ -152,6 +154,7 @@ $cols: 1;
     
     .description{
       height: 280px;
+    
     }
     .imgCont{
       //align-self: center;

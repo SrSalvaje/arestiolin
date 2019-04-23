@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./Portfolio.module.scss";
 import ProjectWidget from './ProjectWidget/ProjectWidget';
+import bc from '../../Assets/img/zen-space-web.jpg';
 
 //import PropTypes from 'prop-types';
 import content from '../../content';
@@ -11,7 +12,7 @@ import content from '../../content';
 const Portfolio = React.forwardRef((props,ref)=>(
   <div id={'portfolio'} className={styles.main} ref={ref}>
     <h2>Portfolio</h2>
-    <ul className={styles.projectList}>
+    <ul className={styles.projectList} style={{backgroundImage: `url( ${bc})`}}>
     {content.portfolio.map((project, index)=>(
         <li key={project.id}>
            <ProjectWidget
