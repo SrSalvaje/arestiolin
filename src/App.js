@@ -31,6 +31,10 @@ class App extends Component {
     window.removeEventListener("resize", debounce(this.getViewpoertSize, 500));
   }
 
+ /*  shouldComponentUpdate(){
+
+  } */
+
   getViewpoertSize=()=>{
     this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth});   
   }
@@ -97,7 +101,7 @@ class App extends Component {
               openModal={this.openModal}
             />
             <Profile height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"}/>
-            <CV  id={"cv"} />
+            <CV  id={"cv"}/>
             <Portfolio id={'portfolio'}/>
          </GetScrollPos>
           <Footer  openModal={this.openModal}></Footer>
