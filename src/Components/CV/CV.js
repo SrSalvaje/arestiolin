@@ -127,9 +127,9 @@ class CV extends Component{
                     />
                     <div className={this.props.verticalPosition<=200?styles.displayMap: styles.map}>
                         <Map cv={content.CV}
-                        mapToParent={this.mapToParent}
-                    />
-                    </div>
+                         mapToParent={this.mapToParent}
+                        />
+                    </div>            
                 </div>
             </div>
         )
