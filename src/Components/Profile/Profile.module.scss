@@ -95,17 +95,17 @@
     ul>li:nth-child(odd){
         background-color: $lightBlue;
         color: $whitish;
-        cursor: pointer;
+        //cursor: pointer;
        
       
       }
       
-      li:hover, ul>li:nth-child(odd):hover {
+     /*  li:hover, ul>li:nth-child(odd):hover {
           background-color: $darkBlue;
           color: $brownish;
           cursor: pointer;
           
-      }
+      } */
 }
 
 
@@ -158,12 +158,13 @@
  }
 
 @media screen and (min-width:768px){
-    .main{  
+    .main{ 
+       
         display: grid;
-        grid-template-columns: 47.5% 47.5%;
-        grid-template-rows: 47.5% 47.5%;
-        grid-gap: 5%; 
-        padding: 5%;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 49% 50%;
+        grid-gap: 2%;
+        padding: 2%;
 
     }
    .widget{
@@ -175,6 +176,11 @@
         height: 100%;
 
         max-height: 100%;
+        p, ul{
+            font-size: 25px;
+            
+        }
+      
        
         h2{
             background-color: $darkBlue;
@@ -182,15 +188,54 @@
             border-radius: 10px 10px 0 0;
             padding: 10px 0 10px; 
             transition: .3s; 
+            font-size: 30px;
         }
 
         div{
-            display: block;  
+            display: block;
+            
         }
    }
      
  }
 
+.contDiv::-webkit-scrollbar{
+    width: 10px !important;
 
+}
+.contDiv::-webkit-scrollbar-track {
+    background:$whitish ; 
+  }
 
+  
+  /* Handle */
+  .contDiv::-webkit-scrollbar-thumb {
+    background: $darkBlue; 
+  }
+  
+  /* Handle on hover */
+  .contDiv::-webkit-scrollbar-thumb:hover {
+    background: $brownish; 
+  }
+
+  /* list */
+
+  .contDiv::-webkit-scrollbar {
+    width: 15px !important;
+  }
+  
+  /* Track */
+  .contDiv::-webkit-scrollbar-track {
+    background:$blackish ; 
+  }
+  
+  /* Handle */
+  .contDiv::-webkit-scrollbar-thumb {
+    background: $darkBlue; 
+  }
+  
+  /* Handle on hover */
+  .contDiv::-webkit-scrollbar-thumb:hover {
+    background: $brownish; 
+  }
 

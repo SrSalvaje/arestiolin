@@ -20,7 +20,7 @@ class Widget extends Component {
   
       const widget = (<article className={showHide} >
                           <h2 onClick={this.togleShow}>{this.props.title}</h2>
-                          <div /* style={{display:showHide}} */>
+                          <div className={styles.contDiv} >
                             {/* if its a list, wrap all props in a UL and return LI, else return the content */}
                             {(this.props.type==='list'? <ul>{this.props.content.map((li, index) =>( <li key={`item${index}`}>{li}</li>))}</ul> : this.props.content)}
                           </div>
