@@ -7,16 +7,38 @@
     top:$navBarHeight1;
     z-index: 4;
     background: $blackish;
-    display:flex;
+    display:grid;
     flex-direction: column;
     flex-flow: column;
+    grid-template-areas: 'title title title'
+    'prevI mylist nextI';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
     align-items: center;
     justify-items: center;
     margin: 100px 0 0;
     overflow: hidden;
 }
 
+.nextPrev{
+  font-size: 40px;
+  color: white;
+ 
+
+
+}
+
+.prev{
+  composes:nextPrev;
+
+}
+.next{
+  composes:nextPrev;
+
+}
+
 .projectList{
+  grid-area: mylist;
     margin:40px auto auto;
     display: flex;
     flex-direction: row;
@@ -63,6 +85,7 @@
     color: $whitish;
     margin:0;
     padding:30px 0 0;
+    grid-area: title;
 }
 
 
