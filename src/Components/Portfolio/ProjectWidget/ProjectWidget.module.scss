@@ -184,7 +184,10 @@ $cols: 1;
     grid-column-gap:10px;
     
     .description{
-      height: 280px;
+      height: 265px;
+      p{
+        font-size: 20px;
+      }
     
     }
     .imgCont{
