@@ -86,6 +86,19 @@ code {
   }
 } 
 
+@media screen and  (min-width: 425px){
+  .gm-style-iw {
+    min-width: 300px; 
+    min-height: 220px;
+  }
+} 
+
+@media screen and  (min-width: 768px){
+  .gm-style-iw {
+    min-width: 360px; 
+    min-height: 270px;
+  }
+} 
 @media screen and (min-width:1400px){
   
   
@@ -93,7 +106,7 @@ code {
      max-width:1400px;
      /* max-height:900px; */
     /* height: calc(100%-8vh); */
-    margin: 200px auto auto;
+    margin: 100px auto auto;
     left:-50%;
     right:-50%;
    }
