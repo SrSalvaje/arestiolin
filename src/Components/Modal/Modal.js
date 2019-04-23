@@ -8,6 +8,8 @@ import myface from '../../Assets/img/myFace.jpeg'
 
 
 const Modal = (props)=>{
+ 
+
     return(
         <div className={props.isModal?styles.display:styles.modal}>
           
