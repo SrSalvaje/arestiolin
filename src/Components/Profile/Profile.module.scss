@@ -2,7 +2,7 @@
 
 .main{
     box-shadow: -7px -7px 19px -4px rgba(118,54,38,1);
-    height:$viewHeight1;
+    height:100vh;
     width: 100%;
     background:$blackish;
     display: flex;
@@ -12,7 +12,7 @@
     align-items: center; */
    
     position: sticky;
-    top:$navBarHeight1; 
+    top: 0; 
     z-index: 3;
     margin: 100px 0 0; 
     

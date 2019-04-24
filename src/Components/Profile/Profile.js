@@ -11,31 +11,39 @@ import photoLogo from '../../Assets/img/004-photoshop.png';
 import accessLogo from '../../Assets/img/signs.png';
 import premiereLogo from '../../Assets/img/005-premiere.png';
 
-const Profile = React.forwardRef((props, ref) =>{
+const Profile = (props) =>{
     //let tenPercentHeight=props.height/10;
     return (
-        <div id={'profile'} className={styles.main} ref={ref} >
+        <div id={'profile'} className={styles.main} >
             <Widget
+                clickWidget={props.clickWidget}
+                    openedWidget={props.openedWidget}
                     type={content.profile.widget1.type}
-                    class={props.verticalPosition<= (props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget} 
+                    class={styles.enter/* props.verticalPosition<= (props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget */} 
                     title={content.profile.widget1.title} 
                     content={content.profile.widget1.content} 
             />
-            <Widget 
+            <Widget
+                clickWidget={props.clickWidget}
+                openedWidget={props.openedWidget} 
                 type={content.profile.widget2.type}
-                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget} 
+                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget */} 
                 title={content.profile.widget2.title} 
                 content={content.profile.widget2.content} 
             /> 
-             <Widget 
+             <Widget
+                clickWidget={props.clickWidget}
+                openedWidget={props.openedWidget} 
                 type={content.profile.widget3.type}
-                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget} 
+                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget */} 
                 title={content.profile.widget3.title} 
                 content={content.profile.widget3.content} 
             /> 
-            <Widget 
+            <Widget
+                clickWidget={props.clickWidget}
+                openedWidget={props.openedWidget} 
                 type={content.profile.widget4.type}
-                class={props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget} 
+                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget */} 
                 title={content.profile.widget4.title} 
                 content={<ul>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>
@@ -54,6 +62,6 @@ const Profile = React.forwardRef((props, ref) =>{
          
         </div>
     
-    )})
+    )}
 
 export default Profile

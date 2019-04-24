@@ -1,46 +1,28 @@
 import React from 'react';
 import styles from "./Nav.module.scss";
+import { NavLink } from "react-router-dom"
 //import PropTypes from 'prop-types';
 
 
 
 
-const Nav = React.forwardRef((props, ref)=>{
-   
-    const goTo=(e, position, name)=>{
-       e.preventDefault();
-       //e.target.scrollIntoView(false)
-       
-       window.scrollTo(0,`${(Math.round(window.innerHeight)+100)*position}`); 
-       /*  console.log(`Target name ${name}`);
-        console.log(`Current target id ${e.currentTarget.id}`); */
-       
-        //props.clickedOnNav(name);
-        //adjustPos(element);
-
-
-    };
-    //const adjustPos=(element)=>element.addRef.current.scrollIntoView(false); 
-
-   /*  const toggleModal=(callback)=>{
-        console.log("Modal");
-        callback();
-    }; */
-
-
+const Nav = (props)=>{
     return(
-        <nav id={'nav'} className={(props.verticalPosition<=-80 )?styles.main: styles.hide} ref={ref}>
+        <nav id={'nav'} className={props.showNav?styles.main: styles.hide}>
             <ul>
-            {props.links.map(link=>(
-            <li value={link.name}  onClick={link.name==='contact'? (e)=>props.openModal(e) : (e)=> goTo(e, link.position, link.name )} key={link.name} className={ link.name===props.currentView? styles.liCurrent:styles.lis}><a  href={`#${link.name}`} value={link.name}className={/* link.name===props.currentView? styles.linksCurrent: */ styles.links}  >{link.name}</a></li>
-            ))}
+                {props.links.map(link=>(
+                    link.name!=='contact' ?
+                    <li value={link.name}  key={link.name}  className={ styles.lis}><NavLink activeClassName={styles.liCurrent} className={styles.links} to={`/${link.name}`}>
+                       <span>{link.name}</span>
+                    </NavLink ></li> : 
+                    <li value={link.name}  onClick={ (e)=>props.openModal(e)} key={link.name} className={styles.lis}><a  href={`#${link.name}`} value={link.name}className={/* link.name===props.currentView? styles.linksCurrent: */ styles.links}  >{link.name}</a></li>
+
+                ))}
             </ul>
         </nav>
 
-    )
-    });
-
-
+    )      
+};
 
 
 export default Nav;

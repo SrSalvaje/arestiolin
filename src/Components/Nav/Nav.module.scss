@@ -7,7 +7,7 @@
     position:fixed;
     top:0; 
     background:$blackish;
-    margin: 0 0 95vh;
+    //margin: 0 0 95vh;
     visibility: visible;
     border-bottom-right-radius: 5px; 
     box-shadow: 2px 2px 10px $darkBlue;
@@ -72,9 +72,10 @@
     
     background-color: $whitish;
     border-bottom: 3px solid $brownish;
-    a{
-        color: $darkBlue;
-    }
+   span{
+    color: $darkBlue;
+   } 
+    
 
 }
 .hide{
