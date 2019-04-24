@@ -28,11 +28,11 @@ class CV extends Component{
             </div>
         </div>`        
     );
-    componentWillUnmount(){
+    /* componentWillUnmount(){
         window.google.maps.event.clearListener(this.state.map, 'click');
         window.google.maps.event.clearListener(this.state.map, 'closeclick');
 
-    }
+    } */
     createMarkers = () => {   
         const {map}=this.state;
         const infoWindow= new window.google.maps.InfoWindow();
@@ -132,7 +132,7 @@ class CV extends Component{
   
     render(){
         return(
-            <div id={"cv"} className={styles.main} ref={this.props.forwardedRef} >
+            <div id={"cv"} className={styles.main} >
                 <h2>Employment History</h2>
                 <div  className={styles.mainContent}>
                     <List
@@ -140,7 +140,7 @@ class CV extends Component{
                         items={content.CV}
                         openInfo={this.openInfo}
                     />
-                    <div className={this.props.verticalPosition<=200?styles.displayMap: styles.map}>
+                    <div className={styles.displayMap/* this.props.verticalPosition<=200?styles.displayMap: styles.map */}>
                         <Map cv={content.CV}
                          mapToParent={this.mapToParent}
                         />
@@ -150,4 +150,4 @@ class CV extends Component{
         )
     }
 } 
-export default React.forwardRef((props, ref)=> <CV {...props} forwardedRef={ref}/>); 
+export default CV; 
