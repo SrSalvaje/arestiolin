@@ -6,114 +6,27 @@
     position: sticky;
     top:0;
     z-index: 4;
-    background: $blackish;
+    //background: $blackish;
     display:flex;
-    flex-direction: row;
-   // flex-flow: column;
-    flex-wrap: wrap;
+    flex-direction: column;
+  
+    flex-wrap:nowrap;
     align-items: center;
     justify-items: center;
    // margin: 100px 0 0;
-    overflow: hidden;
+   overflow-x: hidden;
 }
-.nextPrev{
-  font-size: 40px;
-  color: white;
-  width: 20%;
-  padding:10px 0 0;
-  height: 7vh;
-  margin: 0;
-}
+
 .main h2{
-  height: 7vh;
+
   width: 60%;
   color: $whitish;
-  margin:0;
-  padding:30px 0 0;
-}
-.prev{
-  composes:nextPrev;
+  margin:$navBarHeight1 auto 0;
 
 }
-.next{
-  composes:nextPrev;
-
-}
-
-.nextPrev:hover{
-  color: $brownish;
-
-}
-
-.projectList{
-    margin:40px auto auto;
-    display: flex;
-    flex-direction: row;
-    flex-flow: row;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding: 0;
-    height: 405px;
-    justify-items: center;
-    align-items: center;
-    //overflow: scroll;
-    width: 95%;
-    border-radius: 20px;
-    border: 3px solid $lightBlue;
-    list-style: none;
-    scroll-snap-type: x proximity; 
-    box-shadow: 5px 5px 15px $darkBlue;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: 50% 50%;
-    //background-attachment: scroll;
-    
-  
-   
-    li{
-       // margin:auto 5px;
-       scroll-snap-align: center; 
-       display:flex;
-       flex-direction: column;
-       align-items: center;
-       justify-items: center;
-       height: 100%;
-       min-width: 100%;
-       margin:auto ;
-    }
-
-  
-    
-}
-
-
-
-
-.projectList::-webkit-scrollbar {
-    width: 3px !important;
-    height: 0px;
-  }
-  
-  /* Track */
-  .projectList::-webkit-scrollbar-track {
-    background:white ; 
-  }
-  
-  /* Handle */
-  .projectList::-webkit-scrollbar-thumb {
-    background: $darkBlue; 
-  }
-  
-  /* Handle on hover */
-  .projectList::-webkit-scrollbar-thumb:hover {
-    background: $brownish; 
-  }
 
 @media screen and (min-width:375px){
- 
-  .projectList{
-    width:332px;
-  }
+
 
   .main{
         h2{
@@ -141,33 +54,10 @@
        font-size: 50px;
      }
    }
-   .nextPrev{
-     visibility: hidden;
-   }
-
-   .projectList{
-    margin:auto;
-    width: 95%;
-    //height: 700px;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 45% 45%;
-    grid-row-gap: 20px;
-    grid-row-gap: 5%;
-    grid-column-gap: 2.5%;
-   
-    grid-auto-rows: 75% ;
-    scroll-snap-type: none;
-    overflow: scroll; 
-    
-    li{
-      scroll-snap-align: none; 
-     }
+      
 }
-     
- }
 
- @media screen and (min-height:812px){
+/*  @media screen and (min-height:812px){
    .projectList{
      height: 550px;
      margin:50px auto auto;
@@ -176,9 +66,9 @@
     
    }
 
- }
+ } */
 
- @media screen and (min-width:1024px){
+ /* @media screen and (min-width:1024px){
    .projectList{
      min-height: 450px;
      height: 90%;
@@ -208,7 +98,6 @@
      }
    }
 
-
  }
- 
+  */
  
