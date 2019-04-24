@@ -2,9 +2,9 @@
 .main{
     box-shadow: -7px -7px 19px -4px rgba(118,54,38,1);
     width: 100%;
-    height:$viewHeight1;
+    height:100vh;
     position: sticky;
-    top:$navBarHeight1;
+    top:0;
     z-index: 4;
     background: $blackish;
     display:flex;
@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-items: center;
-    margin: 100px 0 0;
+   // margin: 100px 0 0;
     overflow: hidden;
 }
 .nextPrev{
