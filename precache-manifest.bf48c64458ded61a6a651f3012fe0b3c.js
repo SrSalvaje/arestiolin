@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
   },
   {
-    "revision": "3b66f71a49eb063ecd1c",
+    "revision": "9c8ddda0dfd22629acbe",
     "url": "/arestiolin/static/css/main.73331536.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/js/runtime~main.9598e85c.js"
   },
   {
-    "revision": "7c793be88cbb6d0a0843",
-    "url": "/arestiolin/static/js/2.44e2760d.chunk.js"
+    "revision": "c276ddb96959cefdfe5c",
+    "url": "/arestiolin/static/js/2.6342e1b8.chunk.js"
   },
   {
     "revision": "d2bd1f98b6a7d95d7ce117a588584e8c",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/restRev.970657a4.JPG"
   },
   {
-    "revision": "3b66f71a49eb063ecd1c",
-    "url": "/arestiolin/static/js/main.f6b3bb58.chunk.js"
+    "revision": "9c8ddda0dfd22629acbe",
+    "url": "/arestiolin/static/js/main.9c28ccd7.chunk.js"
   },
   {
     "revision": "b57e0d2a6a6c64f814ed93bb72de9277",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/zen-space-web.d8a914c3.jpg"
   },
   {
-    "revision": "0888745848973f0d62ce4d51afb99030",
+    "revision": "d25305cf5469f4c556e27ced05a88fb5",
     "url": "/arestiolin/index.html"
   }
 ];
