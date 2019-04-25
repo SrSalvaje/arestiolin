@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import styles from './App.module.scss';
 import content from './content'
 import HeroCont from './Components/Hero/HeroCont';
@@ -121,21 +121,30 @@ class App extends Component {
               ]}
               openModal={this.openModal}
             />
+            <Switch>
+            <Route exact={true} path='/' render={()=>(
+              <HeroCont
+                id={"hero"}
+                title={content.hero.title}
+                content={content.hero.content}
+                button={content.hero.button}
+                background={content.hero.background}
+            />
+
+            )}/>
+             
           <Route path='/profile' render={()=>(
             <React.Fragment>
-              <HeroCont
-              id={"hero"}
-              title={content.hero.title}
-              content={content.hero.content}
-              button={content.hero.button}
-              background={content.hero.background}
-            />
             <Profile trigger1={this.state.trigger1}  trigger2={this.state.trigger2}   trigger3={this.state.trigger3} trigger4={this.state.trigger4}   id={"profile"} openedWidget={this.state.openedWidget} clickWidget={this.clickWidget} />
             </React.Fragment>
           )}
           />
           <Route path='/cv' render={()=>( <CV  id={"cv"}/>)}/>
           <Route path='/portfolio' render={()=>(<Portfolio id={'portfolio'} width={this.state.viewPortWidth}/>)}/>
+
+
+            </Switch>
+            
           <Footer  openModal={this.openModal} showFooter={this.state.showFooter} showNav={this.state.showNav}></Footer>
           <Modal isModal={this.state.isModal}
           openModal={this.openModal}/>
