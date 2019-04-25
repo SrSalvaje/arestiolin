@@ -19,7 +19,11 @@ const Profile = (props) =>{
                 clickWidget={props.clickWidget}
                     openedWidget={props.openedWidget}
                     type={content.profile.widget1.type}
-                    class={styles.enter/* props.verticalPosition<= (props.height*(props.width<768 ? 0.85 : 0.65))? styles.enter: styles.widget */} 
+                    class={props.trigger1===true?styles.enter:styles.widget} 
+                    
+                    
+                    
+                    
                     title={content.profile.widget1.title} 
                     content={content.profile.widget1.content} 
             />
@@ -27,7 +31,7 @@ const Profile = (props) =>{
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget2.type}
-                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.65 : 0.65))? styles.enter: styles.widget */} 
+                class={props.trigger2===true?styles.enter:styles.widget} 
                 title={content.profile.widget2.title} 
                 content={content.profile.widget2.content} 
             /> 
@@ -35,7 +39,7 @@ const Profile = (props) =>{
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget3.type}
-                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.35 : 0.25))? styles.enter: styles.widget */} 
+                class={ props.trigger3===true?styles.enter:styles.widget} 
                 title={content.profile.widget3.title} 
                 content={content.profile.widget3.content} 
             /> 
@@ -43,7 +47,7 @@ const Profile = (props) =>{
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget4.type}
-                class={styles.enter/* props.verticalPosition<=(props.height*(props.width<768 ? 0.15 : 0.25))? styles.enter: styles.widget */} 
+                class={props.trigger4===true?styles.enter:styles.widget} 
                 title={content.profile.widget4.title} 
                 content={<ul>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>

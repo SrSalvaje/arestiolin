@@ -1,7 +1,7 @@
 @import '../../Assets/variables.module';
 .main{
-    margin:100px 0 0;
-    position: sticky;
+   // margin:100px 0 0;
+    position: fixed;
     bottom:-200px;
     color: white;
     width: 100%;
@@ -20,7 +20,8 @@
     grid-auto-rows: 50%;
     text-align: left;
     font-size: 15px;
-    overflow: hidden;    
+    overflow: hidden;   
+    transition: bottom .5s; 
    
     p{
         
@@ -40,6 +41,10 @@
     } 
 }
 
+.show{
+    composes:main;
+    bottom:0;
+}
 .commonLogo{
     background-color: transparent !important;
     height: auto !important;
@@ -124,6 +129,9 @@
           bottom:-150px;
           height: 150px;
           font-size: 23px;
+      }
+      .show{
+          bottom:0;
       }
       .googleLogo{
           width:50px !important;

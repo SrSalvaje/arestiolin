@@ -9,7 +9,7 @@ import PortfolioSlider from './PortfolioSlider'
 
 const Portfolio =()=>(
     <div id={'portfolio'} className={styles.main}>
-        <h2>Portfolio</h2>
+  
          <PortfolioSlider/> 
     </div>
 

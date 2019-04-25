@@ -78,9 +78,9 @@
 
 .display .modalContent p {
    
-    width: 100%;
+    width: 99%;
     z-index: 0;
-    transform:translateX(-10px);
+    transform:translateX(5px);
     transition-property: transform .5s, width .5s;
     transition-duration: .5s;
     transition-delay: .3s;
@@ -156,6 +156,7 @@
       p{
         font-size: 20px;
         height:25px;
+       
       }
 
   }
@@ -175,7 +176,7 @@
 }
 
 @media screen and (min-width:768px){
-  .modalContent{
+  .display .modalContent{
     max-width: 550px;
     width: 550px;
     max-height: 320px;
@@ -185,9 +186,12 @@
     p{
       font-size: 30px;
       height:35px;
+      transform:translateX(-7px);
     }
 
   }
+
+
 
   .myPicture{
     

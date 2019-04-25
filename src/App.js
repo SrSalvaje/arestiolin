@@ -15,16 +15,22 @@ import Footer  from "./Components/Footer/Footer";
 
 
 let prevScroll = window.pageYOffset;
+let currentScroll;
 
 class App extends Component {
   state={
   
     currentView:"",
     showNav:true,
+    showFooter:false,
     isModal:false,
     viewPortHeight:"",
     viewPortWidth:"",
-    openedWidget:""
+    openedWidget:"",
+    trigger1:false,
+    trigger2:false,
+    trigger3:false,
+    trigger4:false
 
   
   }
@@ -38,22 +44,43 @@ class App extends Component {
   componentDidMount(){
     this.getViewpoertSize();
     window.addEventListener("resize", debounce(this.getViewpoertSize, 500));
-    window.addEventListener('scroll', throttle(this.showNav, 200));
+    window.addEventListener('scroll', throttle(this.showNav, 300));
   }
 
   componentWillUnmount(){
     window.removeEventListener("resize", debounce(this.getViewpoertSize, 500));
-    window.removeEventListener('scroll', throttle(this.showNav, 200));
+    window.removeEventListener('scroll', throttle(this.showNav, 300));
   }
 
   showNav=()=>{
-    let currentScroll= window.pageYOffset;
+    currentScroll= window.pageYOffset;
+    let setNav, setFooter;
+    
     if(prevScroll > currentScroll){
-      this.setState({showNav:true})
+      //this.setState({showNav:true})
+      setNav=true;
     }else{
-      this.setState({showNav:false})
+      //this.setState({showNav:false})
+      setNav=false;
+    }
+
+    if(prevScroll<currentScroll){
+      console.log(currentScroll)
+      setFooter=true;
+    }else{
+      console.log("hidding footer")
+      setFooter=false;
     }
     prevScroll=currentScroll;
+
+   this.setState({
+     trigger1: currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight/4: this.state.viewPortHeight/2)? true: false,
+     trigger2:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/2: this.state.viewPortHeight+50) ?  true: false,
+     trigger3:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/1.5: this.state.viewPortHeight+400) ?  true: false,
+     trigger4:currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight-68: this.state.viewPortHeight+800) ?  true: false,
+     showNav: setNav,
+     showFooter:setFooter 
+    });
   }
 
   
@@ -103,13 +130,13 @@ class App extends Component {
               button={content.hero.button}
               background={content.hero.background}
             />
-            <Profile height={this.state.viewPortHeight} width={this.state.viewPortWidth} id={"profile"} openedWidget={this.state.openedWidget} clickWidget={this.clickWidget}/>
+            <Profile trigger1={this.state.trigger1}  trigger2={this.state.trigger2}   trigger3={this.state.trigger3} trigger4={this.state.trigger4}   id={"profile"} openedWidget={this.state.openedWidget} clickWidget={this.clickWidget} />
             </React.Fragment>
           )}
           />
           <Route path='/cv' render={()=>( <CV  id={"cv"}/>)}/>
           <Route path='/portfolio' render={()=>(<Portfolio id={'portfolio'} width={this.state.viewPortWidth}/>)}/>
-          <Footer  openModal={this.openModal}></Footer>
+          <Footer  openModal={this.openModal} showFooter={this.state.showFooter} showNav={this.state.showNav}></Footer>
           <Modal isModal={this.state.isModal}
           openModal={this.openModal}/>
         </div>

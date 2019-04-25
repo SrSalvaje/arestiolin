@@ -140,10 +140,11 @@
    .main{
        li{
            width:auto;
-           padding:0 20px;
+          // padding:0 20px;
+          min-width: 100px;;
            a{
                font-size: 35px;
-               text-align: left;
+               text-align: center;
            }
        }
 

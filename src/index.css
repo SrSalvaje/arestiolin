@@ -13,7 +13,20 @@ body {
 /* main infowindow div
 height and width for the info window are controlled here,
 height must match custom infowindow height  */
- .gm-style-iw {
+ 
+.gm-style-iw .gm-style-iw-c, .gm-style .gm-style-iw-c{
+  background: transparent  !important; /* Fallback color  */
+  background: transparent !important;
+  background-color:transparent !important;
+}
+.gm-style-iw-d{
+  background: rgb(0,0,0)  !important; /* Fallback color  */
+  background: rgba(0,0,0, 0.4) !important;
+
+}
+
+
+.gm-style-iw {
   margin:0;
   padding: 0;
   min-width: 300px; 
@@ -37,12 +50,14 @@ height must match custom infowindow height  */
 } 
 /* tootip */
  .gm-style .gm-style-iw-t::after{
-  background-color: #90afc5   !important;
+  background-color: rgb(0,0,0)  !important; 
+  background-color: rgba(0,0,0, 0.4) !important;
 } 
 /* close */
  .gm-ui-hover-effect{
   width:40px !important;
   height: 40px !important;
+  color:white !important;
 }
 .gm-ui-hover-effect img{
   width:25px !important;

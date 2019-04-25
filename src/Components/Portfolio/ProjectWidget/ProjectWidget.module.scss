@@ -5,7 +5,7 @@ $cols: 1;
 
 .main{
     width:282px;
-    height:315px;
+    height:360px;
     margin: auto;
     display: grid;
     grid-template-areas: 
@@ -13,7 +13,7 @@ $cols: 1;
         'imgs'
         'description';
     grid-template-columns: 100%;
-    grid-template-rows: 10% 45% 45% ;
+    grid-template-rows: 20% 35% 45% ;
     border: 3px;
     border-color:$darkBlue;
     border-style: solid;
@@ -41,6 +41,7 @@ $cols: 1;
     margin: 0 auto;
     color: $whitish;
     justify-self: center;
+    font-size: 27px;
 }
 
 .imgCont{
@@ -53,15 +54,27 @@ $cols: 1;
   box-shadow: 3px 3px 5px gray;
   //animation: hvr-wobble-skew 4s infinite linear;
   transform: perspective(1px) translateZ(0);
+  text-decoration: none;
+ 
+}
+.imageText{
+  color: white;
+  background: #286AC6;
+  background: rgba(40, 106, 198, 0.41);
+  font-size: 15;
+  position: relative;
+  //display: block;
+  bottom: 50px;
+  height: 30px;
+  
+  display: flex;
+  align-items: center;
+ // justify-items: center;
+  span{
+    margin: auto;
+  }
 }
 
-/* .hvr-wobble-skew {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-} */
 .imgCont:hover, .imgCont:focus, .imgCont:active {
   animation-name: wobble;
   animation-duration: 1s;
@@ -80,7 +93,7 @@ $cols: 1;
 
   .description{
     width: 95%;
-     max-height: 100px;
+     max-height: 150px;
     //overflow: auto;
     grid-area: description;
     border: 1px solid $brownish;
@@ -90,7 +103,7 @@ $cols: 1;
     display: flex;
     flex-direction: column;
     //overflow: visible;
-    margin:10px auto;
+    margin:20px auto;
     box-shadow: 4px 4px 5px gray;
     p{
       padding: 7px 5px 5px;;
@@ -149,28 +162,34 @@ $cols: 1;
 .description p::-webkit-scrollbar-thumb:hover {
   background: $brownish; 
 }
+/* Media queries */
 
-@media screen and  (min-height: 736px){
+
+
+
+@media screen and  (min-height: 768px){
   .main{
-    height: /* 100% */ 400px ;
-    width: 90%;
-    //min-height: 0;
+ 
     h3{
       
-      font-size: 30px;
+      font-size: 32px;
       padding:20px 0 0 0; 
     }
-    .btn{
-      height:40px;
-      width:60%;
-      font-size: 15px;
-      margin-bottom: 10px;
-    }
+ 
     .description{
-      font-size: 20px; }
+      font-size: 23px; 
+      max-height: 160px;
+      margin: 30px auto;
+    }
 }
 
+  .imageText{
+    font-size: 18px;
+    height: 35px;
+  }
+
 }
+
 
 @media screen and (min-width:1024px){
   .main{
@@ -182,13 +201,13 @@ $cols: 1;
                         '  description description description ';
 
     grid-template-columns: auto 600px auto ;
-    grid-template-rows: 50px 290px auto;
+    grid-template-rows: 150px 320px auto;
     grid-column-gap:10px;
     
     .description{
-      height: 80%;
+      height: 90%;
       p{
-        font-size: 20px;
+        font-size: 25px;
       }
     
     }
@@ -199,6 +218,13 @@ $cols: 1;
       align-self: flex-start;
       
     }
+
+    .imageText{
+      font-size: 20px;
+      height: 40px;
+      bottom:100px
+    }
+  
     
     h3{
       
@@ -208,11 +234,7 @@ $cols: 1;
       font-size: 40px;
       
     }
-    .btn{
-      grid-area: description;
-      position: relative;
-      top: -p0px;
-    }
+ 
                       
   }
 
@@ -223,57 +245,4 @@ $cols: 1;
 
 
 
-/* @media screen and (min-width:425px){
-  .main{
-    margin:auto 60px;
-    min-height: 0;
-    min-width: 0;
-    max-height: none;
-    max-width: 300px;
-    height:100%;
-    width: 100%;
-    margin:auto;
-    h3{
-      font-size: 25px;
-    }
-  }
-  .btn{
-    height:40px;
-    width:60%;
-    font-size: 15px;
-  }
-  
-} */
-
-
-
-
-  /* .projectImg{
-    grid-area: imgs;
-   
-} */
-
-/* .imgCont {
-    grid-area: imgs;
-    width:  calc(100% / #{$cols}) ;
-    margin: 2px;
-    height: 0;
-  position: relative; 
-    overflow: hidden;
-   padding-bottom: #{$ratio-16-9 / $cols}; 
-} 
  
-  .img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    margin: auto;
-    border-radius: 20px;
-  }
-
-
- */
