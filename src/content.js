@@ -34,7 +34,6 @@ const content={
         widget1:{
             content:<ul >
             <li>30 years old (22/03/1988), Spanish and Mexican Citizenship</li>
-            <li>Swedish Personal Number: 880322-1251</li>
             <li>Front-end Web Developer</li>
             <li>Journalist</li>
             <li>Video Editor</li>
