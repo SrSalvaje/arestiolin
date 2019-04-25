@@ -9,8 +9,7 @@ import PortfolioSlider from './PortfolioSlider'
 
 const Portfolio =()=>(
     <div id={'portfolio'} className={styles.main}>
-  
-         <PortfolioSlider/> 
+  <PortfolioSlider/>   
     </div>
 
 )
