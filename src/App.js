@@ -78,7 +78,7 @@ class App extends Component {
      trigger1: currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight/4: this.state.viewPortHeight/2)? true: false,
      trigger2:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/2: this.state.viewPortHeight+50) ?  true: false,
      trigger3:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/1.5: this.state.viewPortHeight+400) ?  true: false,
-     trigger4:currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight-68: this.state.viewPortHeight+800) ?  true: false,
+     trigger4:currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight-68: this.state.viewPortHeight+700) ?  true: false,
      showNav: setNav,
      showFooter:setFooter 
     });

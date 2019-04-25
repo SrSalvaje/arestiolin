@@ -65,7 +65,7 @@
 
 }
 .buttonCommon:hover{
-    color: $lightBlue;
+    //color: $lightBlue;
     font-size: 45px;
 }
 
@@ -150,7 +150,7 @@
     
     display: inline-block;
     vertical-align: middle;
-    color:$brownish;
+   // color:$brownish;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     
@@ -160,7 +160,7 @@
     animation-duration: 0.75s;
     animation-timing-function: linear;
     animation-iteration-count:1;
-    color:$brownish;
+    //color:$brownish;
   }
   
 

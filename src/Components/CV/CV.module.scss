@@ -1,13 +1,16 @@
 @import '../../Assets/variables.module';
 .main{
-    box-shadow: -7px -7px 19px -4px rgba(118,54,38,1);
+    //box-shadow: -7px -7px 19px -4px rgba(118,54,38,1);
+    
+    background-color: rgb(0,0,0); // Fallback color 
+    background-color: rgba(0,0,0, 0.4); 
     width: 100%;
-    height:calc(100vh + 10px);
+    height:100vh ;
     position: sticky;
     top:0; 
     z-index: 3;
-    background:$blackish;
-    padding-bottom: 10px;
+    background:transparent;
+   // padding-bottom: 10px;
    // margin: 100px 0 0;
     h2{
         width: 95%;
@@ -133,7 +136,7 @@
         h2{
           font-size: 40px;
             margin: 10px auto ;
-            padding: 40px;
+            padding: 20px;
             height:100px;
             
         } 

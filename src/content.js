@@ -199,8 +199,16 @@ const content={
     ],
 
     portfolio:[
-        {title: "My Malmö",
+        {title: "Memory Game",
         index:1,
+        image: matching,
+        url: 'https://srsalvaje.github.io/memorygame/',
+        description: 'Third Project of Udacity´s FEND Nanodegree as a test of OOP. It´s made with vanilla JS ',
+        id:'card6',
+        alt:'screenshot from website'
+        },
+        {title: "My Malmö",
+        index:2,
         image: Mymalmo,
         url: 'https://srsalvaje.github.io/UdacityFinal/',
         description: `I was tasked with building a website to display points of interest in my city. 
@@ -211,7 +219,7 @@ const content={
         alt:'screenshot from website'
         },
         {title: "Book Tracker",
-        index:2,
+        index:3,
         image: myReads,
         url: 'https://srsalvaje.github.io/Udacity-My-Reads/',
         description: `This is the 7th assessment project for Udacity's FEND Nanodegree. 
@@ -220,7 +228,7 @@ const content={
         alt:'screenshot from website'
         },
         {title: "Restaurant Reviews",
-        index:3,
+        index:4,
         image: restRev,
         url: 'https://srsalvaje.github.io/udacity-restaurant-reviews/',
         description: ` I had to convert a static webpage to a mobile-ready web application by adding accessibility features, converting the design to be responsive on different sized displays and add a service worker to allow offline use.`,
@@ -228,7 +236,7 @@ const content={
         alt:'screenshot from website'
         },
         {title:"Jasmine Test suite",
-        index:4,
+        index:5,
         description:`This repo is the 4th project of the Udacity FEND Nanodegree, my task was to develop a test suit for the existing code base.`,
         image:JasmineTest,
         id:'card4',
@@ -236,21 +244,14 @@ const content={
         url:'https://github.com/SrSalvaje/UdacityFeedReaderProject'
     },
         {title: "Arcade Clone",
-        index:5,
+        index:6,
         image: arcade,
         url: 'https://srsalvaje.github.io/UdacityP4Frogger/',
         description: `This is a clone of the popular Frogger arcade game, the game engine, images and resources.js were provided by the Udacity team, the rest of the code was written by me`,
         id:'card5',
         alt:'screenshot from website'
-        },
-        {title: "Memory Game",
-        index:6,
-        image: matching,
-        url: 'https://srsalvaje.github.io/memorygame/',
-        description: 'Third Project of Udacity´s FEND Nanodegree as a test of OOP. It´s made with vanilla JS ',
-        id:'card6',
-        alt:'screenshot from website'
         }
+        
     ]
         
 

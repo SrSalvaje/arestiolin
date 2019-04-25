@@ -13,7 +13,7 @@ class PortfolioSlider extends Component {
 
     state={
         projects: content.portfolio,
-        project:0
+        project:1
 
     }
    
