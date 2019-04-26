@@ -1,15 +1,15 @@
 {
-  "main.css": "/arestiolin/static/css/main.3338a7bb.chunk.css",
-  "main.js": "/arestiolin/static/js/main.7a93f779.chunk.js",
-  "main.js.map": "/arestiolin/static/js/main.7a93f779.chunk.js.map",
+  "main.css": "/arestiolin/static/css/main.9c9b09c0.chunk.css",
+  "main.js": "/arestiolin/static/js/main.310a9efe.chunk.js",
+  "main.js.map": "/arestiolin/static/js/main.310a9efe.chunk.js.map",
   "runtime~main.js": "/arestiolin/static/js/runtime~main.9598e85c.js",
   "runtime~main.js.map": "/arestiolin/static/js/runtime~main.9598e85c.js.map",
-  "static/js/2.6342e1b8.chunk.js": "/arestiolin/static/js/2.6342e1b8.chunk.js",
-  "static/js/2.6342e1b8.chunk.js.map": "/arestiolin/static/js/2.6342e1b8.chunk.js.map",
+  "static/js/2.123be66f.chunk.js": "/arestiolin/static/js/2.123be66f.chunk.js",
+  "static/js/2.123be66f.chunk.js.map": "/arestiolin/static/js/2.123be66f.chunk.js.map",
   "index.html": "/arestiolin/index.html",
-  "precache-manifest.acebaa7006af2940b6a4772826869319.js": "/arestiolin/precache-manifest.acebaa7006af2940b6a4772826869319.js",
+  "precache-manifest.36a40caf252b3ca1b9f765f89dd6673f.js": "/arestiolin/precache-manifest.36a40caf252b3ca1b9f765f89dd6673f.js",
   "service-worker.js": "/arestiolin/service-worker.js",
-  "static/css/main.3338a7bb.chunk.css.map": "/arestiolin/static/css/main.3338a7bb.chunk.css.map",
+  "static/css/main.9c9b09c0.chunk.css.map": "/arestiolin/static/css/main.9c9b09c0.chunk.css.map",
   "static/media/arcade.JPG": "/arestiolin/static/media/arcade.b57e0d2a.JPG",
   "static/media/coding.png": "/arestiolin/static/media/coding.1bba3da1.png",
   "static/media/diving.svg": "/arestiolin/static/media/diving.fef112ed.svg",
@@ -25,6 +25,5 @@
   "static/media/restRev.JPG": "/arestiolin/static/media/restRev.970657a4.JPG",
   "static/media/sale.svg": "/arestiolin/static/media/sale.620fc071.svg",
   "static/media/signs.png": "/arestiolin/static/media/signs.09bcacde.png",
-  "static/media/teach.svg": "/arestiolin/static/media/teach.e61a277b.svg",
-  "static/media/zen-space-web.jpg": "/arestiolin/static/media/zen-space-web.d8a914c3.jpg"
+  "static/media/teach.svg": "/arestiolin/static/media/teach.e61a277b.svg"
 }

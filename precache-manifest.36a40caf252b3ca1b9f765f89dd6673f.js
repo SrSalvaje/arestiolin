@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "c4d348e033806271c58bfbd82980df50",
-    "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
+    "revision": "970657a4f46c5d338ba3ae5b07ba57f4",
+    "url": "/arestiolin/static/media/restRev.970657a4.JPG"
   },
   {
-    "revision": "6d190bfbf0f70df4cf24",
-    "url": "/arestiolin/static/css/main.3338a7bb.chunk.css"
+    "revision": "2ad025b6cb753df0eb98",
+    "url": "/arestiolin/static/css/main.9c9b09c0.chunk.css"
   },
   {
     "revision": "042dcbb3056eb60045b0",
     "url": "/arestiolin/static/js/runtime~main.9598e85c.js"
   },
   {
-    "revision": "c276ddb96959cefdfe5c",
-    "url": "/arestiolin/static/js/2.6342e1b8.chunk.js"
+    "revision": "c81afbaba02b9315fd09",
+    "url": "/arestiolin/static/js/2.123be66f.chunk.js"
   },
   {
     "revision": "d2bd1f98b6a7d95d7ce117a588584e8c",
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/myReads.bae73f78.JPG"
   },
   {
-    "revision": "970657a4f46c5d338ba3ae5b07ba57f4",
-    "url": "/arestiolin/static/media/restRev.970657a4.JPG"
+    "revision": "2ad025b6cb753df0eb98",
+    "url": "/arestiolin/static/js/main.310a9efe.chunk.js"
   },
   {
-    "revision": "6d190bfbf0f70df4cf24",
-    "url": "/arestiolin/static/js/main.7a93f779.chunk.js"
+    "revision": "c4d348e033806271c58bfbd82980df50",
+    "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
   },
   {
     "revision": "b57e0d2a6a6c64f814ed93bb72de9277",
@@ -80,11 +80,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/logo.ee7cd8ed.svg"
   },
   {
-    "revision": "d8a914c3cb4fb62ed9841c9a1f2d2af3",
-    "url": "/arestiolin/static/media/zen-space-web.d8a914c3.jpg"
-  },
-  {
-    "revision": "91971c82c449fa3b3cbf469f55eb00c1",
+    "revision": "9a92af57da860b8db13e35253beccbba",
     "url": "/arestiolin/index.html"
   }
 ];
