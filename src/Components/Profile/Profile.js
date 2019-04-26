@@ -12,22 +12,19 @@ import accessLogo from '../../Assets/img/signs.png';
 import premiereLogo from '../../Assets/img/005-premiere.png';
 
 const Profile = (props) =>{
-    //let tenPercentHeight=props.height/10;
     return (
-        <div id={'profile'} className={styles.main} >
+        <div id={'profile'} className={styles.main}  >
             <Widget
+                ref={props.widgetRefs[0]}
                 clickWidget={props.clickWidget}
-                    openedWidget={props.openedWidget}
-                    type={content.profile.widget1.type}
-                    class={props.trigger1===true?styles.enter:styles.widget} 
-                    
-                    
-                    
-                    
-                    title={content.profile.widget1.title} 
-                    content={content.profile.widget1.content} 
+                openedWidget={props.openedWidget}
+                type={content.profile.widget1.type}
+                class={props.trigger1===true?styles.enter:styles.widget} 
+                title={content.profile.widget1.title} 
+                content={content.profile.widget1.content} 
             />
             <Widget
+                ref={props.widgetRefs[1]}
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget2.type}
@@ -36,6 +33,7 @@ const Profile = (props) =>{
                 content={content.profile.widget2.content} 
             /> 
              <Widget
+                ref={props.widgetRefs[2]}
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget3.type}
@@ -44,6 +42,7 @@ const Profile = (props) =>{
                 content={content.profile.widget3.content} 
             /> 
             <Widget
+                ref={props.widgetRefs[3]}
                 clickWidget={props.clickWidget}
                 openedWidget={props.openedWidget} 
                 type={content.profile.widget4.type}
@@ -58,12 +57,8 @@ const Profile = (props) =>{
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={accessLogo} alt={"Two avatars using sign language"}/><span>Accesibility</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={premiereLogo} alt={"PremierePro Logo"}/><span>PremierePro</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={photoLogo} alt={"Photoshop Logo"}/><span>Photoshop</span></li>
-                   {/*  <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/>Tools</li> */}
                 </ul>} 
-            /> 
-    
-    
-         
+            />      
         </div>
     
     )}
