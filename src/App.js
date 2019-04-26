@@ -37,6 +37,8 @@ class App extends Component {
     //store references to global event listeners
   this.throttledScroll = throttle(this.checkScroll, 300);
   this.debouncedViewPort = debounce(this.getViewpoertSize, 500);
+  this.widgetRefs=[React.createRef(), React.createRef(), React.createRef(), React.createRef()];
+    
   }
  
   //called when a widget is clicked in Profile
@@ -61,30 +63,33 @@ class App extends Component {
     currentScroll= window.pageYOffset;
     let setNav, setFooter;
     
-    if(prevScroll > currentScroll){
-      setNav=true;
-    }else{
-      setNav=false;
-    }
-
-    if(prevScroll<currentScroll){
-      setFooter=true;
-    }else{
-      setFooter=false;
-    }
+    setNav=prevScroll > currentScroll ? true: false;
+    setFooter=prevScroll<currentScroll ? true : false;
     prevScroll=currentScroll;
 
-   this.setState({
-     trigger1: currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight/4: this.state.viewPortHeight/2)? true: false,
-     trigger2:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/2: this.state.viewPortHeight+50) ?  true: false,
-     trigger3:currentScroll >= (this.state.viewPortWidth<768? this.state.viewPortHeight/1.5: this.state.viewPortHeight+400) ?  true: false,
-     trigger4:currentScroll>= (this.state.viewPortWidth<768? this.state.viewPortHeight-68: this.state.viewPortHeight+700) ?  true: false,
-     showNav: setNav,
-     showFooter:setFooter 
-    });
+   if(!!this.widgetRefs[0].current){
+   
+    this.setState({
+      trigger1:this.checkWidgetPos(0, 5),
+      trigger2: this.checkWidgetPos(1, 5) ,
+      trigger3: this.checkWidgetPos(2, 5),
+      trigger4: this.checkWidgetPos(3, 5),
+      showNav: setNav,
+      showFooter: setFooter,
+     });
+
+   }else{
+  
+     this.setState({ 
+        showNav: setNav,
+        showFooter: setFooter})
+   } 
+   
   }
 
-  
+  checkWidgetPos=(widget, screen )=>{
+      return this.widgetRefs[widget].current.getBoundingClientRect().top < this.state.viewPortHeight-(this.state.viewPortHeight/screen)?  true : false;    
+  }
 
   getViewpoertSize=()=>{
     this.setState({viewPortHeight:window.innerHeight, viewPortWidth:window.innerWidth});   
@@ -105,7 +110,7 @@ class App extends Component {
     return (
    
         <div className={styles.App} >
-          <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div>
+          <div style={{ backgroundImage: `url( ${bc} )`}} className={styles.heroImg}></div> 
             <Nav
               showNav={this.state.showNav}
               viewPortHeight={this.state.viewPortHeight}
@@ -129,7 +134,7 @@ class App extends Component {
                     button={content.hero.button}
                     background={content.hero.background}
                   />
-                  <Profile trigger1={this.state.trigger1}  trigger2={this.state.trigger2}   trigger3={this.state.trigger3} trigger4={this.state.trigger4}   id={"profile"} openedWidget={this.state.openedWidget} clickWidget={this.clickWidget} />
+                  <Profile widgetRefs={this.widgetRefs} trigger1={this.state.trigger1}  trigger2={this.state.trigger2}   trigger3={this.state.trigger3} trigger4={this.state.trigger4}   id={"profile"} openedWidget={this.state.openedWidget} clickWidget={this.clickWidget} />
                 </React.Fragment>
 
               )}/>   
