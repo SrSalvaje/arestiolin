@@ -42,7 +42,7 @@ const content={
             <li>cellphone: 07 6321 82 80</li>
         </ul>,
             type:"jsx",
-            title:'Jon Miren Aresti Olin'
+            title:'Jon Aresti Olin'
                     
         },
         widget2:{
