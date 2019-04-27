@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "970657a4f46c5d338ba3ae5b07ba57f4",
-    "url": "/arestiolin/static/media/restRev.970657a4.JPG"
+    "revision": "c4d348e033806271c58bfbd82980df50",
+    "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
   },
   {
-    "revision": "2ad025b6cb753df0eb98",
-    "url": "/arestiolin/static/css/main.9c9b09c0.chunk.css"
+    "revision": "82a603ecce4132f022a6",
+    "url": "/arestiolin/static/css/main.f65c9b8c.chunk.css"
   },
   {
     "revision": "042dcbb3056eb60045b0",
     "url": "/arestiolin/static/js/runtime~main.9598e85c.js"
   },
   {
-    "revision": "c81afbaba02b9315fd09",
-    "url": "/arestiolin/static/js/2.123be66f.chunk.js"
+    "revision": "fbf4f3efefe17b79134a",
+    "url": "/arestiolin/static/js/2.5289a81c.chunk.js"
   },
   {
     "revision": "d2bd1f98b6a7d95d7ce117a588584e8c",
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/myReads.bae73f78.JPG"
   },
   {
-    "revision": "2ad025b6cb753df0eb98",
-    "url": "/arestiolin/static/js/main.310a9efe.chunk.js"
+    "revision": "970657a4f46c5d338ba3ae5b07ba57f4",
+    "url": "/arestiolin/static/media/restRev.970657a4.JPG"
   },
   {
-    "revision": "c4d348e033806271c58bfbd82980df50",
-    "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
+    "revision": "82a603ecce4132f022a6",
+    "url": "/arestiolin/static/js/main.37bca8fd.chunk.js"
   },
   {
     "revision": "b57e0d2a6a6c64f814ed93bb72de9277",
@@ -68,6 +68,10 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/signs.09bcacde.png"
   },
   {
+    "revision": "df1c7fd0c80f2c1cd3ff3ef0940c0dbd",
+    "url": "/arestiolin/static/media/gulp.df1c7fd0.png"
+  },
+  {
     "revision": "c9c09d0aa3ce2d5f2af07de879fe0c3e",
     "url": "/arestiolin/static/media/hero.c9c09d0a.JPG"
   },
@@ -80,7 +84,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/logo.ee7cd8ed.svg"
   },
   {
-    "revision": "9a92af57da860b8db13e35253beccbba",
+    "revision": "9fa483a613ba84c39360d8502d7e7744",
     "url": "/arestiolin/index.html"
   }
 ];
