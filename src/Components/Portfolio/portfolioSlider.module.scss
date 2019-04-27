@@ -12,6 +12,8 @@
     justify-self: center;
     align-content: center;
     justify-content: center;
+    border:1px solid white;
+  
 
 }
   
@@ -23,6 +25,7 @@
     /* width of widget */
     max-width: 282px;
     margin:0 auto;
+    
 }
 //inner slideshow div
 .activeSlideShowcard{
@@ -121,13 +124,17 @@
 
 }
  @media screen and (min-width:1024px){
-    .slideShow{
+    
+  .main{
+    margin: calc(8vh + 10px)
+  }
+  .slideShow{
         min-width:650px ;
 
     } 
     
     .slideShowWrapper > div {
-        height: 750px;
+        height: 700px;
         min-width: 650px;
         transform: scale(0.8);
         

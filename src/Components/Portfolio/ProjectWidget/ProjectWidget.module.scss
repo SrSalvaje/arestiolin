@@ -150,7 +150,7 @@ $cols: 1;
 
 /* Track */
 .description p::-webkit-scrollbar-track {
-  background:white ; 
+  background:transparent ; 
 }
 
 /* Handle */
@@ -201,7 +201,7 @@ $cols: 1;
                         '  description description description ';
 
     grid-template-columns: auto 600px auto ;
-    grid-template-rows: 150px 320px auto;
+    grid-template-rows: 110px 320px auto;
     grid-column-gap:10px;
     
     .description{
@@ -230,8 +230,8 @@ $cols: 1;
       
       align-self: flex-start;
       justify-self: center;
-      margin:10px auto;
-      font-size: 40px;
+      margin:20px auto;
+      font-size: 30px;
       
     }
  
