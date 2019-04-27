@@ -37,7 +37,7 @@ const content={
             <li>Front-end Web Developer</li>
             <li>Journalist</li>
             <li>Video Editor</li>
-            <li>PADI Certified SCUBA diving instructor</li>
+            <li>PADI Certified SCUBA Diving Instructor</li>
             <li>Email: jon.m.h.aresti@gmail.com</li>
             <li>cellphone: 07 6321 82 80</li>
         </ul>,
@@ -49,7 +49,7 @@ const content={
             type:'jsx',
             title:'Education',
             content: <ul>
-            <li>Masters in Collaborative Media and Creative Industries in Malmo University. Graduation date: Summer 2019. </li>
+            <li>Master's in Collaborative Media and Creative Industries in Malmö University. Graduation date: Summer 2019. </li>
             <li> Front-End Web Development. Google Challenge scholarship recipient, Udacity. Since November 2017. </li>
             <li>Interaction Design. Malmo University (01/01/2018 – 05/06/2018). </li>
             <li> Bachelor of Liberal Arts with a major in Peace and Conflict Studies and a minor in International Relations. Malmo University. </li>
