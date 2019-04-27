@@ -25,7 +25,6 @@ height must match custom infowindow height  */
 
 }
 
-
 .gm-style-iw {
   margin:0;
   padding: 0;
@@ -72,10 +71,9 @@ height must match custom infowindow height  */
 *:after{
   box-sizing: inherit;
 }
+
 * h1,* h2,* h3{
   font-family: 'Special Elite', cursive;
-  /* justify-items: center;
-  align-items: center; */
   text-align: center;
   padding: 5px 0 0;
   margin: auto;
@@ -114,15 +112,13 @@ code {
     min-height: 270px;
   }
 } 
+
 @media screen and (min-width:1400px){
   
   
    #home,#profile, #cv, #portfolio,#nav, #footer{
-     max-width:1400px;
-    
-    margin: 100px auto auto;
-    /* left:-50%;
-    right:-50%; */
+      max-width:1400px;
+      margin: 100px auto auto;
    }
   
    
@@ -136,10 +132,4 @@ code {
     height:150px;
    }
 } 
-/* 
-.heroImg{
-  width:1800px;
-  margin:auto;
-  left:-50%;
-  right:-50%;
-}  */
+
