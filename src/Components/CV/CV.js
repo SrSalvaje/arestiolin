@@ -133,7 +133,6 @@ class CV extends Component{
     render(){
         return(
             <div id={"cv"} className={styles.main} >
-                <h2>Employment History</h2>
                 <div  className={styles.mainContent}>
                     <List
                         position={this.props.verticalPosition}
