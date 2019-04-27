@@ -65,7 +65,7 @@ class App extends Component {
     
     setNav=prevScroll > currentScroll ? true: false;
     setFooter=prevScroll<currentScroll ? true : false;
-    prevScroll=currentScroll;
+    
 
    if(!!this.widgetRefs[0].current){
    
@@ -84,6 +84,8 @@ class App extends Component {
         showNav: setNav,
         showFooter: setFooter})
    } 
+
+   prevScroll=currentScroll;
    
   }
 
@@ -100,11 +102,6 @@ class App extends Component {
      return {isModal:!prevState.isModal}
   })
 }
-
-
- /*  clickedOnNav=(currentView)=>{
-    this.setState({currentView:currentView})
-  } */
 
   render() {
     return (
