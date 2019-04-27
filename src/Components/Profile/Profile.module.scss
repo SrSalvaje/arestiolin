@@ -230,45 +230,31 @@ $duration: 0.5s;
 
 @media screen and (min-width:768px){
     .main{ 
-       height:1700px;
-      position: relative;
-      left:0 !important;
-      top:190px;
-      //top:-600px;
-      margin:auto;
-      //top: 100vh;
-      // position: relative;
-       /*  display: grid;
-        grid-template-columns: 49% 49%;
-        grid-template-rows: 49% 49%;
-        grid-row-gap: 10%;
-        grid-column-gap: 2%;
-        padding: 2%; */
-
+        height:1700px;
+        position: relative;
+        left:0 !important;
+        top:190px;
+        margin:auto;
     }
    .widget{
-       position: relative;
-       right:0;
-      
+        position: relative;
+        right:0;
         width: 80%;
-       // max-width: 100%;
         margin:50px auto;
         height: 300px;
-
         max-height: 100%;
+
         p, ul{
-            font-size: 22px;
-            
+            font-size: 22px;   
         }
-      
-       
+
         h2{
             background-color: $darkBlue;
             color: $whitish;
             border-radius: 10px 10px 0 0;
             padding: 10px 0 10px; 
             transition: .3s; 
-            font-size: 30px;
+            font-size: 26px;
         }
 
         div{
@@ -284,6 +270,7 @@ $duration: 0.5s;
     .main{
         height:100%;
     }
+
     .widget{
         max-height: none;
         height: 100%;
@@ -298,37 +285,37 @@ $duration: 0.5s;
 
 .contDiv::-webkit-scrollbar-track {
     background:$whitish ; 
-  }
+}
 
   
-  /* Handle */
-  .contDiv::-webkit-scrollbar-thumb {
-    background: $darkBlue; 
-  }
-  
-  /* Handle on hover */
-  .contDiv::-webkit-scrollbar-thumb:hover {
-    background: $brownish; 
-  }
+/* Handle */
+.contDiv::-webkit-scrollbar-thumb {
+background: $darkBlue; 
+}
 
-  /* list */
+/* Handle on hover */
+.contDiv::-webkit-scrollbar-thumb:hover {
+background: $brownish; 
+}
 
-  .contDiv::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  .contDiv::-webkit-scrollbar-track {
-    background:$blackish ; 
-  }
-  
-  /* Handle */
-  .contDiv::-webkit-scrollbar-thumb {
-    background: $darkBlue; 
-  }
-  
-  /* Handle on hover */
-  .contDiv::-webkit-scrollbar-thumb:hover {
-    background: $brownish; 
-  }
+/* list */
+
+.contDiv::-webkit-scrollbar {
+width: 15px;
+}
+
+/* Track */
+.contDiv::-webkit-scrollbar-track {
+background:$blackish ; 
+}
+
+/* Handle */
+.contDiv::-webkit-scrollbar-thumb {
+background: $darkBlue; 
+}
+
+/* Handle on hover */
+.contDiv::-webkit-scrollbar-thumb:hover {
+background: $brownish; 
+}
 
