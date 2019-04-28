@@ -50,6 +50,16 @@
     width:50px !important;
     margin: auto 20px auto 0;
 }
+
+.linkedinLogo{
+    composes:commonLogo;
+    width:25px !important;
+    background-color: transparent !important;
+    height: auto !important;
+   
+    overflow: hidden !important;
+}
+
 .googleLogo{
     composes:commonLogo;
     

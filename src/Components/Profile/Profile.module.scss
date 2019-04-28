@@ -216,6 +216,20 @@ $duration: 0.5s;
     overflow: hidden !important;
 }
 
+.tooling{
+    composes: mainDivStyles;
+    margin-left: 10px !important;
+
+}
+
+.gulp{
+    composes: mainDivStyles;
+    width:20px !important;
+    margin-left: 10px !important;
+   
+
+}
+
 @media screen and  (min-width: 375px){
   .main{
     h2{

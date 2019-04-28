@@ -24,7 +24,7 @@ const content={
         }  
     },
     hero:{
-        title: 'Hi, my name is Jon Miren',
+        title: 'Hi, my name is Jon Aresti Olin',
         content:"I'm a Front-End Web Developer.",
         button:'Welcome to my portfolio!',
         background: "../../Assets/img/hero.JPG"
@@ -51,8 +51,8 @@ const content={
             content: <ul>
             <li>Master's in Collaborative Media and Creative Industries in Malmö University. Graduation date: Summer 2019. </li>
             <li> Front-End Web Development. Google Challenge scholarship recipient, Udacity. Since November 2017. </li>
-            <li>Interaction Design. Malmo University (01/01/2018 – 05/06/2018). </li>
-            <li> Bachelor of Liberal Arts with a major in Peace and Conflict Studies and a minor in International Relations. Malmo University. </li>
+            <li>Interaction Design. Malmö University (01/01/2018 – 05/06/2018). </li>
+            <li> Bachelor of Liberal Arts with a major in Peace and Conflict Studies and a minor in International Relations. Malmö University. </li>
             <li> Script Writing Workshop with Academy Award Winner Guillermo Arriaga, January 2017. </li>
             <li>Journalism and Entrepreneurship: how to monetize, promote and manage digital media. Online course from the Knight Center for Journalism in The Americas. October 2016 – November 2016. </li>
             <li> Advanced Copy-Writing for Journalists workshop in ARTELUZ, Mexico City, Mexico. May 2016</li>
@@ -67,11 +67,13 @@ const content={
             title:'About Me',
             content: 
             <React.Fragment>
-                <p>My background is in journalism and before coming to Sweden I worked as a news editor for one of the largest newspapers in Mexico where I helped shape their digital transformation strategy.</p> 
-                <p>Being a journalist taught me two things: to think critically and to thrive under pressure, and aren’t these the exact skills that make a great programmer? </p>
-                <p>I am passionate about JavaScript and thanks to a Google Scholarship I was able to graduate from Udacity´s Front-End Nanodegree. </p>
+                <p>My background is in journalism and before moving to Sweden I worked as a news editor for one of the largest newspapers in Mexico, where I helped shape their digital transformation strategy.</p> 
+                <p>Being a journalist taught me two things: to think critically and to thrive under pressure, and aren’t these critical  skills for any programmer? </p>
+                <p>I am passionate about JavaScript and thanks to a Google Scholarship I was able to graduate from Udacity´s Front-End Nanodegree. I enjoy learning new things and keeping up to date with JS and the latests technologies </p>
                 <p>I also studied a semester of Interaction Design in Malmo University and I am currently finishing a masters in Collaborative Media and Creative Industries.</p> 
                 <p>My goal is to become a digital product developer and mix my new-found passion for programming with my experience in media.</p>
+                <p> Currently my efforts are in mastering React and playing around with Node.js, I want to become a full-stack JS developer.</p>
+                <p>My hobbies include scuba diving, science fiction novels, writing and finding the world's best pale ale and chicken tikka masala.</p>
             
                 </React.Fragment>
         },
@@ -88,19 +90,19 @@ const content={
         icon:code,
         start:"15/08/2018",
         end:'ongoing',
-        location:'Malmo, Sweden',
-        description:'I am developing the internal portal and creating  custom schedulling apps that integrate with their API ',
+        location:'Malmö, Sweden',
+        description:'I am developing the internal portal and creating a schedule app that integrate with their API ',
         coordinates:  { lat:55.587399, lng: 13.057444},
         id:"webSecureLink"
         },
     
         {
-            title:'Online Editor for La Jornada',
+            title:'News Editor for La Jornada',
             icon:news,
             start:'10/12/2015',
             end:'16/06/2017',
             location:'Mexico City, Mexico',
-            description:'La Jornada is Mexico´s premiere political newspaper, during my time there I was in charge of managing the portal, fact checking stories, coordinating live coverage and creating multimedia content',
+            description:'La Jornada is Mexico´s premiere political newspaper, during my time there I was in charge of managing the portal, fact checking stories, coordinating live coverage and creating multimedia content.',
             coordinates:  { lat: 19.373213, lng: -99.160531},
             id:'onlineJornada'
         },
@@ -111,7 +113,7 @@ const content={
             start:'15/01/2015 ',
             end:'21/11/2015',
             location: 'Mexico City, Mexico',
-            description:'I focused on executive classes and translation of corporate material',
+            description:'I focused on teaching executive classes and translating corporate materials',
             coordinates: { lat:19.428896, lng:-99.141923},
             id:'englishNerles'
         },
@@ -122,7 +124,7 @@ const content={
             start:'10/01/2013 ',
             end:'19/12/2013',
             location:'Acapulco, Guerrero, Mexico',
-            description:'Local weekly newspaper focused on political comentary, I wrote a weekly column',
+            description:'Local weekly newspaper focused on political commentary, I wrote a column for them and acted as translator and fixer',
             coordinates:  { lat:16.865667, lng: -99.891980},
             id:'columnistPalabra'
         },
@@ -133,7 +135,7 @@ const content={
             start:'1/09/2013 ',
             end:'18/10/2013',
             location:'Mexico City, Mexico',
-            description:'I wrote for the Culture section.',
+            description:'I worked as editorial staff and my duties included reporting, translating, editing and writing stories for the culture section.',
             coordinates:  { lat:19.373213, lng:-99.160531},
             id:'reporterJornada'
         },
@@ -178,7 +180,7 @@ const content={
             start:'10/12/ 2007',
             end:'20/07/2008',
             location:'Philipsburg, Sint Maarten',
-            description:'I taught advanced scuba diving courses and guided groups of novice divers in demanding conditions',
+            description:'I taught advanced scuba diving courses, guided groups of novice divers in demanding conditions and helped in the management of the store and equipment maintenance.',
             coordinates:  { lat:18.018169, lng: -63.043496},
             id:'scubaFun'
         },
@@ -189,7 +191,7 @@ const content={
             start:'14/07/2006 ',
             end:'18/06/2007',
             location:'Cancun, Mexico',
-            description:'My job was to ensure our guests had the vacation of their lifetime by providing access to all the activities and nightlife Cancun had to offer.',
+            description:'I was a costumer success manager, my job was to ensure our guests had the vacation of their lifetime by providing access to all the activities and nightlife Cancun had to offer.',
             coordinates: { lat:21.102660, lng: -86.764194},
             id:'salesBarcelo'
         }
@@ -202,7 +204,7 @@ const content={
         index:1,
         image: matching,
         url: 'https://srsalvaje.github.io/memorygame/',
-        description: 'Third Project of Udacity´s FEND Nanodegree as a test of OOP. It´s made with vanilla JS ',
+        description: 'Third Project of Udacity´s FEND Nanodegree with emphasis on OOP. I wrote it with vanilla JS. ',
         id:'card6',
         alt:'screenshot from website'
         },
@@ -210,7 +212,7 @@ const content={
         index:2,
         image: Mymalmo,
         url: 'https://srsalvaje.github.io/UdacityFinal/',
-        description: `I was tasked with building a website to display points of interest in my city. 
+        description: `Udacity's final project, I was tasked with building a website to display points of interest in my city. 
         The site was built from the ground up by me using create-react app and relying on the API´s of FourSquare and Google Maps.`,
     
     
@@ -222,7 +224,7 @@ const content={
         image: myReads,
         url: 'https://srsalvaje.github.io/Udacity-My-Reads/',
         description: `This is the 7th assessment project for Udacity's FEND Nanodegree. 
-        Basic CSS, HTML and a book database API were provided but without any of the React code.`,
+            Basic CSS, HTML and a book database API were provided but without any of the React code.`,
         id:'card2',
         alt:'screenshot from website'
         },
@@ -236,7 +238,7 @@ const content={
         },
         {title:"Jasmine Test suite",
         index:5,
-        description:`This repo is the 4th project of the Udacity FEND Nanodegree, my task was to develop a test suit for the existing code base.`,
+        description:`This Github repo is the 4th project of the Udacity FEND Nanodegree, my task was to develop a Jasmine  test suit for the existing code base and refactor the spaghetti code.`,
         image:JasmineTest,
         id:'card4',
         alt:'Jasmine Logo',
@@ -245,8 +247,8 @@ const content={
         {title: "Arcade Clone",
         index:6,
         image: arcade,
-        url: 'https://srsalvaje.github.io/UdacityP4Frogger/',
-        description: `This is a clone of the popular Frogger arcade game, the game engine, images and resources.js were provided by the Udacity team, the rest of the code was written by me`,
+        url: 'https://github.com/SrSalvaje/UdacityP4Frogger',
+        description: `A clone of the popular Frogger arcade game, the game engine and images were provided by the Udacity team, the rest of the code was written by me. Note that its not meant for mobile devices`,
         id:'card5',
         alt:'screenshot from website'
         }

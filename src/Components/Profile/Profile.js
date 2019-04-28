@@ -10,6 +10,11 @@ import testLogo from '../../Assets/img/008-test.png';
 import photoLogo from '../../Assets/img/004-photoshop.png';
 import accessLogo from '../../Assets/img/signs.png';
 import premiereLogo from '../../Assets/img/005-premiere.png';
+import sassLogo from '../../Assets/img/009-sass.png'
+import gitLogo from '../../Assets/img/git.png'
+import jasmineLogo from '../../Assets/img/jasmine.png'
+import gulpLogo from '../../Assets/img/gulp.png'
+import githubLogo from '../../Assets/img/github.png'
 
 const Profile = (props) =>{
     return (
@@ -51,12 +56,17 @@ const Profile = (props) =>{
                 content={<ul>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={content.imgs.jsLogo.img} alt={"JavaScript Logo"}/> <span>JavaScript</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={ReactLogo} alt={"React Logo"}/><span>React</span></li>
-                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={cssLogo} alt={"CSS Logo"}/><span>CSS</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={cssLogo} alt={"CSS Logo"}/>  <ResponsiveLogo mainDivStyles={styles.tooling} logo={sassLogo} alt={"sass Logo"}/><span>CSS</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={htmlLogo} alt={"HTML Logo"}/><span>HTML</span></li>
-                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={testLogo} alt={"Test Logo"}/><span>Test Driven Development</span></li>
+                    <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={testLogo} alt={"Test Logo"}/>         <ResponsiveLogo mainDivStyles={styles.tooling} logo={jasmineLogo} alt={"jasmine Logo"}/><span>Test Driven Development</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={accessLogo} alt={"Two avatars using sign language"}/><span>Accesibility</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={premiereLogo} alt={"PremierePro Logo"}/><span>PremierePro</span></li>
                     <li><ResponsiveLogo mainDivStyles={styles.mainDivStyles} logo={photoLogo} alt={"Photoshop Logo"}/><span>Photoshop</span></li>
+                    <li>
+                    <ResponsiveLogo mainDivStyles={styles.tooling} logo={gitLogo} alt={"git Logo"}/>
+                    <ResponsiveLogo mainDivStyles={styles.tooling} logo={githubLogo} alt={"github Logo"}/>
+                    <ResponsiveLogo mainDivStyles={styles.gulp} logo={gulpLogo} alt={"gulp Logo"}/>
+                    </li>
                 </ul>} 
             />      
         </div>
