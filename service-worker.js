@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/arestiolin/precache-manifest.a80e41dc7431b6d645f5fd4caa7d75ef.js"
+  "/arestiolin/precache-manifest.03e818a8a66fc0850461510632171f2e.js"
 );
 
 workbox.clientsClaim();

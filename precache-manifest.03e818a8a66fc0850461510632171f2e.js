@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/matching.c4d348e0.JPG"
   },
   {
-    "revision": "82a603ecce4132f022a6",
+    "revision": "7af7c82c95e71658a351",
     "url": "/arestiolin/static/css/main.f65c9b8c.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/restRev.970657a4.JPG"
   },
   {
-    "revision": "82a603ecce4132f022a6",
-    "url": "/arestiolin/static/js/main.37bca8fd.chunk.js"
+    "revision": "7af7c82c95e71658a351",
+    "url": "/arestiolin/static/js/main.f748e452.chunk.js"
   },
   {
     "revision": "b57e0d2a6a6c64f814ed93bb72de9277",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/arestiolin/static/media/logo.ee7cd8ed.svg"
   },
   {
-    "revision": "9fa483a613ba84c39360d8502d7e7744",
+    "revision": "28e798394dc283f3a6b00e2d495972ee",
     "url": "/arestiolin/index.html"
   }
 ];
